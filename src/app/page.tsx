@@ -1,5 +1,6 @@
 "use client"
 import Image from "next/image"
+import Typography from "@mui/material/Typography"
 import parityLogo from "../../public/parity-logo.png"
 
 export default function Home() {
@@ -21,7 +22,9 @@ export default function Home() {
         }}
       >
         <Image src={parityLogo} alt="Parity Consultants logo." />
-        <p style={{ paddingTop: "24px" }}>Check back soon...</p>
+        <Typography sx={{ paddingTop: "24px", color: "gray" }}>
+          Check back soon...
+        </Typography>
       </section>
     </main>
   )
