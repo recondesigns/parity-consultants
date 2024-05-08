@@ -89,7 +89,7 @@ export default function NavigationFlyout({}) {
 
   return (
     <FlyoutWrapper isflyoutopen={`${isFlyoutOpen}`}>
-      <CloseIconContainer onClick={setIsFlyoutOpen}>
+      <CloseIconContainer onClick={setIsFlyoutOpen} sx={{ color: "#000000" }}>
         <CloseIcon />
       </CloseIconContainer>
       <Image src={parityLogo} alt="Parity Consultants logo." />
