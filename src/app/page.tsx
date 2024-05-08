@@ -23,7 +23,9 @@ export default function Home() {
         }}
       >
         <Image src={parityLogo} alt="Parity Consultants logo." />
-        <Typography sx={{ paddingTop: "24px", color: "gray" }}>
+        <Typography
+          sx={{ paddingTop: "24px", color: "gray", fontFamily: "inherit" }}
+        >
           Check back soon...
         </Typography>
       </section>
