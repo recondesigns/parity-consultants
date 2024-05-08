@@ -1,7 +1,7 @@
 "use client"
 import Typography from "@mui/material/Typography"
 
-export default function OurServicesPage() {
+export default function ServicesPage() {
   return (
     <main
       style={{
