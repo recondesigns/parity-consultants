@@ -18,17 +18,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={inter.className}
-        style={{
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
-        }}
-      >
-        <Header />
-        {children}
-        <Footer />
+      <body className={inter.className}>
+        <div style={{ position: "relative" }}>
+          <Header />
+          {children}
+          <Footer />
+        </div>
       </body>
     </html>
   )
