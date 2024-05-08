@@ -20,7 +20,7 @@ export default function ScaledComputingPage() {
         }}
       >
         <Typography variant="h2" sx={{ paddingTop: "24px" }}>
-          Our solutions
+          Scaled Computing
         </Typography>
         <Typography sx={{ paddingTop: "24px", color: "gray" }}>
           Check back soon...
