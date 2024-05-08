@@ -17,6 +17,7 @@ export default function ScaledComputingPage() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          minHeight: "calc(100vh - 72px)",
         }}
       >
         <Typography variant="h2" sx={{ paddingTop: "24px" }}>
