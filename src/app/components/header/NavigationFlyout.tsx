@@ -105,7 +105,7 @@ export default function NavigationFlyout({}) {
           </li>
           <li>
             <StyledLink
-              href="/our-services"
+              href="/services"
               onClick={() => delayFlyoutClose(setIsFlyoutOpen)}
             >
               <Typography>Services</Typography>
@@ -113,7 +113,7 @@ export default function NavigationFlyout({}) {
           </li>
           <li>
             <StyledLink
-              href="/our-solutions"
+              href="/solutions"
               onClick={() => delayFlyoutClose(setIsFlyoutOpen)}
             >
               <Typography>Solutions</Typography>

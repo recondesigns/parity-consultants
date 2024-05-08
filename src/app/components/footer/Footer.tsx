@@ -10,7 +10,7 @@ import parityLogo from "../../../../public/parity-logo.png"
 
 const StyledFooter = styled(Box)(
   {
-    display: "flex"
+    display: "flex",
   },
   ({ theme }) => ({})
 )
@@ -113,7 +113,7 @@ export default function Footer() {
                     </Typography>
                   </li>
                   <li style={{ width: "100%" }}>
-                    <StyledLink href="/our-services">
+                    <StyledLink href="/services">
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -123,7 +123,7 @@ export default function Footer() {
                     </StyledLink>
                   </li>
                   <li style={{ width: "100%" }}>
-                    <StyledLink href="/our-solutions">
+                    <StyledLink href="/solutions">
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
