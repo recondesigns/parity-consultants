@@ -17,7 +17,6 @@ export default function GetSupportPage() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "calc(100vh - 72px)",
         }}
       >
         <Typography
