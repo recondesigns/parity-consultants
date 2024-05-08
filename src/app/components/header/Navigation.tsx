@@ -73,7 +73,7 @@ export default function Navigation() {
         </li>
       </StyledUl>
       <MenuIconContainer
-        sx={{ display: { xs: "flex", md: "none" } }}
+        sx={{ display: { xs: "flex", md: "none", color: "#000000" } }}
         onClick={() => setIsFlyoutOpen(!isFlyoutOpen)}
       >
         {!isFlyoutOpen ? <MenuIcon /> : <MenuOpenIcon />}

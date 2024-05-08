@@ -17,6 +17,7 @@ export default function ServicesPage() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          minHeight: "calc(100vh - 72px)",
         }}
       >
         <Typography variant="h2" sx={{ paddingTop: "24px" }}>
