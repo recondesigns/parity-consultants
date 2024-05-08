@@ -11,6 +11,7 @@ export default function Home() {
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
+        minHeight: "calc(100vh - 72px)",
       }}
     >
       <section
