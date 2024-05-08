@@ -9,9 +9,14 @@ import parityLogo from "../../../../public/parity-logo.png"
 
 const StyledHeader = styled(Box)(
   {
+    position: "fixed",
+    top: "0px",
+    left: "0px",
+    right: "0px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
+    background: "#FFFFFF",
   },
   ({ theme }) => ({})
 )

@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Mulish } from "next/font/google"
 import Header from "./components/header/Header"
+import NavigationFlyout from "./components/header/NavigationFlyout"
 import Footer from "./components/footer/Footer"
 import "./globals.css"
 
@@ -19,8 +20,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div style={{ position: "relative" }}>
+        <div style={{ position: "relative", paddingTop: "72px" }}>
           <Header />
+          <NavigationFlyout />
           {children}
           <Footer />
         </div>

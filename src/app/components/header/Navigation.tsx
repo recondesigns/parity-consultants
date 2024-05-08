@@ -5,7 +5,6 @@ import Link from "next/link"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import MenuIcon from "@mui/icons-material/Menu"
-import NavigationFlyout from "./NavigationFlyout"
 import MenuOpenIcon from "@mui/icons-material/MenuOpen"
 import { useAppStore } from "../../stores/appStore"
 
@@ -78,7 +77,6 @@ export default function Navigation() {
       >
         {!isFlyoutOpen ? <MenuIcon /> : <MenuOpenIcon />}
       </MenuIconContainer>
-      <NavigationFlyout />
     </StyledNav>
   )
 }

@@ -71,7 +71,7 @@ const FlyoutWrapper = styled(Box)<FlyoutWrapperProps>(
     justifyContent: "start",
     alignItems: "center",
     background: "white",
-    zIndex: "300",
+    zIndex: 300,
   },
   ({ theme, isflyoutopen }) => ({
     display: isflyoutopen !== "true" ? "none" : "flex",
