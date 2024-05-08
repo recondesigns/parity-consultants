@@ -53,22 +53,22 @@ export default function Navigation() {
       <StyledUl sx={{ display: { xs: "none", md: "flex" } }}>
         <li>
           <StyledLink href="/services">
-            <Typography>Services</Typography>
+            <Typography sx={{ fontFamily: "inherit" }}>Services</Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/solutions">
-            <Typography>Solutions</Typography>
+            <Typography sx={{ fontFamily: "inherit" }}>Solutions</Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/contact-us">
-            <Typography>Contact us</Typography>
+            <Typography sx={{ fontFamily: "inherit" }}>Contact us</Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/get-support">
-            <Typography>Get support</Typography>
+            <Typography sx={{ fontFamily: "inherit" }}>Get support</Typography>
           </StyledLink>
         </li>
       </StyledUl>

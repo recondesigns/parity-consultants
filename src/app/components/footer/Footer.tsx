@@ -76,6 +76,7 @@ export default function Footer() {
                 variant="caption"
                 component="p"
                 textAlign={{ xs: "center", sm: "left" }}
+                sx={{ fontFamily: "inherit" }}
               >
                 860 Hebron Parkway #1203
               </Typography>
@@ -83,6 +84,7 @@ export default function Footer() {
                 variant="caption"
                 component="p"
                 textAlign={{ xs: "center", sm: "left" }}
+                sx={{ fontFamily: "inherit" }}
               >
                 Lewisville, TX 75057
               </Typography>
@@ -91,6 +93,7 @@ export default function Footer() {
                   variant="caption"
                   component="p"
                   textAlign={{ xs: "center", sm: "left" }}
+                  sx={{ fontFamily: "inherit" }}
                 >
                   469-240-5090
                 </Typography>
@@ -108,6 +111,7 @@ export default function Footer() {
                       variant="body1"
                       textAlign={{ xs: "center", sm: "left" }}
                       fontWeight="bold"
+                      sx={{ fontFamily: "inherit" }}
                     >
                       We offer
                     </Typography>
@@ -117,6 +121,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
+                        sx={{ fontFamily: "inherit" }}
                       >
                         Services
                       </Typography>
@@ -127,6 +132,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
+                        sx={{ fontFamily: "inherit" }}
                       >
                         Solutions
                       </Typography>
@@ -137,6 +143,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
+                        sx={{ fontFamily: "inherit" }}
                       >
                         Scaled Computing
                       </Typography>
@@ -147,6 +154,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
+                        sx={{ fontFamily: "inherit" }}
                       >
                         Support
                       </Typography>
@@ -162,6 +170,7 @@ export default function Footer() {
                       variant="body1"
                       textAlign={{ xs: "center", sm: "left" }}
                       fontWeight="bold"
+                      sx={{ fontFamily: "inherit" }}
                     >
                       Connect
                     </Typography>
@@ -174,6 +183,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
+                        sx={{ fontFamily: "inherit" }}
                       >
                         Facebook
                       </Typography>
@@ -187,6 +197,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
+                        sx={{ fontFamily: "inherit" }}
                       >
                         Instagram
                       </Typography>
@@ -200,6 +211,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
+                        sx={{ fontFamily: "inherit" }}
                       >
                         LinkedIn
                       </Typography>
@@ -210,6 +222,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
+                        sx={{ fontFamily: "inherit" }}
                       >
                         Contact us
                       </Typography>
@@ -225,6 +238,7 @@ export default function Footer() {
                       variant="body1"
                       fontWeight="bold"
                       textAlign={{ xs: "center", sm: "left" }}
+                      sx={{ fontFamily: "inherit" }}
                     >
                       Company
                     </Typography>
@@ -233,6 +247,7 @@ export default function Footer() {
                     <Typography
                       variant="body2"
                       textAlign={{ xs: "center", sm: "left" }}
+                      sx={{ fontFamily: "inherit" }}
                     >
                       About us
                     </Typography>
@@ -241,6 +256,7 @@ export default function Footer() {
                     <Typography
                       variant="body2"
                       textAlign={{ xs: "center", sm: "left" }}
+                      sx={{ fontFamily: "inherit" }}
                     >
                       Terms & Conditions
                     </Typography>
@@ -249,6 +265,7 @@ export default function Footer() {
                     <Typography
                       variant="body2"
                       textAlign={{ xs: "center", sm: "left" }}
+                      sx={{ fontFamily: "inherit" }}
                     >
                       Privacy Policy
                     </Typography>

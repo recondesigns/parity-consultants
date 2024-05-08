@@ -100,7 +100,7 @@ export default function NavigationFlyout({}) {
               href="/"
               onClick={() => delayFlyoutClose(setIsFlyoutOpen)}
             >
-              <Typography>Home</Typography>
+              <Typography sx={{ fontFamily: "inherit" }}>Home</Typography>
             </StyledLink>
           </li>
           <li>
@@ -108,7 +108,7 @@ export default function NavigationFlyout({}) {
               href="/services"
               onClick={() => delayFlyoutClose(setIsFlyoutOpen)}
             >
-              <Typography>Services</Typography>
+              <Typography sx={{ fontFamily: "inherit" }}>Services</Typography>
             </StyledLink>
           </li>
           <li>
@@ -116,7 +116,7 @@ export default function NavigationFlyout({}) {
               href="/solutions"
               onClick={() => delayFlyoutClose(setIsFlyoutOpen)}
             >
-              <Typography>Solutions</Typography>
+              <Typography sx={{ fontFamily: "inherit" }}>Solutions</Typography>
             </StyledLink>
           </li>
           <li>
@@ -124,7 +124,7 @@ export default function NavigationFlyout({}) {
               href="/contact-us"
               onClick={() => delayFlyoutClose(setIsFlyoutOpen)}
             >
-              <Typography>Contact us</Typography>
+              <Typography sx={{ fontFamily: "inherit" }}>Contact us</Typography>
             </StyledLink>
           </li>
           <li>
@@ -132,7 +132,9 @@ export default function NavigationFlyout({}) {
               href="/get-support"
               onClick={() => delayFlyoutClose(setIsFlyoutOpen)}
             >
-              <Typography>Get support</Typography>
+              <Typography sx={{ fontFamily: "inherit" }}>
+                Get support
+              </Typography>
             </StyledLink>
           </li>
         </StyledUl>
