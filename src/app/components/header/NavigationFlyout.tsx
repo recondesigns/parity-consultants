@@ -55,7 +55,7 @@ const StyledLink = styled(Link)(
 )
 
 type FlyoutWrapperProps = {
-  isflyoutopen: boolean
+  isflyoutopen: boolean | string
 }
 
 const FlyoutWrapper = styled(Box)<FlyoutWrapperProps>(
@@ -70,9 +70,10 @@ const FlyoutWrapper = styled(Box)<FlyoutWrapperProps>(
     justifyContent: "center",
     alignItems: "center",
     background: "white",
+    zIndex: "300",
   },
   ({ theme, isflyoutopen }) => ({
-    display: !isflyoutopen ? "none" : "flex",
+    display: isflyoutopen !== "true" ? "none" : "flex",
   })
 )
 
@@ -87,7 +88,7 @@ export default function NavigationFlyout({}) {
   const { isFlyoutOpen, setIsFlyoutOpen } = useAppStore()
 
   return (
-    <FlyoutWrapper isflyoutopen={isFlyoutOpen}>
+    <FlyoutWrapper isflyoutopen={`${isFlyoutOpen}`}>
       <CloseIconContainer onClick={setIsFlyoutOpen}>
         <CloseIcon />
       </CloseIconContainer>
@@ -104,7 +105,7 @@ export default function NavigationFlyout({}) {
           </li>
           <li>
             <StyledLink
-              href="/our-services"
+              href="/services"
               onClick={() => delayFlyoutClose(setIsFlyoutOpen)}
             >
               <Typography>Services</Typography>
@@ -112,7 +113,7 @@ export default function NavigationFlyout({}) {
           </li>
           <li>
             <StyledLink
-              href="/our-solutions"
+              href="/solutions"
               onClick={() => delayFlyoutClose(setIsFlyoutOpen)}
             >
               <Typography>Solutions</Typography>

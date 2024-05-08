@@ -1,7 +1,7 @@
 "use client"
 import Typography from "@mui/material/Typography"
 
-export default function OurSeOurSolutionsPagervicesPage() {
+export default function SolutionsPage() {
   return (
     <main
       style={{

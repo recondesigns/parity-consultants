@@ -52,12 +52,12 @@ export default function Navigation() {
     <StyledNav as="nav">
       <StyledUl sx={{ display: { xs: "none", md: "flex" } }}>
         <li>
-          <StyledLink href="/our-services">
+          <StyledLink href="/services">
             <Typography>Services</Typography>
           </StyledLink>
         </li>
         <li>
-          <StyledLink href="/our-solutions">
+          <StyledLink href="/solutions">
             <Typography>Solutions</Typography>
           </StyledLink>
         </li>
