@@ -5,8 +5,8 @@ import Link from "next/link"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import MenuIcon from "@mui/icons-material/Menu"
-import MenuOpenIcon from "@mui/icons-material/MenuOpen"
 import { useAppStore } from "../../stores/appStore"
+import NavigationFlyout from "./NavigationFlyout"
 
 const StyledUl = styled("ul")(
   {
@@ -75,8 +75,12 @@ export default function Navigation() {
         sx={{ display: { xs: "flex", md: "none", color: "#000000" } }}
         onClick={() => setIsFlyoutOpen(!isFlyoutOpen)}
       >
-        {!isFlyoutOpen ? <MenuIcon /> : <MenuOpenIcon />}
+        <MenuIcon />
       </MenuIconContainer>
+      <NavigationFlyout
+        isOpen={isFlyoutOpen}
+        onClose={() => setIsFlyoutOpen(!isFlyoutOpen)}
+      />
     </StyledNav>
   )
 }
