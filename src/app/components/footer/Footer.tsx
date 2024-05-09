@@ -145,7 +145,7 @@ export default function Footer() {
                         textAlign={{ xs: "center", sm: "left" }}
                         sx={{ fontFamily: "inherit" }}
                       >
-                        Scaled Computing
+                        Scale Computing
                       </Typography>
                     </StyledLink>
                   </li>
