@@ -139,7 +139,7 @@ export default function Footer() {
                     </StyledLink>
                   </li>
                   <li style={{ width: "100%" }}>
-                    <StyledLink href="/scaled-computing">
+                    <StyledLink href="/scale-computing">
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}

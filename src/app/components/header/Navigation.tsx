@@ -61,7 +61,7 @@ export default function Navigation() {
           </StyledLink>
         </li>
         <li>
-          <StyledLink href="/scaled-computing">
+          <StyledLink href="/scale-computing">
             <Typography sx={{ fontFamily: "inherit" }}>
               Get Scale Computing
             </Typography>
