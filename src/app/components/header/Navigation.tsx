@@ -61,13 +61,20 @@ export default function Navigation() {
           </StyledLink>
         </li>
         <li>
+          <StyledLink href="/scaled-computing">
+            <Typography sx={{ fontFamily: "inherit" }}>
+              Get Scale Computing
+            </Typography>
+          </StyledLink>
+        </li>
+        <li>
           <StyledLink href="/contact-us">
             <Typography sx={{ fontFamily: "inherit" }}>Contact us</Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/get-support">
-            <Typography sx={{ fontFamily: "inherit" }}>Get support</Typography>
+            <Typography sx={{ fontFamily: "inherit" }}>Support</Typography>
           </StyledLink>
         </li>
       </StyledUl>

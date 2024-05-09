@@ -51,7 +51,7 @@ const list = (onClose: any) => (
       <ListItem>
         <StyledLink href="/scaled-computing" onClick={onClose}>
           <Typography sx={{ fontFamily: "inherit" }}>
-            Get Scaled Computing
+            Get Scale Computing
           </Typography>
         </StyledLink>
       </ListItem>
@@ -62,7 +62,7 @@ const list = (onClose: any) => (
       </ListItem>
       <ListItem>
         <StyledLink href="/get-support" onClick={onClose}>
-          <Typography sx={{ fontFamily: "inherit" }}>Get support</Typography>
+          <Typography sx={{ fontFamily: "inherit" }}>Support</Typography>
         </StyledLink>
       </ListItem>
     </List>
