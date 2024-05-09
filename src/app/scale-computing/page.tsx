@@ -17,13 +17,17 @@ export default function ScaledComputingPage() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "calc(100vh - 72px)",
         }}
       >
-        <Typography variant="h2" sx={{ paddingTop: "24px" }}>
-          Scaled Computing
+        <Typography
+          variant="h2"
+          sx={{ paddingTop: "24px", fontFamily: "inherit" }}
+        >
+          Get Scale Computing
         </Typography>
-        <Typography sx={{ paddingTop: "24px", color: "gray" }}>
+        <Typography
+          sx={{ paddingTop: "24px", color: "gray", fontFamily: "inherit" }}
+        >
           Check back soon...
         </Typography>
       </section>

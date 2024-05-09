@@ -17,13 +17,17 @@ export default function ContactUsPage() {
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
-          minHeight: "calc(100vh - 72px)",
         }}
       >
-        <Typography variant="h2" sx={{ paddingTop: "24px" }}>
+        <Typography
+          variant="h2"
+          sx={{ paddingTop: "24px", fontFamily: "inherit" }}
+        >
           Contact us
         </Typography>
-        <Typography sx={{ paddingTop: "24px", color: "gray" }}>
+        <Typography
+          sx={{ paddingTop: "24px", color: "gray", fontFamily: "inherit" }}
+        >
           Check back soon...
         </Typography>
       </section>

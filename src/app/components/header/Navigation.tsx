@@ -5,9 +5,8 @@ import Link from "next/link"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import MenuIcon from "@mui/icons-material/Menu"
-import NavigationFlyout from "./NavigationFlyout"
-import MenuOpenIcon from "@mui/icons-material/MenuOpen"
 import { useAppStore } from "../../stores/appStore"
+import NavigationFlyout from "./NavigationFlyout"
 
 const StyledUl = styled("ul")(
   {
@@ -53,22 +52,29 @@ export default function Navigation() {
       <StyledUl sx={{ display: { xs: "none", md: "flex" } }}>
         <li>
           <StyledLink href="/services">
-            <Typography>Services</Typography>
+            <Typography sx={{ fontFamily: "inherit" }}>Services</Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/solutions">
-            <Typography>Solutions</Typography>
+            <Typography sx={{ fontFamily: "inherit" }}>Solutions</Typography>
+          </StyledLink>
+        </li>
+        <li>
+          <StyledLink href="/scale-computing">
+            <Typography sx={{ fontFamily: "inherit" }}>
+              Get Scale Computing
+            </Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/contact-us">
-            <Typography>Contact us</Typography>
+            <Typography sx={{ fontFamily: "inherit" }}>Contact us</Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/get-support">
-            <Typography>Get support</Typography>
+            <Typography sx={{ fontFamily: "inherit" }}>Support</Typography>
           </StyledLink>
         </li>
       </StyledUl>
@@ -76,9 +82,12 @@ export default function Navigation() {
         sx={{ display: { xs: "flex", md: "none", color: "#000000" } }}
         onClick={() => setIsFlyoutOpen(!isFlyoutOpen)}
       >
-        {!isFlyoutOpen ? <MenuIcon /> : <MenuOpenIcon />}
+        <MenuIcon />
       </MenuIconContainer>
-      <NavigationFlyout />
+      <NavigationFlyout
+        isOpen={isFlyoutOpen}
+        onClose={() => setIsFlyoutOpen(!isFlyoutOpen)}
+      />
     </StyledNav>
   )
 }
