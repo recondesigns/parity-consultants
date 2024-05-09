@@ -23,7 +23,7 @@ export default function ScaledComputingPage() {
           variant="h2"
           sx={{ paddingTop: "24px", fontFamily: "inherit" }}
         >
-          Scaled Computing
+          Get Scale Computing
         </Typography>
         <Typography
           sx={{ paddingTop: "24px", color: "gray", fontFamily: "inherit" }}
