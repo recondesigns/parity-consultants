@@ -16,7 +16,7 @@ const StyledHeader = styled(Box)(
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    background: "#FFFFFF",
+    background: "#FDFCFC",
   },
   ({ theme }) => ({})
 )

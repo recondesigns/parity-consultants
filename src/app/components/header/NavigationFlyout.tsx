@@ -42,29 +42,37 @@ const list = (onClose: any) => (
       <Divider />
       <ListItem>
         <StyledLink href="/services" onClick={onClose}>
-          <Typography sx={{ fontFamily: "inherit" }}>Services</Typography>
+          <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+            Services
+          </Typography>
         </StyledLink>
       </ListItem>
       <ListItem>
         <StyledLink href="/solutions" onClick={onClose}>
-          <Typography sx={{ fontFamily: "inherit" }}>Solutions</Typography>
+          <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+            Solutions
+          </Typography>
         </StyledLink>
       </ListItem>
       <ListItem>
         <StyledLink href="/scale-computing" onClick={onClose}>
-          <Typography sx={{ fontFamily: "inherit" }}>
+          <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
             Get Scale Computing
           </Typography>
         </StyledLink>
       </ListItem>
       <ListItem>
         <StyledLink href="/contact-us" onClick={onClose}>
-          <Typography sx={{ fontFamily: "inherit" }}>Contact us</Typography>
+          <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+            Contact us
+          </Typography>
         </StyledLink>
       </ListItem>
       <ListItem>
         <StyledLink href="/get-support" onClick={onClose}>
-          <Typography sx={{ fontFamily: "inherit" }}>Support</Typography>
+          <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+            Support
+          </Typography>
         </StyledLink>
       </ListItem>
     </List>
