@@ -32,10 +32,12 @@ type Props = {
 const list = (onClose: any) => (
   <Box sx={{ width: 250 }} role="presentation">
     <List>
-      <ListItem sx={{ padding: "20px 0px" }}>
-        <ListItemButton sx={{ justifyContent: "center" }}>
+      <ListItem
+        sx={{ padding: "20px 0px", display: "flex", justifyContent: "center" }}
+      >
+        <StyledLink href="/" onClick={onClose}>
           <Image src={parityLogo} height={32} alt="Company logo." />
-        </ListItemButton>
+        </StyledLink>
       </ListItem>
       <Divider />
       <ListItem>
