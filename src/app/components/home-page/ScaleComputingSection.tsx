@@ -2,21 +2,23 @@ import React from "react"
 import { Parallax } from "react-parallax"
 import Typography from "@mui/material/Typography"
 import { Section } from "../ui"
-import networkingImage from "../../../../public/images/networking1560.jpg"
+import networkingImage from "../../../../public/images/blue-networking-1000.jpg"
 
 export default function ScaledComputingSection() {
   return (
     <Section>
       <Parallax
-        blur={2}
+        blur={0}
         bgImage={`${networkingImage.src}`}
         bgImageAlt="networking servers"
-        strength={200}
+        strength={400}
+        // @ts-expect-error
+        blur={{ min: -15, max: 20 }}
         style={{ width: "100%" }}
       >
         <div
           style={{
-            height: "100vh",
+            height: "calc(100vh - 150px)",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -35,10 +37,10 @@ export default function ScaledComputingSection() {
               Parity Consultants
             </Typography>
             <Typography
-              variant="h4"
+              variant="h5"
               component="p"
               fontFamily="inherit"
-              color="#FDFCFC"
+              color="#D95C5C"
               textAlign="center"
               pt="8px"
             >

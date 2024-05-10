@@ -40,7 +40,7 @@ export default function HomeHero({}) {
               variant="h4"
               component="p"
               fontFamily="inherit"
-              color="rgba(51, 51, 51, 0.8)"
+              color="#D95C5C"
               textAlign="center"
               pt="8px"
             >
