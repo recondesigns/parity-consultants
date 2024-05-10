@@ -2,12 +2,12 @@
 import React from "react"
 import { motion } from "framer-motion"
 import Typography from "@mui/material/Typography"
-import { Section, AuroraBackground } from "../ui/"
+import { Section, AuroraBackgroundSection } from "../ui/"
 
 export default function HomeHero({}) {
   return (
     <Section>
-      <AuroraBackground>
+      <AuroraBackgroundSection>
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -41,7 +41,7 @@ export default function HomeHero({}) {
             </Typography>
           </div>
         </motion.div>
-      </AuroraBackground>
+      </AuroraBackgroundSection>
     </Section>
   )
 }

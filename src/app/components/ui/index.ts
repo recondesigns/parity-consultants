@@ -1,4 +1,4 @@
 export { default as Header } from "./header"
 export { default as Footer } from "./footer"
 export { default as Main } from "./main"
-export { Section, AuroraBackground } from "./section"
+export { Section, AuroraBackgroundSection } from "./section"
