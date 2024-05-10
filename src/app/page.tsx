@@ -1,33 +1,11 @@
 "use client"
-import Image from "next/image"
-import Typography from "@mui/material/Typography"
-import parityLogo from "../../public/parity-logo.png"
+import Main from "./components/ui/main/Main"
+import HomeHero from "./components/home-page/HomeHeroSection"
 
 export default function Home() {
   return (
-    <main
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <section
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Image src={parityLogo} alt="Parity Consultants logo." />
-        <Typography
-          sx={{ paddingTop: "24px", color: "gray", fontFamily: "inherit" }}
-        >
-          Check back soon...
-        </Typography>
-      </section>
-    </main>
+    <Main>
+      <HomeHero />
+    </Main>
   )
 }

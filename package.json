@@ -1,6 +1,6 @@
 {
   "name": "parity-consultants",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "private": true,
   "author": "Michael Stedman",
   "contributors": [
@@ -23,10 +23,13 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.16",
     "@mui/material": "^5.15.16",
+    "clsx": "^2.1.1",
+    "framer-motion": "^11.1.9",
     "next": "14.2.3",
     "react": "^18",
     "react-dom": "^18",
     "styled-components": "^6.1.9",
+    "tailwind-merge": "^2.3.0",
     "zustand": "^4.5.2"
   },
   "devDependencies": {
@@ -42,10 +45,13 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "autoprefixer": "^10.4.19",
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "eslint-plugin-storybook": "^0.8.0",
+    "postcss": "^8.4.38",
     "storybook": "^8.0.10",
+    "tailwindcss": "^3.4.3",
     "typescript": "^5"
   }
 }

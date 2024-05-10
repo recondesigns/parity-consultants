@@ -5,7 +5,7 @@ import Link from "next/link"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import MenuIcon from "@mui/icons-material/Menu"
-import { useAppStore } from "../../stores/appStore"
+import { useAppStore } from "../../../stores/appStore"
 import NavigationFlyout from "./NavigationFlyout"
 
 const StyledUl = styled("ul")(
@@ -52,34 +52,42 @@ export default function Navigation() {
       <StyledUl sx={{ display: { xs: "none", md: "flex" } }}>
         <li>
           <StyledLink href="/services">
-            <Typography sx={{ fontFamily: "inherit" }}>Services</Typography>
+            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+              Services
+            </Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/solutions">
-            <Typography sx={{ fontFamily: "inherit" }}>Solutions</Typography>
+            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+              Solutions
+            </Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/scale-computing">
-            <Typography sx={{ fontFamily: "inherit" }}>
+            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
               Get Scale Computing
             </Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/contact-us">
-            <Typography sx={{ fontFamily: "inherit" }}>Contact us</Typography>
+            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+              Contact us
+            </Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/get-support">
-            <Typography sx={{ fontFamily: "inherit" }}>Support</Typography>
+            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+              Support
+            </Typography>
           </StyledLink>
         </li>
       </StyledUl>
       <MenuIconContainer
-        sx={{ display: { xs: "flex", md: "none", color: "#000000" } }}
+        sx={{ display: { xs: "flex", md: "none", color: "color: '#333333'," } }}
         onClick={() => setIsFlyoutOpen(!isFlyoutOpen)}
       >
         <MenuIcon />
