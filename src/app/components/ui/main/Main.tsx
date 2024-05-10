@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React from "react"
 import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
@@ -22,7 +22,7 @@ export default function Main({ children, ...otherProps }: Props) {
   return (
     <StyledMain
       component={"main"}
-      sx={{ paddingTop: { xs: "80px", lg: "96px" } }}
+      // sx={{ paddingTop: { xs: "80px", lg: "96px" } }}
       {...otherProps}
     >
       {children}

@@ -17,7 +17,8 @@ const StyledHeader = styled(Box)(
     justifyContent: "space-between",
     alignItems: "center",
     background: "#FDFCFC",
-    borderBottom: '1px solid rgba(51, 51, 51, .3)'
+    // borderBottom: '1px solid rgba(51, 51, 51, .3)',
+    zIndex: 300,
   },
   ({ theme }) => ({})
 )
