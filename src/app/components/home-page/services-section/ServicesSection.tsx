@@ -48,9 +48,9 @@ export default function ServicesSection() {
         </Typography>
       </Box>
       <Grid container spacing={{ xs: 2, sm: 4 }}>
-        {services.map((service) => {
+        {services.map((service, idx) => {
           return (
-            <Grid item xs={12} md={6} lg={4}>
+            <Grid key={idx} item xs={12} md={6} lg={4}>
               <ServicesSectionCard service={service}></ServicesSectionCard>
             </Grid>
           )

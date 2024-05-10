@@ -60,8 +60,8 @@ export default function ServicesSectionCard({ service }: Props) {
             listStyleType: "circle",
           }}
         >
-          {service.servicesGroup.map((service) => (
-            <Box component="li">
+          {service.servicesGroup.map((service, idx) => (
+            <Box key={idx} component="li">
               <Typography variant="body1">{service}</Typography>
             </Box>
           ))}
