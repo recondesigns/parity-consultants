@@ -1,7 +1,10 @@
 import React from "react"
 import Box from "@mui/material/Box"
+import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
+import SolutionsSectionCard from "./SolutionsSectionCard"
+import solutions from "./solutions"
 
 export default function SolutionsSection() {
   return (
@@ -31,7 +34,7 @@ export default function SolutionsSection() {
           color="#333333"
           textAlign="center"
         >
-          Our services
+          Our solutions
         </Typography>
         <Typography
           variant="h5"
@@ -45,6 +48,15 @@ export default function SolutionsSection() {
           completely satisfied
         </Typography>
       </Box>
+      <Grid container spacing={{ xs: 2, sm: 4 }}>
+        {solutions.map((solution) => {
+          return (
+            <Grid item xs={12} md={6} lg={4}>
+              <SolutionsSectionCard solution={solution} />
+            </Grid>
+          )
+        })}
+      </Grid>
     </Section>
   )
 }
