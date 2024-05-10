@@ -19,6 +19,8 @@ type Props = {
   children: React.ReactNode
 }
 
-export default function Section({ children, ...otherProps }: Props) {
+const Section = ({ children, ...otherProps }: Props) => {
   return <StyledSection {...otherProps}>{children}</StyledSection>
 }
+
+export default Section

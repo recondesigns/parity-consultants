@@ -1,9 +1,11 @@
 import React from 'react'
 
-type Props = {}
+type Props = {
+  children: React.ReactNode
+}
 
-export default function Button({}: Props) {
+export default function Button({ children }: Props) {
   return (
-    <button>Button</button>
+    <button>{children}</button>
   )
 }

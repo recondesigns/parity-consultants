@@ -1,6 +1,6 @@
 "use client"
-import Main from "./components/ui/main/Main"
-import HomeHero from "./components/home-page/HomeHeroSection"
+import { Main } from "./components/ui"
+import HomeHero from "./components/home-page/HomeHero"
 
 export default function Home() {
   return (
