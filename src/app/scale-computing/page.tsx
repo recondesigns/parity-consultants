@@ -25,9 +25,7 @@ export default function ScaledComputingPage() {
         >
           Get Scale Computing
         </Typography>
-        <Typography
-          sx={{ paddingTop: "24px", color: "gray", fontFamily: "inherit" }}
-        >
+        <Typography sx={{ paddingTop: "24px", fontFamily: "inherit" }}>
           Check back soon...
         </Typography>
       </section>

@@ -6,7 +6,7 @@ import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
-import parityLogo from "../../../../public/parity-logo.png"
+import parityLogo from "../../../../../public/parity-logo.png"
 
 const StyledFooter = styled(Box)(
   {
@@ -93,7 +93,7 @@ export default function Footer() {
                   variant="caption"
                   component="p"
                   textAlign={{ xs: "center", sm: "left" }}
-                  sx={{ fontFamily: "inherit" }}
+                  sx={{ fontFamily: "inherit", color: "#333333" }}
                 >
                   469-240-5090
                 </Typography>
@@ -121,7 +121,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit" }}
+                        sx={{ fontFamily: "inherit", color: "#333333" }}
                       >
                         Services
                       </Typography>
@@ -132,7 +132,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit" }}
+                        sx={{ fontFamily: "inherit", color: "#333333" }}
                       >
                         Solutions
                       </Typography>
@@ -143,7 +143,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit" }}
+                        sx={{ fontFamily: "inherit", color: "#333333" }}
                       >
                         Scale Computing
                       </Typography>
@@ -154,7 +154,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit" }}
+                        sx={{ fontFamily: "inherit", color: "#333333" }}
                       >
                         Support
                       </Typography>
@@ -183,7 +183,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit" }}
+                        sx={{ fontFamily: "inherit", color: "#333333" }}
                       >
                         Facebook
                       </Typography>
@@ -197,7 +197,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit" }}
+                        sx={{ fontFamily: "inherit", color: "#333333" }}
                       >
                         Instagram
                       </Typography>
@@ -211,7 +211,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit" }}
+                        sx={{ fontFamily: "inherit", color: "#333333" }}
                       >
                         LinkedIn
                       </Typography>
@@ -222,7 +222,7 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit" }}
+                        sx={{ fontFamily: "inherit", color: "#333333" }}
                       >
                         Contact us
                       </Typography>
@@ -247,7 +247,7 @@ export default function Footer() {
                     <Typography
                       variant="body2"
                       textAlign={{ xs: "center", sm: "left" }}
-                      sx={{ fontFamily: "inherit" }}
+                      sx={{ fontFamily: "inherit", color: "#333333" }}
                     >
                       About us
                     </Typography>
@@ -256,7 +256,7 @@ export default function Footer() {
                     <Typography
                       variant="body2"
                       textAlign={{ xs: "center", sm: "left" }}
-                      sx={{ fontFamily: "inherit" }}
+                      sx={{ fontFamily: "inherit", color: "#333333" }}
                     >
                       Terms & Conditions
                     </Typography>
@@ -265,7 +265,7 @@ export default function Footer() {
                     <Typography
                       variant="body2"
                       textAlign={{ xs: "center", sm: "left" }}
-                      sx={{ fontFamily: "inherit" }}
+                      sx={{ fontFamily: "inherit", color: "#333333" }}
                     >
                       Privacy Policy
                     </Typography>
