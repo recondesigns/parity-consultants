@@ -5,6 +5,7 @@ import {
   HeroSection,
   ServicesSection,
   SocialProofSection,
+  SolutionsSection,
 } from "./components/home-page/"
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
       <ServicesSection />
       <ScaleComputingFormSection />
       <SocialProofSection />
+      <SolutionsSection />
     </Main>
   )
 }

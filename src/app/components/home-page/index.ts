@@ -2,3 +2,4 @@ export { default as ScaleComputingFormSection } from "./ScaledComputingFormSecti
 export { default as HeroSection } from "./HeroSection"
 export { ServicesSection } from "./services-section/"
 export { SocialProofSection } from "./social-proof-section"
+export { SolutionsSection } from "./solutions-section"
