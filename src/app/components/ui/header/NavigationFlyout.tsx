@@ -9,7 +9,7 @@ import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
 import Divider from "@mui/material/Divider"
 import Typography from "@mui/material/Typography"
-import parityLogo from "../../../../../public/parity-logo.png"
+import parityLogo from "../../../../../public/images/parity-logo.png"
 
 const StyledLink = styled(Link)(
   {

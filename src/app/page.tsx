@@ -1,11 +1,22 @@
 "use client"
 import { Main } from "./components/ui"
-import HomeHero from "./components/home-page/HomeHero"
+import {
+  ScaleComputingFormSection,
+  HeroSection,
+  ServicesSection,
+  SocialProofSection,
+  SolutionsSection,
+} from "./components/home-page/"
 
 export default function Home() {
   return (
     <Main>
-      <HomeHero />
+      <HeroSection />
+      <ScaleComputingFormSection />
+      <ServicesSection />
+      <ScaleComputingFormSection />
+      <SocialProofSection />
+      <SolutionsSection />
     </Main>
   )
 }
