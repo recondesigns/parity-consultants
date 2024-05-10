@@ -2,8 +2,7 @@
 import React from "react"
 import { motion } from "framer-motion"
 import Typography from "@mui/material/Typography"
-import Section from "../ui/section/Section"
-import { AuroraBackground } from "./AuroraBackground"
+import { Section, AuroraBackground } from "../ui/"
 
 export default function HomeHero({}) {
   return (
