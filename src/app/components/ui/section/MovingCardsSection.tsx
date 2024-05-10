@@ -31,7 +31,7 @@ const MovingCardsSection = ({
 
   useEffect(() => {
     addAnimation()
-  }, [])
+  }, [addAnimation])
   const [start, setStart] = useState(false)
   function addAnimation() {
     if (containerRef.current && scrollerRef.current) {
@@ -94,7 +94,7 @@ const MovingCardsSection = ({
           <Box
             component={"li"}
             sx={{
-              minWidth: "300px",
+              minWidth: { xs: "340px", sm: "440px" },
               maxWidth: "300px",
               background: "#FDFCFC",
             }}
