@@ -15,7 +15,7 @@ const AuroraBackground = ({
 }: AuroraBackgroundProps) => {
   return (
     <div
-      style={{ height: "calc(100vh - 200px)" }}
+      style={{ height: "calc(100vh - 150px)" }}
       className={cn(
         " w-full relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
         className
