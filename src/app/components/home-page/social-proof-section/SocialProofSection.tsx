@@ -1,49 +1,81 @@
-"use client";
-import React, { useEffect, useState } from "react";
-import MovingCardsSection from "../../ui/section/MovingCardsSection";
+"use client"
+import React from "react"
+import Box from "@mui/material/Box"
+import Typography from "@mui/material/Typography"
+import { Section } from "../../ui"
+import MovingCardsSection from "../../ui/section/MovingCardsSection"
 
 function SocialProofSection() {
   return (
-    <div className="h-[40rem] rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <MovingCardsSection
-        items={testimonials}
-        direction="right"
-        speed="slow"
-      />
-    </div>
-  );
+    <Section
+      sx={{
+        padding: "80px 80px",
+        px: { xs: "20px", md: "40px", lg: "80px" },
+      }}
+    >
+      <Box
+        sx={{
+          padding: {
+            xs: "0px 0px 40px 0px",
+            sm: "0px 0px 56px 0px",
+            md: "0px 32px 56px 32px",
+            lg: "0px 32px 72px 32px",
+            xl: "0px 0px 72px 0px",
+          },
+          width: "100%",
+        }}
+      >
+        <Typography
+          variant="h3"
+          component="h2"
+          fontFamily="inherit"
+          fontWeight="bold"
+          color="#333333"
+          textAlign="center"
+        >
+          Client testimonials
+        </Typography>
+        <Typography
+          variant="h5"
+          component="p"
+          fontFamily="inherit"
+          color="#D95C5C"
+          textAlign="center"
+          pt="8px"
+        >
+          See what our clients are saying
+        </Typography>
+      </Box>
+      <MovingCardsSection items={testimonials} direction="right" speed="fast" />
+    </Section>
+  )
 }
 
 const testimonials = [
   {
-    quote:
-      "It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness, it was the epoch of belief, it was the epoch of incredulity, it was the season of Light, it was the season of Darkness, it was the spring of hope, it was the winter of despair.",
-    name: "Charles Dickens",
-    title: "A Tale of Two Cities",
+    quote: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+    numquam blanditiis`,
+    name: "Frank Galikanokus",
+    company: "Bunty Soap Company",
+    testimonialImage: "",
   },
   {
-    quote:
-      "To be, or not to be, that is the question: Whether 'tis nobler in the mind to suffer The slings and arrows of outrageous fortune, Or to take Arms against a Sea of troubles, And by opposing end them: to die, to sleep.",
-    name: "William Shakespeare",
-    title: "Hamlet",
+    quote: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+    numquam blanditiis`,
+    name: "Frank Galikanokus",
+    company: "Bunty Soap Company",
+    testimonialImage: "",
   },
   {
-    quote: "All that we see or seem is but a dream within a dream.",
-    name: "Edgar Allan Poe",
-    title: "A Dream Within a Dream",
+    quote: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
+    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
+    numquam blanditiis`,
+    name: "Frank Galikanokus",
+    company: "Bunty Soap Company",
+    testimonialImage: "",
   },
-  {
-    quote:
-      "It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.",
-    name: "Jane Austen",
-    title: "Pride and Prejudice",
-  },
-  {
-    quote:
-      "Call me Ishmael. Some years ago—never mind how long precisely—having little or no money in my purse, and nothing particular to interest me on shore, I thought I would sail about a little and see the watery part of the world.",
-    name: "Herman Melville",
-    title: "Moby-Dick",
-  },
-];
+]
 
 export default SocialProofSection

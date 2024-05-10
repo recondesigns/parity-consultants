@@ -37,7 +37,7 @@ export default function ScaledComputingSection() {
               Parity Consultants
             </Typography>
             <Typography
-              variant="h5"
+              variant="h4"
               component="p"
               fontFamily="inherit"
               color="#D95C5C"

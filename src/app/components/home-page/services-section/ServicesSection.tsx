@@ -44,7 +44,7 @@ export default function ServicesSection() {
           textAlign="center"
           pt="8px"
         >
-          We are your one stop shop for all of your technology needs.
+          We are your one stop shop for all of your technology needs
         </Typography>
       </Box>
       <Grid container spacing={{ xs: 2, sm: 4 }}>

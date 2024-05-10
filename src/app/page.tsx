@@ -4,7 +4,7 @@ import {
   HomeHero,
   ScaleComputingSection,
   ServicesSection,
-  SocialProofSection
+  SocialProofSection,
 } from "./components/home-page/"
 
 export default function Home() {

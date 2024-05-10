@@ -23,12 +23,12 @@ export default function HomeHero({}) {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative flex flex-col gap-4 items-center justify-center px-4"
+          className="relative flex flex-col items-center justify-center gap-4 px-4"
         >
           <div>
             <Typography
-              variant="h2"
-              component="h1"
+              variant="h3"
+              component="h2"
               fontFamily="inherit"
               fontWeight="bold"
               color="#333333"
@@ -37,7 +37,7 @@ export default function HomeHero({}) {
               Scale Computing
             </Typography>
             <Typography
-              variant="h4"
+              variant="h5"
               component="p"
               fontFamily="inherit"
               color="#D95C5C"
