@@ -6,10 +6,9 @@ import Box from "@mui/material/Box"
 import Drawer from "@mui/material/Drawer"
 import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
-import ListItemButton from "@mui/material/ListItemButton"
 import Divider from "@mui/material/Divider"
 import Typography from "@mui/material/Typography"
-import parityLogo from "../../../../public/parity-logo.png"
+import parityLogo from "../../../../../public/parity-logo.png"
 
 const StyledLink = styled(Link)(
   {

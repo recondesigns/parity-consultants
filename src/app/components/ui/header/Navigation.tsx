@@ -5,7 +5,7 @@ import Link from "next/link"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import MenuIcon from "@mui/icons-material/Menu"
-import { useAppStore } from "../../stores/appStore"
+import { useAppStore } from "../../../stores/appStore"
 import NavigationFlyout from "./NavigationFlyout"
 
 const StyledUl = styled("ul")(
