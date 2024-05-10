@@ -2,13 +2,19 @@
 import React from "react"
 import { motion } from "framer-motion"
 import Typography from "@mui/material/Typography"
-import Section from "../ui/section/Section"
-import { AuroraBackground } from "./AuroraBackground"
+import { Section, AuroraBackgroundSection } from "../ui"
 
-export default function HomeHero({}) {
+export default function ScaleComputingFormSection({}) {
   return (
-    <Section>
-      <AuroraBackground>
+    <Section
+      sx={{
+        padding: {
+          xs: "40px 20px 40px 20px",
+          md: "40px 40px 40px 40px",
+        },
+      }}
+    >
+      <AuroraBackgroundSection>
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -17,32 +23,32 @@ export default function HomeHero({}) {
             duration: 0.8,
             ease: "easeInOut",
           }}
-          className="relative flex flex-col gap-4 items-center justify-center px-4"
+          className="relative flex flex-col items-center justify-center gap-4 px-4"
         >
           <div>
             <Typography
-              variant="h2"
-              component="h1"
+              variant="h3"
+              component="h2"
               fontFamily="inherit"
               fontWeight="bold"
               color="#333333"
               textAlign="center"
             >
-              Parity Consultants
+              Scale Computing
             </Typography>
             <Typography
-              variant="h4"
+              variant="h5"
               component="p"
               fontFamily="inherit"
-              color="rgba(51, 51, 51, 0.8)"
+              color="#D95C5C"
               textAlign="center"
               pt="8px"
             >
-              Your affordable IT Solution
+              Get the latest in Edge computing
             </Typography>
           </div>
         </motion.div>
-      </AuroraBackground>
+      </AuroraBackgroundSection>
     </Section>
   )
 }

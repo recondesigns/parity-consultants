@@ -6,7 +6,7 @@ import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
-import parityLogo from "../../../../../public/parity-logo.png"
+import parityLogo from "../../../../../public/images/parity-logo.png"
 
 const StyledFooter = styled(Box)(
   {
