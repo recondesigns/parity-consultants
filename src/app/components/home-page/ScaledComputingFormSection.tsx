@@ -2,9 +2,9 @@
 import React from "react"
 import { motion } from "framer-motion"
 import Typography from "@mui/material/Typography"
-import { Section, AuroraBackgroundSection } from "../ui/"
+import { Section, AuroraBackgroundSection } from "../ui"
 
-export default function HomeHero({}) {
+export default function ScaleComputingFormSection({}) {
   return (
     <Section
       sx={{
@@ -44,7 +44,7 @@ export default function HomeHero({}) {
               textAlign="center"
               pt="8px"
             >
-              Let us set you up with the latest in Edge computing.
+              Get the latest in Edge computing
             </Typography>
           </div>
         </motion.div>

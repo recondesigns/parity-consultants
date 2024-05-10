@@ -4,7 +4,7 @@ import Typography from "@mui/material/Typography"
 import { Section } from "../ui"
 import networkingImage from "../../../../public/images/blue-networking-1000.jpg"
 
-export default function ScaledComputingSection() {
+export default function HeroSection() {
   return (
     <Section>
       <Parallax
