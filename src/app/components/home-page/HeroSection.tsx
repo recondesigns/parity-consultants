@@ -8,11 +8,9 @@ export default function HeroSection() {
   return (
     <Section>
       <Parallax
-        blur={0}
         bgImage={`${networkingImage.src}`}
         bgImageAlt="networking servers"
         strength={400}
-        // @ts-expect-error
         blur={{ min: -15, max: 20 }}
         style={{ width: "100%" }}
       >
