@@ -6,7 +6,14 @@ import { Section, AuroraBackgroundSection } from "../ui/"
 
 export default function HomeHero({}) {
   return (
-    <Section>
+    <Section
+      sx={{
+        padding: {
+          xs: "40px 20px 40px 20px",
+          md: "40px 40px 40px 40px",
+        },
+      }}
+    >
       <AuroraBackgroundSection>
         <motion.div
           initial={{ opacity: 0.0, y: 40 }}
@@ -27,7 +34,7 @@ export default function HomeHero({}) {
               color="#333333"
               textAlign="center"
             >
-              Parity Consultants
+              Scale Computing
             </Typography>
             <Typography
               variant="h4"
@@ -37,7 +44,7 @@ export default function HomeHero({}) {
               textAlign="center"
               pt="8px"
             >
-              Your affordable IT Solution
+              Let us set you up with the latest in Edge computing.
             </Typography>
           </div>
         </motion.div>

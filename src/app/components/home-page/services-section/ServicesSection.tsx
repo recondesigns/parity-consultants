@@ -16,7 +16,13 @@ export default function ServicesSection() {
     >
       <Box
         sx={{
-          paddingBottom: { xs: "40px", sm: "56px", md: "72px" },
+          padding: {
+            xs: "0px 0px 40px 0px",
+            sm: "0px 0px 56px 0px",
+            md: "0px 32px 56px 32px",
+            lg: "0px 32px 72px 32px",
+            xl: "0px 0px 72px 0px",
+          },
           width: "100%",
         }}
       >
@@ -41,17 +47,7 @@ export default function ServicesSection() {
           We are your one stop shop for all of your technology needs.
         </Typography>
       </Box>
-      <Grid
-        container
-        spacing={{ xs: 2, sm: 4}}
-        sx={{
-          padding: {
-            xs: "0px 56px 0px 56px",
-            md: "0px 32px 0px 32px",
-            lg: "0px 0px 0px 0px",
-          },
-        }}
-      >
+      <Grid container spacing={{ xs: 2, sm: 4 }}>
         {services.map((service) => {
           return (
             <Grid item xs={12} md={6} lg={4}>

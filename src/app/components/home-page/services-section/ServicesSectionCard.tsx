@@ -44,7 +44,12 @@ export default function ServicesSectionCard({ service }: Props) {
           variant="h5"
           component="div"
           color="#333333"
-          sx={{ mb: 1.5, height: "calc(2rem * 2)" }}
+          sx={{
+            mb: { sm: 0.5, md: 1.5, lg: 1.0, xl: 0.5 },
+            width: "100%",
+            minHeight: { xs: "72px" },
+            maxHeight: { xs: "72px" },
+          }}
         >
           {service.title}
         </Typography>

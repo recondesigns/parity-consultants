@@ -1,6 +1,7 @@
 "use client"
-import { cn } from "../../../utils/cn"
 import React, { ReactNode } from "react"
+import { cn } from "../../../utils/cn"
+import Box from "@mui/material/Box"
 
 interface AuroraBackgroundProps extends React.HTMLProps<HTMLDivElement> {
   children: ReactNode
@@ -14,15 +15,19 @@ const AuroraBackground = ({
   ...props
 }: AuroraBackgroundProps) => {
   return (
-    <div
-      style={{ height: "calc(100vh - 150px)" }}
+    // @ts-expect-error
+    <Box
+      style={{ height: "400px", borderRadius: "20px" }}
       className={cn(
         " w-full relative flex flex-col  h-[100vh] items-center justify-center bg-zinc-50 dark:bg-zinc-900  text-slate-950 transition-bg",
         className
       )}
       {...props}
     >
-      <div className="absolute inset-0 overflow-hidden">
+      <div
+        className="absolute inset-0 overflow-hidden"
+        style={{ borderRadius: "20px" }}
+      >
         <div
           className={cn(
             `
@@ -47,7 +52,7 @@ const AuroraBackground = ({
         ></div>
       </div>
       {children}
-    </div>
+    </Box>
   )
 }
 

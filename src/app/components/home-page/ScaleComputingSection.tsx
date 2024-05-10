@@ -16,7 +16,7 @@ export default function ScaledComputingSection() {
       >
         <div
           style={{
-            height: "400px",
+            height: "100vh",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -32,7 +32,7 @@ export default function ScaledComputingSection() {
               color="#FDFCFC"
               textAlign="center"
             >
-              Scale Computing
+              Parity Consultants
             </Typography>
             <Typography
               variant="h4"
@@ -42,7 +42,7 @@ export default function ScaledComputingSection() {
               textAlign="center"
               pt="8px"
             >
-              Let us set you up with the latest in Edge computing.
+              Your affordable IT Solution
             </Typography>
           </div>
         </div>
