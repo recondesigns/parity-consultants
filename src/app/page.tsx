@@ -1,7 +1,7 @@
 "use client"
 import { Main } from "./components/ui"
 import {
-  ScaleComputingFormSection,
+  ScaleComputingSection,
   HeroSection,
   ServicesSection,
   SocialProofSection,
@@ -11,12 +11,12 @@ import {
 export default function Home() {
   return (
     <Main>
-      <HeroSection />
-      <ScaleComputingFormSection />
-      <ServicesSection />
-      <ScaleComputingFormSection />
-      <SocialProofSection />
-      <SolutionsSection />
+      {/* <HeroSection /> */}
+      <ScaleComputingSection />
+      {/* <ServicesSection /> */}
+      {/* <ScaleComputingFormSection /> */}
+      {/* <SocialProofSection /> */}
+      {/* <SolutionsSection /> */}
     </Main>
   )
 }
