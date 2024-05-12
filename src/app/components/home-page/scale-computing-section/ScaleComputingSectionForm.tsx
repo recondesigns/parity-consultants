@@ -5,9 +5,7 @@ import Typography from "@mui/material/Typography"
 import TextField from "@mui/material/TextField"
 import Button from "@mui/material/Button"
 
-type Props = {}
-
-function ScaleComputingSectionForm({}: Props) {
+function ScaleComputingSectionForm() {
   const [nameInput, setNameInput] = React.useState("")
   const [emailInput, setEmailInput] = React.useState("")
   const [companyInput, setCompanyInput] = React.useState("")
