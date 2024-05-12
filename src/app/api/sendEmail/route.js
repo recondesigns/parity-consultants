@@ -8,13 +8,13 @@ export async function POST(request) {
     const transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "stedmanonlinedesigns@gmail.com",
-        pass: "nzdq thiu pexf mceo",
+        user: process.env.NEXT_PUBLIC_GMAIL_USER,
+        pass: process.env.NEXT_PUBLIC_GMAIL_PASS,
       },
     })
 
     const info = await transporter.sendMail({
-      from: `"Parity Consultants website" <stedmanonlinedesigns@gmail.com>`,
+      from: `"Parity Consultants website" <${process.env.NEXT_PUBLIC_GMAIL_FROM_EMAIL}>`,
       to: "michaelstedman81@gmail.com",
       subject: "New Scale Computing lead",
       text: `
