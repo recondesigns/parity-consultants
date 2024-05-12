@@ -20,7 +20,7 @@ function ScaleComputingSectionForm() {
       .post(
         process.env.NODE_ENV === "development"
           ? "http://localhost:3000/api/sendEmail"
-          : "/",
+          : "/api/sendEmail",
         {
           name: nameInput,
           email: emailInput,
