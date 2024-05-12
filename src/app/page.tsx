@@ -11,12 +11,12 @@ import {
 export default function Home() {
   return (
     <Main>
-      {/* <HeroSection /> */}
+      <HeroSection />
+      <ServicesSection />
       <ScaleComputingSection />
-      {/* <ServicesSection /> */}
-      {/* <ScaleComputingFormSection /> */}
-      {/* <SocialProofSection /> */}
-      {/* <SolutionsSection /> */}
+      {/* <ScaleComputingSection /> */}
+      <SocialProofSection />
+      <SolutionsSection />
     </Main>
   )
 }
