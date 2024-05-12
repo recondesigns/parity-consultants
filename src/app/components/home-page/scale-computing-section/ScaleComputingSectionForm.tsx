@@ -1,4 +1,5 @@
 import React from "react"
+import axios from "axios"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import TextField from "@mui/material/TextField"
@@ -7,6 +8,17 @@ import Button from "@mui/material/Button"
 type Props = {}
 
 export default function ScaleComputingSectionForm({}: Props) {
+  const handleSubmit = (e: any) => {
+    e.preventDefault()
+    axios
+      .post("http://localhost:3000/api/sendEmail", {
+        name: "Fred",
+        email: "fast.freddy@email.com",
+        company: "Ford",
+      })
+      .then((result) => console.log(result.data))
+  }
+
   return (
     <Box
       component="form"
@@ -16,6 +28,7 @@ export default function ScaleComputingSectionForm({}: Props) {
         borderRadius: "20px",
         maxWidth: "380px",
       }}
+      onClick={(e) => handleSubmit(e)}
     >
       <Typography variant="h6" fontWeight="bold" sx={{ fontFamily: "inherit" }}>
         Get Started Today!
