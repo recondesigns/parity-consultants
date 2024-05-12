@@ -11,6 +11,7 @@ function SocialProofSection() {
       sx={{
         padding: "80px 80px",
         px: { xs: "20px", md: "40px", lg: "80px" },
+        overflow: "hidden",
       }}
     >
       <Box
