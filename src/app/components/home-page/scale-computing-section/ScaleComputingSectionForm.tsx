@@ -17,11 +17,16 @@ function ScaleComputingSectionForm() {
     setIsSending(true)
 
     axios
-      .post("http://localhost:3000/api/sendEmail", {
-        name: nameInput,
-        email: emailInput,
-        company: companyInput,
-      })
+      .post(
+        process.env.NODE_ENV === "development"
+          ? "http://localhost:3000/api/sendEmail"
+          : "/",
+        {
+          name: nameInput,
+          email: emailInput,
+          company: companyInput,
+        }
+      )
       .then(() => {
         // console.log(result.data)
         setIsSending(false)
