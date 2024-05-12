@@ -7,16 +7,32 @@ import Button from "@mui/material/Button"
 
 type Props = {}
 
-export default function ScaleComputingSectionForm({}: Props) {
+function ScaleComputingSectionForm({}: Props) {
+  const [nameInput, setNameInput] = React.useState("")
+  const [emailInput, setEmailInput] = React.useState("")
+  const [companyInput, setCompanyInput] = React.useState("")
+  const [isSending, setIsSending] = React.useState(false)
+  const [isSent, setIsSent] = React.useState(false)
+
   const handleSubmit = (e: any) => {
     e.preventDefault()
+    setIsSending(true)
+
     axios
       .post("http://localhost:3000/api/sendEmail", {
-        name: "Fred",
-        email: "fast.freddy@email.com",
-        company: "Ford",
+        name: nameInput,
+        email: emailInput,
+        company: companyInput,
       })
-      .then((result) => console.log(result.data))
+      .then(() => {
+        // console.log(result.data)
+        setIsSending(false)
+        setIsSent(true)
+      })
+  }
+
+  const handleChange = (e: any, setter: any) => {
+    setter(e.target.value)
   }
 
   return (
@@ -28,7 +44,7 @@ export default function ScaleComputingSectionForm({}: Props) {
         borderRadius: "20px",
         maxWidth: "380px",
       }}
-      onClick={(e) => handleSubmit(e)}
+      onSubmit={(e) => handleSubmit(e)}
     >
       <Typography variant="h6" fontWeight="bold" sx={{ fontFamily: "inherit" }}>
         Get Started Today!
@@ -42,7 +58,10 @@ export default function ScaleComputingSectionForm({}: Props) {
         name="nameInput"
         label="Name"
         type="text"
+        value={nameInput}
         fullWidth
+        disabled={!isSent ? false : true}
+        onChange={(e) => handleChange(e, setNameInput)}
         sx={{ paddingBottom: "16px", fontFamily: "inherit" }}
       />
       <TextField
@@ -50,7 +69,10 @@ export default function ScaleComputingSectionForm({}: Props) {
         name="emailInput"
         label="Email"
         type="email"
+        value={emailInput}
         fullWidth
+        disabled={!isSent ? false : true}
+        onChange={(e) => handleChange(e, setEmailInput)}
         sx={{ paddingBottom: "16px" }}
       />
       <TextField
@@ -58,17 +80,33 @@ export default function ScaleComputingSectionForm({}: Props) {
         name="companyInput"
         label="Company"
         type="text"
+        value={companyInput}
         fullWidth
+        disabled={!isSent ? false : true}
+        onChange={(e) => handleChange(e, setCompanyInput)}
         sx={{ paddingBottom: "16px" }}
       />
       <Button
         variant="contained"
         size="large"
         fullWidth
-        sx={{ borderRadius: "50px", fontWeight: "bold", background: "#3634C6" }}
+        type="submit"
+        disabled={isSent ? true : false}
+        sx={{
+          borderRadius: "50px",
+          fontWeight: "bold",
+          background: !isSent ? "#3634C6" : "green",
+          textTransform: "capitalize",
+          "&:disabled": {
+            color: isSent ? "#FDFCFC" : "#FDFCFC",
+            background: isSent ? "green" : "initial",
+          },
+        }}
       >
-        Send
+        {isSending ? "Sending..." : isSent ? "Sent!" : "Send"}
       </Button>
     </Box>
   )
 }
+
+export default React.memo(ScaleComputingSectionForm)
