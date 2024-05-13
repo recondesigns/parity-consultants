@@ -96,7 +96,7 @@ function ContactUsPage() {
                 pt="16px"
                 sx={{ color: "#333333", fontFamily: "inherit" }}
               >
-                If you'd like to opt out of future communications, please send
+                If you&apos;d like to opt out of future communications, please send
                 us an message or email.
               </Typography>
               <Box
