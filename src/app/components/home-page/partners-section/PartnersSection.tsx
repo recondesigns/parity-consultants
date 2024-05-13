@@ -18,7 +18,7 @@ export default function PartnersSection({}: Props) {
           md: "100px 80px",
           lg: "120px 100px",
         },
-        px: { xs: "20px", md: "40px", lg: "80px" },
+        // px: { xs: "20px", md: "40px", lg: "80px" },
       }}
     >
       <Box
@@ -65,7 +65,6 @@ export default function PartnersSection({}: Props) {
         }}
       >
         {partners.map((partner, idx) => {
-          console.log(partner.image)
           return (
             <a href={partner.url} target="_blank" key={idx}>
               <Image
