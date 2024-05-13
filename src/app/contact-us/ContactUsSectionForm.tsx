@@ -4,7 +4,7 @@ import Box from "@mui/material/Box"
 import TextField from "@mui/material/TextField"
 import Button from "@mui/material/Button"
 
-function ScaleComputingSectionForm() {
+function ContactFormSection() {
   const [nameInput, setNameInput] = React.useState("")
   const [emailInput, setEmailInput] = React.useState("")
   const [messageInput, setMessageInput] = React.useState("")
@@ -18,7 +18,7 @@ function ScaleComputingSectionForm() {
     axios
       .post(
         process.env.NODE_ENV === "development"
-          ? "http://localhost:3000/api/sendEmail"
+          ? "http://localhost:3000/api/sendContactFormMessage"
           : "/api/sendEmail",
         {
           name: nameInput,
@@ -105,4 +105,4 @@ function ScaleComputingSectionForm() {
   )
 }
 
-export default React.memo(ScaleComputingSectionForm)
+export default React.memo(ContactFormSection)
