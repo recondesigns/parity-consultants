@@ -1,4 +1,5 @@
 "use client"
+import React from "react"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
@@ -8,7 +9,7 @@ import FacebookIcon from "@mui/icons-material/Facebook"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
 
-export default function ContactUsPage() {
+function ContactUsPage() {
   return (
     <Main
       sx={{
@@ -199,3 +200,5 @@ export default function ContactUsPage() {
     </Main>
   )
 }
+
+export default React.memo(ContactUsPage)
