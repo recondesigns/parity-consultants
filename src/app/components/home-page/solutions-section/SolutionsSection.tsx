@@ -10,8 +10,12 @@ export default function SolutionsSection() {
   return (
     <Section
       sx={{
-        padding: "80px 80px",
-        px: { xs: "20px", md: "40px", lg: "80px" },
+        padding: {
+          xs: "80px 20px",
+          sm: "100px 40px",
+          md: "100px 80px",
+          lg: "120px 100px",
+        },
       }}
     >
       <Box

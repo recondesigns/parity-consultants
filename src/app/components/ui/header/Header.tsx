@@ -5,7 +5,7 @@ import Link from "next/link"
 import Box from "@mui/material/Box"
 import Navigation from "./Navigation"
 import { styled } from "@mui/material/styles"
-import parityLogo from "../../../../../public/images/parity-logo.png"
+import parityLogo from "../../../../../public/images/parity-red-logo.png"
 
 const StyledHeader = styled(Box)(
   {
@@ -41,7 +41,7 @@ export default function Header() {
           }
           style={{ padding: "6px", display: "inline-block" }}
         >
-          <Image src={parityLogo} height={32} alt="Company logo." />
+          <Image src={parityLogo} height={40} alt="Company logo." />
         </Link>
       </div>
       <Navigation />

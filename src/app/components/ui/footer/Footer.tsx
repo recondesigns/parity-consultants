@@ -6,7 +6,7 @@ import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
-import parityLogo from "../../../../../public/images/parity-logo.png"
+import parityLogo from "../../../../../public/images/parity-red-logo.png"
 
 const StyledFooter = styled(Box)(
   {
@@ -65,7 +65,7 @@ export default function Footer() {
             }}
           >
             <Link href={"/"} style={{ display: "inline-block" }}>
-              <Image src={parityLogo} height={32} alt="Company logo." />
+              <Image src={parityLogo} height={40} alt="Company logo." />
             </Link>
           </Box>
         </Grid>
