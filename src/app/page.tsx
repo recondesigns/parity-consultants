@@ -6,6 +6,7 @@ import {
   ServicesSection,
   SocialProofSection,
   SolutionsSection,
+  PartnersSection,
 } from "./components/home-page/"
 
 export default function Home() {
@@ -14,9 +15,10 @@ export default function Home() {
       <HeroSection />
       <ServicesSection />
       <ScaleComputingSection />
-      {/* <ScaleComputingSection /> */}
+      <ScaleComputingSection />
       <SocialProofSection />
       <SolutionsSection />
+      <PartnersSection />
     </Main>
   )
 }
