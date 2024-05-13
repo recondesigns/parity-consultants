@@ -65,7 +65,6 @@ export default function PartnersSection({}: Props) {
         }}
       >
         {partners.map((partner, idx) => {
-          console.log(partner.image)
           return (
             <a href={partner.url} target="_blank" key={idx}>
               <Image
