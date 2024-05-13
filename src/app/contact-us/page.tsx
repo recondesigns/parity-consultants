@@ -235,9 +235,15 @@ function ContactUsPage() {
                   gap: "16px",
                 }}
               >
-                <FacebookIcon fontSize="large" sx={{ color: "#333333" }} />
-                <InstagramIcon fontSize="large" sx={{ color: "#333333" }} />
-                <LinkedInIcon fontSize="large" sx={{ color: "#333333" }} />
+                <StyledLink href="https://www.facebook.com/" target="_blank">
+                  <FacebookIcon fontSize="large" sx={{ color: "#333333" }} />
+                </StyledLink>
+                <StyledLink href="https://www.instagram.com/" target="_blank">
+                  <InstagramIcon fontSize="large" sx={{ color: "#333333" }} />
+                </StyledLink>
+                <StyledLink href="https://www.LinkedIn.com/" target="_blank">
+                  <LinkedInIcon fontSize="large" sx={{ color: "#333333" }} />
+                </StyledLink>
               </Box>
             </Box>
           </Grid>
