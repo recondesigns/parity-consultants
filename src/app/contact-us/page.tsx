@@ -21,7 +21,11 @@ function ContactUsPage() {
     >
       <Section
         sx={{
-          padding: { xs: "80px 20px 40px 20px" },
+          padding: {
+            xs: "64px 20px",
+            md: "80px 64px",
+            lg: "100px 80px",
+          },
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -51,7 +55,7 @@ function ContactUsPage() {
           </Typography>
         </Box>
         <Grid container>
-          <Grid item xs={12} sx={{ padding: "0px 20px" }}>
+          <Grid item xs={12} lg={6} sx={{ padding: "0px 20px" }}>
             <Box>
               <Typography
                 variant="h5"
@@ -93,8 +97,16 @@ function ContactUsPage() {
               </Box>
             </Box>
           </Grid>
-          <Grid item xs={12}>
-            <Box>
+          <Grid item xs={12} lg={6}>
+            <Box
+              px={{
+                xs: "20px",
+                sm: "80px",
+                md: "200px",
+                lg: "64px",
+                xl: "140px",
+              }}
+            >
               <Typography
                 variant="h5"
                 component="h3"
@@ -141,7 +153,16 @@ function ContactUsPage() {
                 #1203 Lewisville, TX 75057
               </Typography>
             </Box>
-            <Box pt="40px">
+            <Box
+              pt="40px"
+              px={{
+                xs: "20px",
+                sm: "80px",
+                md: "200px",
+                lg: "64px",
+                xl: "140px",
+              }}
+            >
               <Typography
                 variant="h5"
                 component="h3"
@@ -171,7 +192,16 @@ function ContactUsPage() {
                 Weekend support is available at $150.00 per hour
               </Typography>
             </Box>
-            <Box pt="40px">
+            <Box
+              pt="40px"
+              px={{
+                xs: "20px",
+                sm: "80px",
+                md: "200px",
+                lg: "64px",
+                xl: "140px",
+              }}
+            >
               <Typography
                 variant="h5"
                 component="h3"
