@@ -57,7 +57,7 @@ export default function PartnersSection({}: Props) {
       </Box>
       <Box
         sx={{
-          padding: { md: "0px 120px 0px 120px", lg: "0px 240px 0px 240px" },
+          padding: { md: "0px 80px 0px 80px" },
           display: "flex",
           justifyContent: "center",
           flexWrap: "wrap",

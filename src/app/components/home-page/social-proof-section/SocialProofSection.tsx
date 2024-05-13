@@ -4,14 +4,19 @@ import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
 import MovingCardsSection from "../../ui/section/MovingCardsSection"
+import testimonials from "./testimonials"
 
 function SocialProofSection() {
   return (
     <Section
       sx={{
-        padding: "80px 80px",
-        px: { xs: "20px", md: "40px", lg: "80px" },
         overflow: "hidden",
+        padding: {
+          xs: "80px 20px",
+          sm: "100px 40px",
+          md: "100px 80px",
+          lg: "120px 100px",
+        },
       }}
     >
       <Box
@@ -51,32 +56,5 @@ function SocialProofSection() {
     </Section>
   )
 }
-
-const testimonials = [
-  {
-    quote: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-    numquam blanditiis`,
-    name: "Frank Galikanokus",
-    company: "Bunty Soap Company",
-    testimonialImage: "",
-  },
-  {
-    quote: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-    numquam blanditiis`,
-    name: "Frank Galikanokus",
-    company: "Bunty Soap Company",
-    testimonialImage: "",
-  },
-  {
-    quote: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime mollitia,
-    molestiae quas vel sint commodi repudiandae consequuntur voluptatum laborum
-    numquam blanditiis`,
-    name: "Frank Galikanokus",
-    company: "Bunty Soap Company",
-    testimonialImage: "",
-  },
-]
 
 export default SocialProofSection

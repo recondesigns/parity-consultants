@@ -2,23 +2,22 @@
 import { Main } from "./components/ui"
 import {
   ScaleComputingSection,
-  HeroSection,
   ServicesSection,
   SocialProofSection,
   SolutionsSection,
   PartnersSection,
+  NewHeroSection
 } from "./components/home-page/"
 
 export default function Home() {
   return (
     <Main>
-      <HeroSection />
+      <NewHeroSection />
+      <PartnersSection />
       <ServicesSection />
       <ScaleComputingSection />
-      {/* <ScaleComputingSection /> */}
-      <SocialProofSection />
       <SolutionsSection />
-      <PartnersSection />
+      <SocialProofSection />
     </Main>
   )
 }
