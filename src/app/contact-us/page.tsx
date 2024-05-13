@@ -1,5 +1,7 @@
 "use client"
 import React from "react"
+import Link from "next/link"
+import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
@@ -8,6 +10,18 @@ import ContactUsSectionForm from "./ContactUsSectionForm"
 import FacebookIcon from "@mui/icons-material/Facebook"
 import InstagramIcon from "@mui/icons-material/Instagram"
 import LinkedInIcon from "@mui/icons-material/LinkedIn"
+
+const StyledLink = styled(Link)(
+  {
+    textDecoration: "none",
+  },
+  ({ theme }) => ({
+    color: "#000000",
+    "&:hover": {
+      color: "gray",
+    },
+  })
+)
 
 function ContactUsPage() {
   return (
@@ -125,15 +139,17 @@ function ContactUsPage() {
               >
                 sales@parity.us.com
               </Typography>
-              <Typography
-                variant="body1"
-                component="p"
-                textAlign="center"
-                pt="4px"
-                sx={{ color: "#333333", fontFamily: "inherit" }}
-              >
-                469-240-5090
-              </Typography>
+              <StyledLink href="tel:4692405090">
+                <Typography
+                  variant="body1"
+                  component="p"
+                  textAlign={{ xs: "center" }}
+                  pt="4px"
+                  sx={{ fontFamily: "inherit", color: "#333333" }}
+                >
+                  469-240-5090
+                </Typography>
+              </StyledLink>
               <Typography
                 variant="body1"
                 component="p"
