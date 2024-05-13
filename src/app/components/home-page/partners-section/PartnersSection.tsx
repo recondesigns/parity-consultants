@@ -64,17 +64,15 @@ export default function PartnersSection({}: Props) {
           gap: "20px",
         }}
       >
-        {partners.map((partner) => {
+        {partners.map((partner, idx) => {
           console.log(partner.image)
           return (
-            <a href={partner.url} target="_blank">
-              <img
+            <a href={partner.url} target="_blank" key={idx}>
+              <Image
                 src={partner.image.src}
                 alt={partner.name}
-                style={{
-                  height: "100px",
-                  minWidth: "100px",
-                }}
+                width={100}
+                height={100}
               />
             </a>
           )
