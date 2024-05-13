@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -9,7 +9,7 @@ import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
 import Divider from "@mui/material/Divider"
 import Typography from "@mui/material/Typography"
-import parityLogo from "../../../../../public/images/parity-logo.png"
+import parityLogo from "../../../../../public/images/parity-red-logo.png"
 
 const StyledLink = styled(Link)(
   {
@@ -36,7 +36,7 @@ const list = (onClose: any) => (
         sx={{ padding: "20px 0px", display: "flex", justifyContent: "center" }}
       >
         <StyledLink href="/" onClick={onClose}>
-          <Image src={parityLogo} height={32} alt="Company logo." />
+          <Image src={parityLogo} height={40} alt="Company logo." />
         </StyledLink>
       </ListItem>
       <Divider />

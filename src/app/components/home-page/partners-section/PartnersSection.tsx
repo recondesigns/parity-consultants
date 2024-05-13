@@ -1,22 +1,24 @@
 "use client"
 import React from "react"
+import Image from "next/image"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
-import MovingCardsSection from "../../ui/section/MovingCardsSection"
-import testimonials from "./testimonials"
+import partners from "./partners"
 
-function SocialProofSection() {
+type Props = {}
+
+export default function PartnersSection({}: Props) {
   return (
     <Section
       sx={{
-        overflow: "hidden",
         padding: {
           xs: "80px 20px",
           sm: "100px 40px",
           md: "100px 80px",
           lg: "120px 100px",
         },
+        px: { xs: "20px", md: "40px", lg: "80px" },
       }}
     >
       <Box
@@ -39,7 +41,7 @@ function SocialProofSection() {
           color="#333333"
           textAlign="center"
         >
-          Client testimonials
+          Our partners
         </Typography>
         <Typography
           variant="h5"
@@ -49,12 +51,33 @@ function SocialProofSection() {
           textAlign="center"
           pt="8px"
         >
-          See what our clients are saying
+          We partner with leading manufacturers to offer best in class service
+          and products
         </Typography>
       </Box>
-      <MovingCardsSection items={testimonials} direction="right" speed="fast" />
+      <Box
+        sx={{
+          padding: { md: "0px 80px 0px 80px" },
+          display: "flex",
+          justifyContent: "center",
+          flexWrap: "wrap",
+          gap: "20px",
+        }}
+      >
+        {partners.map((partner, idx) => {
+          console.log(partner.image)
+          return (
+            <a href={partner.url} target="_blank" key={idx}>
+              <Image
+                src={partner.image.src}
+                alt={partner.name}
+                width={100}
+                height={100}
+              />
+            </a>
+          )
+        })}
+      </Box>
     </Section>
   )
 }
-
-export default SocialProofSection
