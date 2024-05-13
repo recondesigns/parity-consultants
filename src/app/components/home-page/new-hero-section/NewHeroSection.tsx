@@ -64,7 +64,7 @@ function NewHeroSection({}: Props) {
               color: "#333333",
             }}
           >
-            Lorem ipsum dolor sit amet consectetur.
+            Elevate your server experience
           </Typography>
 
           <Typography
