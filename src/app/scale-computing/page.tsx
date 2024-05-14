@@ -1,5 +1,5 @@
 "use client"
-import Typography from "@mui/material/Typography"
+import { HeroSection } from "../components/home-page"
 
 export default function ScaledComputingPage() {
   return (
@@ -11,24 +11,7 @@ export default function ScaledComputingPage() {
         alignItems: "center",
       }}
     >
-      <section
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Typography
-          variant="h2"
-          sx={{ paddingTop: "24px", fontFamily: "inherit" }}
-        >
-          Get Scale Computing
-        </Typography>
-        <Typography sx={{ paddingTop: "24px", fontFamily: "inherit" }}>
-          Check back soon...
-        </Typography>
-      </section>
+      <HeroSection />
     </main>
   )
 }
