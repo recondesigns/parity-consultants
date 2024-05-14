@@ -50,20 +50,20 @@ export default function Navigation() {
   return (
     <StyledNav as="nav">
       <StyledUl sx={{ display: { xs: "none", md: "flex" } }}>
-        <li>
+        {/* <li>
           <StyledLink href="/services">
             <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
               Services
             </Typography>
           </StyledLink>
-        </li>
-        <li>
+        </li> */}
+        {/* <li>
           <StyledLink href="/solutions">
             <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
               Solutions
             </Typography>
           </StyledLink>
-        </li>
+        </li> */}
         <li>
           <StyledLink href="/scale-computing">
             <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
