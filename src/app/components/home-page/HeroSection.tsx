@@ -27,7 +27,7 @@ type Props = {
 
 export default function HeroSection({ includeLearnMoreButton = false }: Props) {
   return (
-    <Section sx={{ background: "linear-gradient(45deg, #ff512f, #f09819)" }}>
+    <Section sx={{ background: "linear-gradient(45deg, #FF2146, #FC711F)" }}>
       <Box
         sx={{
           padding: {

@@ -91,7 +91,6 @@ function ScaleComputingSectionForm() {
       />
       <Button
         variant="contained"
-        color="warning"
         size="large"
         fullWidth
         type="submit"
