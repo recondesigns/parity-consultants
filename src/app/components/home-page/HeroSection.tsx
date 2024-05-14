@@ -14,7 +14,6 @@ export default function HeroSection() {
         bgImage={`${networkingImage.src}`}
         bgImageAlt="networking servers"
         strength={400}
-        blur={{ min: -15, max: 20 }}
         style={{ width: "100%" }}
       >
         <Box
