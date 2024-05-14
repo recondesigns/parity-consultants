@@ -71,34 +71,40 @@ function ContactUsPage() {
         <Grid container>
           <Grid item xs={12} lg={6} sx={{ padding: "0px 20px" }}>
             <Box>
-              <Typography
-                variant="h5"
-                component="h3"
-                textAlign="center"
-                fontWeight="bold"
-                sx={{ color: "#333333", fontFamily: "inherit" }}
+              <Box
+                sx={{
+                  px: { sm: "64px", md: "172px", lg: "60px", xl: "156px" },
+                }}
               >
-                Send us a message
-              </Typography>
-              <Typography
-                variant="body1"
-                component="p"
-                textAlign="center"
-                pt="16px"
-                sx={{ color: "#333333", fontFamily: "inherit" }}
-              >
-                One of our team members will reply to within one business day.
-              </Typography>
-              <Typography
-                variant="body2"
-                component="p"
-                textAlign="center"
-                pt="16px"
-                sx={{ color: "#333333", fontFamily: "inherit" }}
-              >
-                If you&apos;d like to opt out of future communications, please send
-                us an message or email.
-              </Typography>
+                <Typography
+                  variant="h5"
+                  component="h3"
+                  textAlign="center"
+                  fontWeight="bold"
+                  sx={{ color: "#333333", fontFamily: "inherit" }}
+                >
+                  Send us a message
+                </Typography>
+                <Typography
+                  variant="body1"
+                  component="p"
+                  textAlign="center"
+                  pt="16px"
+                  sx={{ color: "#333333", fontFamily: "inherit" }}
+                >
+                  One of our team members will reply to within one business day.
+                </Typography>
+                <Typography
+                  variant="body2"
+                  component="p"
+                  textAlign="center"
+                  pt="16px"
+                  sx={{ color: "#333333", fontFamily: "inherit" }}
+                >
+                  If you&apos;d like to opt out of future communications, please
+                  send us a message or email.
+                </Typography>
+              </Box>
               <Box
                 sx={{
                   padding: "32px 0px 48px 0px",

@@ -16,7 +16,7 @@ export default function ScaleComputingSection({}) {
           md: "100px 80px",
           lg: "120px 100px",
         },
-        background: "#D95C5C",
+        background: "#3634C6",
       }}
     >
       <Grid container>
