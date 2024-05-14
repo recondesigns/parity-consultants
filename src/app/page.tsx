@@ -14,12 +14,12 @@ export default function Home() {
   return (
     <Main>
       <NewHeroSection />
-      <PartnersSection />
       <ServicesSection />
+      <PartnersSection />
       <ScaleComputingSection />
+      <SocialProofSection />
       <SolutionsSection />
       <ScaleComputingSectionSmall />
-      <SocialProofSection />
     </Main>
   )
 }
