@@ -41,6 +41,13 @@ const list = (onClose: any) => (
       </ListItem>
       <Divider />
       <ListItem>
+        <StyledLink href="/" onClick={onClose}>
+          <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+            Home
+          </Typography>
+        </StyledLink>
+      </ListItem>
+      <ListItem>
         <StyledLink href="/services" onClick={onClose}>
           <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
             Services

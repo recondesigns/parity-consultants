@@ -24,8 +24,9 @@ const StyledLink = styled(Link)(
 export default function ServicesSection() {
   return (
     <Section
+      id="servicesSection"
       sx={{
-        padding: "80px 80px",
+        padding: "140px 80px",
         background: "linear-gradient(45deg, #434343 0%, black 100%)",
         px: { xs: "20px", md: "40px", lg: "80px" },
       }}
@@ -89,6 +90,7 @@ export default function ServicesSection() {
             sx={{
               color: "#FDFCFC",
               borderColor: "#FDFCFC",
+              borderRadius: "50px",
               "&:hover": {
                 background: "none",
                 borderColor: "rgba(253,252,252, 0.4)",

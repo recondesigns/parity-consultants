@@ -24,6 +24,7 @@ const StyledLink = styled(Link)(
 export default function SolutionsSection() {
   return (
     <Section
+      id="solutionsSection"
       sx={{
         padding: {
           xs: "80px 20px",
@@ -114,7 +115,7 @@ export default function SolutionsSection() {
       </Grid>
       <Box
         sx={{
-          paddingTop: { xs: "20px", sm: "24px", md: "32px", lg: "48px" },
+          paddingTop: { xs: "48px" },
           width: "100%",
           display: "flex",
           justifyContent: "center",
@@ -128,6 +129,7 @@ export default function SolutionsSection() {
             size="large"
             sx={{
               textTransform: "none",
+              borderRadius: "50px",
             }}
           >
             Learn more

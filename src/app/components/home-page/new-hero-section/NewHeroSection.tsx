@@ -1,6 +1,8 @@
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import Grid from "@mui/material/Grid"
 import { Section } from "../../ui"
@@ -71,7 +73,6 @@ function NewHeroSection({}: Props) {
             variant="h5"
             component="p"
             sx={{
-              paddingBottom: { xs: "32px", lg: "0px" },
               fontFamily: "inherit",
               color: "#333333",
             }}
@@ -81,6 +82,39 @@ function NewHeroSection({}: Props) {
             massa eu. Risus phasellus maecenas tempor ullamcorper vitae erat
             bibendum convallis at. Rhoncus felis.
           </Typography>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: { xs: "column", sm: "row" },
+              gap: { xs: "12px" },
+              paddingTop: { xs: "32px" },
+            }}
+          >
+            <Button
+              size="large"
+              variant="outlined"
+              component={Link}
+              href="#servicesSection"
+              sx={{
+                borderRadius: "50px",
+                textTransform: "none",
+              }}
+            >
+              Services
+            </Button>
+            <Button
+              size="large"
+              variant="outlined"
+              component={Link}
+              href="#solutionsSection"
+              sx={{
+                borderRadius: "50px",
+                textTransform: "none",
+              }}
+            >
+              Solutions
+            </Button>
+          </Box>
         </Grid>
         <Grid
           item
@@ -90,6 +124,7 @@ function NewHeroSection({}: Props) {
             display: "flex",
             flexDirection: "column",
             alignItems: { xs: "center", lg: "end" },
+            paddingTop: { xs: "32px", sm: "40px" },
           }}
         >
           <Image src={sectionImage} alt="section image" />

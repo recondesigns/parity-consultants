@@ -88,11 +88,12 @@ export default function ScaleComputingSectionSmall() {
               <Button
                 component="div"
                 variant="contained"
-                color="success"
+                color="warning"
                 size="large"
                 sx={{
                   fontWeight: "bold",
                   textTransform: "none",
+                  borderRadius: "50px",
                 }}
               >
                 Get signed up
