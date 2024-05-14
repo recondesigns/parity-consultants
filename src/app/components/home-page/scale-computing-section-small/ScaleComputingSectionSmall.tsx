@@ -88,7 +88,6 @@ export default function ScaleComputingSectionSmall() {
               <Button
                 component="div"
                 variant="contained"
-                color="warning"
                 size="large"
                 sx={{
                   fontWeight: "bold",
