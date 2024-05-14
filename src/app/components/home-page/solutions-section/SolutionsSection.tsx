@@ -125,6 +125,7 @@ export default function SolutionsSection() {
           <Button
             component="div"
             variant="outlined"
+            size="large"
             sx={{
               textTransform: "none",
             }}

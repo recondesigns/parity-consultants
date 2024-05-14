@@ -85,6 +85,7 @@ export default function ServicesSection() {
           <Button
             component="div"
             variant="outlined"
+            size="large"
             sx={{
               color: "#FDFCFC",
               borderColor: "#FDFCFC",

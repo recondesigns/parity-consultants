@@ -7,7 +7,7 @@ import {
   SolutionsSection,
   PartnersSection,
   NewHeroSection,
-  ScaleComputingSectionSmall
+  ScaleComputingSectionSmall,
 } from "./components/home-page/"
 
 export default function Home() {
@@ -15,11 +15,11 @@ export default function Home() {
     <Main>
       <NewHeroSection />
       <PartnersSection />
-      {/* <ServicesSection /> */}
-      {/* <ScaleComputingSection /> */}
-      {/* <SolutionsSection /> */}
+      <ServicesSection />
+      <ScaleComputingSection />
+      <SolutionsSection />
       <ScaleComputingSectionSmall />
-      {/* <SocialProofSection /> */}
+      <SocialProofSection />
     </Main>
   )
 }
