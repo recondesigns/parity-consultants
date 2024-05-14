@@ -7,7 +7,6 @@ import Button from "@mui/material/Button"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
-// import SolutionsSectionCard from "./SolutionsSectionCard"
 import solutions from "./solutions"
 
 const StyledLink = styled(Link)(
