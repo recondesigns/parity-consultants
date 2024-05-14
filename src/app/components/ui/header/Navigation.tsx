@@ -67,7 +67,7 @@ export default function Navigation() {
         <li>
           <StyledLink href="/scale-computing">
             <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
-              Get Scale Computing
+              Scale Computing
             </Typography>
           </StyledLink>
         </li>
@@ -78,13 +78,13 @@ export default function Navigation() {
             </Typography>
           </StyledLink>
         </li>
-        <li>
+        {/* <li>
           <StyledLink href="/get-support">
             <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
               Support
             </Typography>
           </StyledLink>
-        </li>
+        </li> */}
       </StyledUl>
       <MenuIconContainer
         sx={{ display: { xs: "flex", md: "none", color: "color: '#333333'," } }}

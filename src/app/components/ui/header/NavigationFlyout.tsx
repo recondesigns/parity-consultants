@@ -57,7 +57,7 @@ const list = (onClose: any) => (
       <ListItem>
         <StyledLink href="/scale-computing" onClick={onClose}>
           <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
-            Get Scale Computing
+            Scale Computing
           </Typography>
         </StyledLink>
       </ListItem>
@@ -68,13 +68,13 @@ const list = (onClose: any) => (
           </Typography>
         </StyledLink>
       </ListItem>
-      <ListItem>
+      {/* <ListItem>
         <StyledLink href="/get-support" onClick={onClose}>
           <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
             Support
           </Typography>
         </StyledLink>
-      </ListItem>
+      </ListItem> */}
     </List>
   </Box>
 )

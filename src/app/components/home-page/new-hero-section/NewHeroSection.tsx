@@ -64,7 +64,7 @@ function NewHeroSection({}: Props) {
               color: "#333333",
             }}
           >
-            Elevate your server experience
+            Elevate server experiences with Parity
           </Typography>
 
           <Typography
