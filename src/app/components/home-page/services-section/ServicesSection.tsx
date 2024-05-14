@@ -89,6 +89,7 @@ export default function ServicesSection() {
             sx={{
               color: "#FDFCFC",
               borderColor: "#FDFCFC",
+              borderRadius: "50px",
               "&:hover": {
                 background: "none",
                 borderColor: "rgba(253,252,252, 0.4)",

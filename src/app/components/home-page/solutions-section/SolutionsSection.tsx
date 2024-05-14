@@ -128,6 +128,7 @@ export default function SolutionsSection() {
             size="large"
             sx={{
               textTransform: "none",
+              borderRadius: "50px",
             }}
           >
             Learn more

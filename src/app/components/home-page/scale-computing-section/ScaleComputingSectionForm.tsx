@@ -91,6 +91,7 @@ function ScaleComputingSectionForm() {
       />
       <Button
         variant="contained"
+        color="warning"
         size="large"
         fullWidth
         type="submit"
@@ -98,12 +99,7 @@ function ScaleComputingSectionForm() {
         sx={{
           borderRadius: "50px",
           fontWeight: "bold",
-          background: !isSent ? "#3634C6" : "green",
           textTransform: "capitalize",
-          "&:disabled": {
-            color: isSent ? "#FDFCFC" : "#FDFCFC",
-            background: isSent ? "green" : "initial",
-          },
         }}
       >
         {isSending ? "Sending..." : isSent ? "Sent!" : "Send"}

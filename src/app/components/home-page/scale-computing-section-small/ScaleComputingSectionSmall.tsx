@@ -93,6 +93,7 @@ export default function ScaleComputingSectionSmall() {
                 sx={{
                   fontWeight: "bold",
                   textTransform: "none",
+                  borderRadius: "50px",
                 }}
               >
                 Get signed up
