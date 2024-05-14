@@ -16,6 +16,7 @@ const StyledSection = styled(Box)(
 
 type Props = {
   sx?: any
+  id?: string
   children: React.ReactNode
 }
 

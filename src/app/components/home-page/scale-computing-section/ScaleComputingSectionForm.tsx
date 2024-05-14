@@ -99,7 +99,7 @@ function ScaleComputingSectionForm() {
         sx={{
           borderRadius: "50px",
           fontWeight: "bold",
-          textTransform: "capitalize",
+          textTransform: "none",
         }}
       >
         {isSending ? "Sending..." : isSent ? "Sent!" : "Send"}
