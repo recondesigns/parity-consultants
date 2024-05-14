@@ -11,6 +11,7 @@ export default function ServicesSection() {
     <Section
       sx={{
         padding: "80px 80px",
+        background: "linear-gradient(45deg, #434343 0%, black 100%)",
         px: { xs: "20px", md: "40px", lg: "80px" },
       }}
     >
@@ -31,7 +32,7 @@ export default function ServicesSection() {
           component="h2"
           fontFamily="inherit"
           fontWeight="bold"
-          color="#333333"
+          color="#fdfcfc"
           textAlign="center"
         >
           Key services
@@ -47,7 +48,7 @@ export default function ServicesSection() {
           We are your one stop shop for all of your technology needs
         </Typography>
       </Box>
-      <Grid container spacing={{ xs: 2, sm: 4 }}>
+      <Grid container justifyContent="center" alignItems="center">
         {services.map((service, idx) => {
           return (
             <Grid key={idx} item xs={12} md={6} lg={4}>
