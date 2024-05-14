@@ -6,7 +6,8 @@ import {
   SocialProofSection,
   SolutionsSection,
   PartnersSection,
-  NewHeroSection
+  NewHeroSection,
+  ScaleComputingSectionSmall,
 } from "./components/home-page/"
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <ServicesSection />
       <ScaleComputingSection />
       <SolutionsSection />
+      <ScaleComputingSectionSmall />
       <SocialProofSection />
     </Main>
   )
