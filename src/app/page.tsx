@@ -16,11 +16,11 @@ export default function Home() {
     <Main>
       <NewHeroSection />
       {/* <ScaleComputingSection /> */}
-      <HeroSection />
+      <HeroSection includeLearnMoreButton={true} />
       <PartnersSection />
       <ServicesSection />
-      <SocialProofSection />
       <SolutionsSection />
+      <SocialProofSection />
       <ScaleComputingSectionSmall />
     </Main>
   )
