@@ -95,6 +95,13 @@ export default function Navigation() {
   return (
     <StyledNav as="nav">
       <StyledUl sx={{ display: { xs: "none", md: "flex" } }}>
+        <StyledLi isActiveLink={setIsActiveLink(pathname, "/")}>
+          <StyledLink href="/" sx={{ height: "100%" }}>
+            <StyledLinkText isActiveLink={setIsActiveLink(pathname, "/")}>
+              Home
+            </StyledLinkText>
+          </StyledLink>
+        </StyledLi>
         <StyledLi isActiveLink={setIsActiveLink(pathname, "/services")}>
           <StyledLink href="/services" sx={{ height: "100%" }}>
             <StyledLinkText
