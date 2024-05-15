@@ -1,7 +1,9 @@
 "use client"
 import React from "react"
 import Image from "next/image"
+import Link from "next/link"
 import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import { Section } from "../components/ui"
@@ -68,6 +70,27 @@ function ConsultingServicesSection() {
               IT research and budgeting, security audits, network planning,
               hardware recommendations, and VPN configuration.
             </Typography>
+            <Box
+              sx={{
+                paddingBottom: { xs: "40px" },
+                display: "flex",
+                justifyContent: { xs: "center", md: "start" },
+              }}
+            >
+              <Button
+                component={Link}
+                href={"/contact-us"}
+                variant="outlined"
+                size="large"
+                sx={{
+                  width: { xs: "100%", md: "initial" },
+                  borderRadius: "50px",
+                  textTransform: "none",
+                }}
+              >
+                Contact us
+              </Button>
+            </Box>
           </Box>
         </Grid>
       </Grid>

@@ -23,6 +23,7 @@ const StyledLink = styled(Link)(
 export default function GetSupportSection() {
   return (
     <Section
+      id="getSupportSection"
       sx={{
         padding: {
           xs: "80px 20px",

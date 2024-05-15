@@ -71,7 +71,7 @@ function SupportServicesSection() {
             >
               <Button
                 component={Link}
-                href={"/get-support"}
+                href={"/#getSupportSection"}
                 variant="outlined"
                 size="large"
                 sx={{
