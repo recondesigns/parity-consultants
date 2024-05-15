@@ -28,7 +28,7 @@ export default function ScaleComputingSectionSmall() {
         padding: {
           xs: "0px 0px",
           md: "20px 40px",
-          lg: "20px 80px",
+          lg: "80px 80px 40px 80px",
         },
       }}
     >
