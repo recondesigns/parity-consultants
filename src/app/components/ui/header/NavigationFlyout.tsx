@@ -61,27 +61,27 @@ const list = (onClose: any) => (
           </Typography>
         </StyledLink>
       </ListItem>
-      <ListItem>
+      {/* <ListItem>
         <StyledLink href="/scale-computing" onClick={onClose}>
           <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
             Scale Computing
+          </Typography>
+        </StyledLink>
+      </ListItem> */}
+      <ListItem>
+        <StyledLink href="/get-support" onClick={onClose}>
+          <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+            Support
           </Typography>
         </StyledLink>
       </ListItem>
       <ListItem>
         <StyledLink href="/contact-us" onClick={onClose}>
           <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
-            Contact us
+            Contact
           </Typography>
         </StyledLink>
       </ListItem>
-      {/* <ListItem>
-        <StyledLink href="/get-support" onClick={onClose}>
-          <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
-            Support
-          </Typography>
-        </StyledLink>
-      </ListItem> */}
     </List>
   </Box>
 )

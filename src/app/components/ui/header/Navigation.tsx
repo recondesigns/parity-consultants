@@ -64,27 +64,27 @@ export default function Navigation() {
             </Typography>
           </StyledLink>
         </li>
-        <li>
+        {/* <li>
           <StyledLink href="/scale-computing">
             <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
               Scale Computing
+            </Typography>
+          </StyledLink>
+        </li> */}
+        <li>
+          <StyledLink href="/get-support">
+            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+              Support
             </Typography>
           </StyledLink>
         </li>
         <li>
           <StyledLink href="/contact-us">
             <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
-              Contact us
+              Contact
             </Typography>
           </StyledLink>
         </li>
-        {/* <li>
-          <StyledLink href="/get-support">
-            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
-              Support
-            </Typography>
-          </StyledLink>
-        </li> */}
       </StyledUl>
       <MenuIconContainer
         sx={{ display: { xs: "flex", md: "none", color: "color: '#333333'," } }}
