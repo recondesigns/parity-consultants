@@ -12,11 +12,12 @@ function SocialProofSection() {
       sx={{
         overflow: "hidden",
         padding: {
-          xs: "80px 20px",
+          xs: "40px 20px",
           sm: "100px 40px",
-          md: "100px 80px",
+          md: "100px 40px",
           lg: "120px 100px",
         },
+        background: "rgba(217,92,92, 0.1)",
       }}
     >
       <Box
@@ -52,9 +53,9 @@ function SocialProofSection() {
           See what our clients are saying
         </Typography>
       </Box>
-      <MovingCardsSection items={testimonials} direction="right" speed="fast" />
+      <MovingCardsSection items={testimonials} />
     </Section>
   )
 }
 
-export default SocialProofSection
+export default React.memo(SocialProofSection)
