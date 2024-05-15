@@ -14,9 +14,10 @@ function SocialProofSection() {
         padding: {
           xs: "80px 20px",
           sm: "100px 40px",
-          md: "100px 80px",
+          md: "100px 40px",
           lg: "120px 100px",
         },
+        // border: '2px solid blue'
       }}
     >
       <Box

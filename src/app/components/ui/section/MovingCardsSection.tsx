@@ -79,9 +79,10 @@ const MovingCardsSection = ({
   }
 
   return (
-    <div
+    <Box
       ref={containerRef}
-      className={cn("scroller relative z-20  max-w-7xl", className)}
+      className={cn("scroller relative z-20  max-w-full", className)}
+      sx={{ py: { xs: '8px' }, overflow: 'hidden' }}
     >
       <Box
         component={"ul"}
@@ -153,7 +154,7 @@ const MovingCardsSection = ({
           </Box>
         ))}
       </Box>
-    </div>
+    </Box>
   )
 }
 
