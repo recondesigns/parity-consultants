@@ -114,6 +114,18 @@ function NewHeroSection({}: Props) {
             >
               Solutions
             </Button>
+            <Button
+              size="large"
+              variant="outlined"
+              component={Link}
+              href="#getSupportSection"
+              sx={{
+                borderRadius: "50px",
+                textTransform: "none",
+              }}
+            >
+              Support
+            </Button>
           </Box>
         </Grid>
         <Grid
