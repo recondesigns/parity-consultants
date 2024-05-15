@@ -1,15 +1,26 @@
+"use client"
 import React from "react"
 import Link from "next/link"
-// import { styled } from "@mui/material/styles"
+import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
 
-type Props = {}
+const StyledLink = styled(Link)(
+  {
+    textDecoration: "none",
+  },
+  ({ theme }) => ({
+    color: "#000000",
+    "&:hover": {
+      color: "gray",
+    },
+  })
+)
 
-export default function GetSupportSection({}: Props) {
+export default function GetSupportSection() {
   return (
     <Section
       sx={{
@@ -92,17 +103,20 @@ export default function GetSupportSection({}: Props) {
             </Typography>
           </Box>
           <Box>
-            <Button
-              variant="outlined"
-              size="small"
-              sx={{
-                textTransform: "none",
-                width: { xs: "100%", md: "auto" },
-                borderRadius: "50px",
-              }}
-            >
-              Allow access
-            </Button>
+            <StyledLink href={"https://support.parity.us.com/"} target="_blank">
+              <Button
+                component="div"
+                variant="outlined"
+                size="small"
+                sx={{
+                  textTransform: "none",
+                  width: { xs: "100%", md: "auto" },
+                  borderRadius: "50px",
+                }}
+              >
+                Allow access
+              </Button>
+            </StyledLink>
           </Box>
         </Grid>
         <Grid
@@ -141,17 +155,25 @@ export default function GetSupportSection({}: Props) {
             </Typography>
           </Box>
           <Box>
-            <Button
-              variant="outlined"
-              size="small"
-              sx={{
-                textTransform: "none",
-                width: { xs: "100%", md: "auto" },
-                borderRadius: "50px",
-              }}
+            <StyledLink
+              href={
+                "https://na.myconnectwise.net/support/index.htm?Company=parity"
+              }
+              target="_blank"
             >
-              Access portal
-            </Button>
+              <Button
+                component="div"
+                variant="outlined"
+                size="small"
+                sx={{
+                  textTransform: "none",
+                  width: { xs: "100%", md: "auto" },
+                  borderRadius: "50px",
+                }}
+              >
+                Access portal
+              </Button>
+            </StyledLink>
           </Box>
         </Grid>
       </Grid>
