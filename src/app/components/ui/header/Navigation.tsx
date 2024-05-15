@@ -42,7 +42,7 @@ const StyledLi = styled("li")<StyledLiProps>(
     height: "100%",
   },
   ({ isActiveLink }) => ({
-    borderBottom: !isActiveLink ? "none" : "2px solid #D95C5C",
+    borderBottom: !isActiveLink ? "none" : "3px solid #D95C5C",
   })
 )
 
