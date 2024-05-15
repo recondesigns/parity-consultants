@@ -14,12 +14,12 @@ function ServicesPage() {
   return (
     <Main>
       <HeroSection includeLearnMoreButton />
-      <PartnersSection />
       <InfrastructureServicesSection />
       <SecurityComplianceServicesSection />
       <DataProtectionServicesSection />
       <ConsultingServicesSection />
       <SupportServicesSection />
+      <PartnersSection />
       <ScaleComputingSectionSmall />
     </Main>
   )

@@ -1,34 +1,19 @@
 "use client"
-import Typography from "@mui/material/Typography"
+import HeroSection from "./HeroSection"
+import ContentSection from "./ContentSection"
+import {
+  ScaleComputingSectionSmall,
+  SocialProofSection,
+} from "../components/home-page"
+import { Main } from "../components/ui"
 
 export default function SolutionsPage() {
   return (
-    <main
-      style={{
-        flex: 1,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <section
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Typography
-          variant="h2"
-          sx={{ paddingTop: "24px", fontFamily: "inherit" }}
-        >
-          Our solutions
-        </Typography>
-        <Typography sx={{ paddingTop: "24px", fontFamily: "inherit" }}>
-          Check back soon...
-        </Typography>
-      </section>
-    </main>
+    <Main>
+      <HeroSection />
+      <ContentSection />
+      <SocialProofSection />
+      <ScaleComputingSectionSmall />
+    </Main>
   )
 }
