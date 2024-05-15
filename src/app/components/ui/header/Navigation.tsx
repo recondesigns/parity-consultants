@@ -57,13 +57,13 @@ export default function Navigation() {
             </Typography>
           </StyledLink>
         </li>
-        {/* <li>
+        <li>
           <StyledLink href="/solutions">
             <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
               Solutions
             </Typography>
           </StyledLink>
-        </li> */}
+        </li>
         <li>
           <StyledLink href="/scale-computing">
             <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>

@@ -2,12 +2,14 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { styled } from "@mui/material/styles"
+import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
 import solutions from "./solutions"
+import solutionsImage7 from "../../../../../public/images/solutions-image-7.jpg"
 
 const StyledLink = styled(Link)(
   {
@@ -20,6 +22,10 @@ const StyledLink = styled(Link)(
     },
   })
 )
+
+const StyledAccordion = styled(Accordion)({}, ({ theme }) => ({}))
+
+const StyledAccordionItem = styled(Item)({}, ({ theme }) => ({}))
 
 export default function SolutionsSection() {
   return (
@@ -68,50 +74,71 @@ export default function SolutionsSection() {
           completely satisfied
         </Typography>
       </Box>
-      <Grid
-        container
-        spacing={{ xs: 4 }}
-        justifyContent={{ xs: "center", lg: "start" }}
-      >
-        {solutions.map((solution, idx) => {
-          return (
-            <Grid key={idx} item xs={12} md={6} lg={4}>
-              <Box sx={{ paddingBottom: { xs: "16px" } }}>
-                <Image
-                  src={solution.image}
-                  width={100}
-                  height={366}
-                  style={{ width: "100%" }}
-                  alt="Infrascturure and management image"
-                />
-              </Box>
 
-              <Box>
-                <Typography
-                  variant="h5"
-                  component="h5"
-                  color="#333333"
-                  sx={{
-                    paddingBottom: { xs: "8px" },
-                    fontFamily: "inherit",
-                    fontWeight: "bold",
-                    width: "100%",
-                  }}
-                >
-                  {solution.title}
-                </Typography>
-                <Typography
-                  variant="body1"
-                  component="p"
-                  color="#333333"
-                  sx={{ fontFamily: "inherit" }}
-                >
-                  {solution.description}
-                </Typography>
-              </Box>
-            </Grid>
-          )
-        })}
+      <Grid container>
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          sx={{
+            display: "flex",
+            paddingBottom: { xs: "20px", lg: "0px" },
+            paddingRight: { lg: "20px" },
+          }}
+        >
+          <Image
+            src={solutionsImage7}
+            alt="server room image"
+            style={{ width: "100%", height: "auto" }}
+          />
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          sx={{
+            paddingLeft: { lg: "20px" },
+          }}
+        >
+          <Box>
+            <StyledAccordion>
+              {solutions.map((solution, idx) => {
+                return (
+                  <StyledAccordionItem
+                    key={idx}
+                    itemKey={idx}
+                    header={
+                      <Box sx={{ borderBottom: "2px solid #D95C5C" }}>
+                        <Typography
+                          variant="h6"
+                          component="p"
+                          fontFamily="inherit"
+                          fontWeight="bold"
+                          color="#333333"
+                        >
+                          {solution.title}
+                        </Typography>
+                      </Box>
+                    }
+                    initialEntered={idx === 0 ? true : false}
+                    sx={{ padding: { xs: "8px 12px" } }}
+                  >
+                    <Box sx={{ paddingTop: "12px" }}>
+                      <Typography
+                        variant="body1"
+                        component="p"
+                        fontFamily="inherit"
+                        color="#333333"
+                      >
+                        {solution.description}
+                      </Typography>
+                    </Box>
+                  </StyledAccordionItem>
+                )
+              })}
+            </StyledAccordion>
+          </Box>
+        </Grid>
       </Grid>
       <Box
         sx={{
