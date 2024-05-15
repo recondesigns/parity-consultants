@@ -1,34 +1,28 @@
 "use client"
-import Typography from "@mui/material/Typography"
+import React from "react"
+import { Main } from "../components/ui"
+import HeroSection from "./HeroSection"
+import InfrastructureServicesSection from "./InfrastructureServicesSection"
+import SecurityComplianceServicesSection from "./SecurityComplianceServicesSection"
+import DataProtectionServicesSection from "./DataProtectionServicesSection"
+import ConsultingServicesSection from "./ConsultingServicesSection"
+import SupportServicesSection from "./SupportServicesSection"
+import { ScaleComputingSectionSmall } from "../components/home-page"
+import { PartnersSection } from "../components/home-page"
 
-export default function ServicesPage() {
+function ServicesPage() {
   return (
-    <main
-      style={{
-        flex: 1,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <section
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
-        <Typography
-          variant="h2"
-          sx={{ paddingTop: "24px", fontFamily: "inherit" }}
-        >
-          Our services
-        </Typography>
-        <Typography sx={{ paddingTop: "24px", fontFamily: "inherit" }}>
-          Check back soon...
-        </Typography>
-      </section>
-    </main>
+    <Main>
+      <HeroSection includeLearnMoreButton />
+      <PartnersSection />
+      <InfrastructureServicesSection />
+      <SecurityComplianceServicesSection />
+      <DataProtectionServicesSection />
+      <ConsultingServicesSection />
+      <SupportServicesSection />
+      <ScaleComputingSectionSmall />
+    </Main>
   )
 }
+
+export default React.memo(ServicesPage)
