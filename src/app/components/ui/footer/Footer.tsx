@@ -149,7 +149,7 @@ export default function Footer() {
                       </Typography>
                     </StyledLink>
                   </li>
-                  <li style={{ width: "100%" }}>
+                  {/* <li style={{ width: "100%" }}>
                     <StyledLink href="/get-support">
                       <Typography
                         variant="body2"
@@ -159,7 +159,7 @@ export default function Footer() {
                         Support
                       </Typography>
                     </StyledLink>
-                  </li>
+                  </li> */}
                 </StyledUl>
               </Grid>
 

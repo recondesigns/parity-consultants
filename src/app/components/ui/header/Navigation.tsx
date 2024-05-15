@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import { usePathname } from "next/navigation"
 import { styled } from "@mui/material/styles"
 import Link from "next/link"
 import Box from "@mui/material/Box"
@@ -31,6 +32,45 @@ const MenuIconContainer = styled("button")(
 
 const StyledNav = styled(Box)({}, ({ theme }) => ({}))
 
+type StyledLiProps = {
+  isScaleComputingLink?: boolean
+  isActiveLink: boolean
+}
+
+const StyledLi = styled("li")<StyledLiProps>(
+  {
+    padding: "4px 8px",
+    height: "100%",
+  },
+  ({ isActiveLink, isScaleComputingLink }) => ({
+    borderBottom: !isActiveLink
+      ? "none"
+      : isScaleComputingLink
+        ? "3px solid #FC711F"
+        : "3px solid #D95C5C",
+  })
+)
+
+type StyledLinkTextProps = {
+  isScaleComputingLink?: boolean
+  isActiveLink: boolean
+}
+
+const StyledLinkText = styled(Typography)<StyledLinkTextProps>(
+  {
+    height: "100%",
+    fontFamily: "inherit",
+  },
+  ({ isActiveLink, isScaleComputingLink }) => ({
+    color: isScaleComputingLink
+      ? "#FC711F"
+      : isActiveLink
+        ? "#D95C5C"
+        : "#333333",
+  })
+)
+// "#D95C5C"
+
 const StyledLink = styled(Link)(
   {
     textDecoration: "none",
@@ -43,48 +83,74 @@ const StyledLink = styled(Link)(
   })
 )
 
+function setIsActiveLink(currentPath: string, linkpath: string) {
+  return currentPath === linkpath ? true : false
+}
+
 export default function Navigation() {
+  const pathname = usePathname()
   // @ts-expect-error => Property 'isFlyoutOpen' does not exist on type 'unknown'.ts(2339)
   const { isFlyoutOpen, setIsFlyoutOpen } = useAppStore()
 
   return (
     <StyledNav as="nav">
       <StyledUl sx={{ display: { xs: "none", md: "flex" } }}>
-        <li>
-          <StyledLink href="/services">
-            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+        <StyledLi isActiveLink={setIsActiveLink(pathname, "/")}>
+          <StyledLink href="/" sx={{ height: "100%" }}>
+            <StyledLinkText isActiveLink={setIsActiveLink(pathname, "/")}>
+              Home
+            </StyledLinkText>
+          </StyledLink>
+        </StyledLi>
+        <StyledLi isActiveLink={setIsActiveLink(pathname, "/services")}>
+          <StyledLink href="/services" sx={{ height: "100%" }}>
+            <StyledLinkText
+              isActiveLink={setIsActiveLink(pathname, "/services")}
+            >
               Services
-            </Typography>
+            </StyledLinkText>
           </StyledLink>
-        </li>
-        <li>
+        </StyledLi>
+        <StyledLi isActiveLink={setIsActiveLink(pathname, "/solutions")}>
           <StyledLink href="/solutions">
-            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+            <StyledLinkText
+              isActiveLink={setIsActiveLink(pathname, "/solutions")}
+            >
               Solutions
-            </Typography>
+            </StyledLinkText>
           </StyledLink>
-        </li>
-        <li>
+        </StyledLi>
+        <StyledLi
+          isActiveLink={setIsActiveLink(pathname, "/scale-computing")}
+          isScaleComputingLink={true}
+        >
           <StyledLink href="/scale-computing">
-            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
-              Scale Computing
-            </Typography>
+            <StyledLinkText
+              isActiveLink={setIsActiveLink(pathname, "/scale-computing")}
+              isScaleComputingLink={true}
+            >
+              Get Scale Computing
+            </StyledLinkText>
           </StyledLink>
-        </li>
-        <li>
-          <StyledLink href="/contact-us">
-            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
-              Contact us
-            </Typography>
-          </StyledLink>
-        </li>
-        {/* <li>
+        </StyledLi>
+        {/* <StyledLi isActiveLink={setIsActiveLink(pathname, "/get-support")}>
           <StyledLink href="/get-support">
-            <Typography sx={{ color: "#333333", fontFamily: "inherit" }}>
+            <StyledLinkText
+              isActiveLink={setIsActiveLink(pathname, "/get-support")}
+            >
               Support
-            </Typography>
+            </StyledLinkText>
           </StyledLink>
-        </li> */}
+        </StyledLi> */}
+        <StyledLi isActiveLink={setIsActiveLink(pathname, "/contact-us")}>
+          <StyledLink href="/contact-us">
+            <StyledLinkText
+              isActiveLink={setIsActiveLink(pathname, "/contact-us")}
+            >
+              Contact
+            </StyledLinkText>
+          </StyledLink>
+        </StyledLi>
       </StyledUl>
       <MenuIconContainer
         sx={{ display: { xs: "flex", md: "none", color: "color: '#333333'," } }}

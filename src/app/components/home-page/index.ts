@@ -6,3 +6,4 @@ export { ScaleComputingSection } from "./scale-computing-section"
 export { PartnersSection } from "./partners-section"
 export { NewHeroSection } from "./new-hero-section"
 export { ScaleComputingSectionSmall } from './scale-computing-section-small'
+export { GetSupportSection } from './get-support-section'
