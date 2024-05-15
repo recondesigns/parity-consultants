@@ -9,6 +9,7 @@ import {
   NewHeroSection,
   ScaleComputingSectionSmall,
   HeroSection,
+  GetSupportSection
 } from "./components/home-page/"
 
 export default function Home() {
@@ -21,6 +22,7 @@ export default function Home() {
       <ServicesSection />
       <SolutionsSection />
       <SocialProofSection />
+      <GetSupportSection />
       <ScaleComputingSectionSmall />
     </Main>
   )
