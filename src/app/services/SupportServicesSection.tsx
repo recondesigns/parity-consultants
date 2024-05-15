@@ -59,7 +59,7 @@ function SupportServicesSection() {
             >
               Experience seamless IT support with our comprehensive services.
               From PC sales and support to virus/spyware removal, preventative
-              maintenance, and remote monitoring, we've got you covered every
+              maintenance, and remote monitoring, we&apos;ve got you covered every
               step of the way.
             </Typography>
             <Box
