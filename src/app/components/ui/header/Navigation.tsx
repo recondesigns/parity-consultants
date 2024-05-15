@@ -33,6 +33,7 @@ const MenuIconContainer = styled("button")(
 const StyledNav = styled(Box)({}, ({ theme }) => ({}))
 
 type StyledLiProps = {
+  isScaleComputingLink?: boolean
   isActiveLink: boolean
 }
 
@@ -41,12 +42,17 @@ const StyledLi = styled("li")<StyledLiProps>(
     padding: "4px 8px",
     height: "100%",
   },
-  ({ isActiveLink }) => ({
-    borderBottom: !isActiveLink ? "none" : "3px solid #D95C5C",
+  ({ isActiveLink, isScaleComputingLink }) => ({
+    borderBottom: !isActiveLink
+      ? "none"
+      : isScaleComputingLink
+        ? "3px solid #FC711F"
+        : "3px solid #D95C5C",
   })
 )
 
 type StyledLinkTextProps = {
+  isScaleComputingLink?: boolean
   isActiveLink: boolean
 }
 
@@ -55,10 +61,15 @@ const StyledLinkText = styled(Typography)<StyledLinkTextProps>(
     height: "100%",
     fontFamily: "inherit",
   },
-  ({ isActiveLink }) => ({
-    color: !isActiveLink ? "#333333" : "#D95C5C",
+  ({ isActiveLink, isScaleComputingLink }) => ({
+    color: isScaleComputingLink
+      ? "#FC711F"
+      : isActiveLink
+        ? "#D95C5C"
+        : "#333333",
   })
 )
+// "#D95C5C"
 
 const StyledLink = styled(Link)(
   {
@@ -102,15 +113,19 @@ export default function Navigation() {
             </StyledLinkText>
           </StyledLink>
         </StyledLi>
-        {/* <StyledLi isActiveLink={setIsActiveLink(pathname, "/scale-computing")}>
+        <StyledLi
+          isActiveLink={setIsActiveLink(pathname, "/scale-computing")}
+          isScaleComputingLink={true}
+        >
           <StyledLink href="/scale-computing">
             <StyledLinkText
               isActiveLink={setIsActiveLink(pathname, "/scale-computing")}
+              isScaleComputingLink={true}
             >
-              Scale Computing
+              Get Scale Computing
             </StyledLinkText>
           </StyledLink>
-        </StyledLi> */}
+        </StyledLi>
         {/* <StyledLi isActiveLink={setIsActiveLink(pathname, "/get-support")}>
           <StyledLink href="/get-support">
             <StyledLinkText
