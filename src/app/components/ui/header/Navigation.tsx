@@ -111,7 +111,7 @@ export default function Navigation() {
             </StyledLinkText>
           </StyledLink>
         </StyledLi> */}
-        <StyledLi isActiveLink={setIsActiveLink(pathname, "/get-support")}>
+        {/* <StyledLi isActiveLink={setIsActiveLink(pathname, "/get-support")}>
           <StyledLink href="/get-support">
             <StyledLinkText
               isActiveLink={setIsActiveLink(pathname, "/get-support")}
@@ -119,7 +119,7 @@ export default function Navigation() {
               Support
             </StyledLinkText>
           </StyledLink>
-        </StyledLi>
+        </StyledLi> */}
         <StyledLi isActiveLink={setIsActiveLink(pathname, "/contact-us")}>
           <StyledLink href="/contact-us">
             <StyledLinkText

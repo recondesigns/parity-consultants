@@ -102,7 +102,7 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
               </StyledLinkText>
             </StyledLink>
           </ListItem> */}
-          <ListItem>
+          {/* <ListItem>
             <StyledLink href="/get-support" onClick={onClose}>
               <StyledLinkText
                 isActiveLink={setIsActiveLink(pathname, "/get-support")}
@@ -110,7 +110,7 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
                 Support
               </StyledLinkText>
             </StyledLink>
-          </ListItem>
+          </ListItem> */}
           <ListItem>
             <StyledLink href="/contact-us" onClick={onClose}>
               <StyledLinkText
