@@ -12,31 +12,28 @@ import Divider from "@mui/material/Divider"
 import Typography from "@mui/material/Typography"
 import parityLogo from "../../../../../public/images/parity-red-logo.png"
 
-const StyledLink = styled(Link)(
-  {
-    textDecoration: "none",
-  },
-  ({ theme }) => ({
-    color: "#000000",
-    "&:hover": {
-      color: "gray",
-      textDecoration: "underline",
-    },
-  })
-)
+const StyledLink = styled(Link)({}, ({ theme }) => ({}))
 
 type StyledLinkTextProps = {
+  isScaleComputingLink?: boolean
   isActiveLink?: boolean
 }
 
 const StyledLinkText = styled(Typography)<StyledLinkTextProps>(
   {
-    color: "#333333",
     fontFamily: "inherit",
   },
-  ({ isActiveLink }) => ({
-    color: !isActiveLink ? "#333333" : "#D95C5C",
-    borderBottom: !isActiveLink ? "3px solid none" : "3px solid #D95C5C",
+  ({ isActiveLink, isScaleComputingLink }) => ({
+    color: isScaleComputingLink
+      ? "#FC711F"
+      : isActiveLink
+        ? "#D95C5C"
+        : "#333333",
+    borderBottom: !isActiveLink
+      ? "none"
+      : isScaleComputingLink
+        ? "3px solid #FC711F"
+        : "3px solid #D95C5C",
   })
 )
 
@@ -70,7 +67,10 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
           <Divider />
           <ListItem>
             <StyledLink href="/" onClick={onClose}>
-              <StyledLinkText isActiveLink={setIsActiveLink(pathname, "/")}>
+              <StyledLinkText
+                sx={{ textDecoration: "none" }}
+                isActiveLink={setIsActiveLink(pathname, "/")}
+              >
                 Home
               </StyledLinkText>
             </StyledLink>
@@ -93,15 +93,16 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
               </StyledLinkText>
             </StyledLink>
           </ListItem>
-          {/* <ListItem>
+          <ListItem>
             <StyledLink href="/scale-computing" onClick={onClose}>
               <StyledLinkText
+                isScaleComputingLink={true}
                 isActiveLink={setIsActiveLink(pathname, "/scale-computing")}
               >
                 Scale Computing
               </StyledLinkText>
             </StyledLink>
-          </ListItem> */}
+          </ListItem>
           {/* <ListItem>
             <StyledLink href="/get-support" onClick={onClose}>
               <StyledLinkText
