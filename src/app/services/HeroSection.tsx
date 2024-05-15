@@ -25,10 +25,12 @@ type Props = {
 }
 // linear-gradient(45deg, #FF2146, #FC711F)
 // linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)
+// linear-gradient(120deg, #d4fc79 40%, #96e6a1 120%)
+// linear-gradient(120deg, #FDFCFC 25%, #D95C5C 200%)
 function HeroSection({ includeLearnMoreButton = false }: Props) {
   return (
     <Section
-      sx={{ background: "linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%)" }}
+      sx={{ background: "linear-gradient(120deg, #FDFCFC 25%, #D95C5C 200%)" }}
     >
       <Box
         sx={{
@@ -36,7 +38,7 @@ function HeroSection({ includeLearnMoreButton = false }: Props) {
             xs: "80px 20px",
             sm: "100px 40px",
             md: "100px 80px",
-            lg: "140px 100px",
+            lg: "180px 100px",
           },
         }}
       >
@@ -52,7 +54,7 @@ function HeroSection({ includeLearnMoreButton = false }: Props) {
             md={6}
             sx={{
               paddingBottom: { xs: "32px", md: "0px" },
-              px: { xs: "20px", md: "0px" },
+              paddingRight: { md: "12px" },
             }}
           >
             <Box
@@ -60,7 +62,7 @@ function HeroSection({ includeLearnMoreButton = false }: Props) {
                 height: { md: "100%" },
                 display: { sm: "flex" },
                 flexDirection: { sm: "column" },
-                justifyContent: { sm: "center" },
+                justifyContent: { sm: "center", md: "start" },
               }}
             >
               <Typography
@@ -72,10 +74,29 @@ function HeroSection({ includeLearnMoreButton = false }: Props) {
                 textAlign={{ xs: "center", md: "left" }}
                 sx={{ paddingBottom: { xs: "8px" } }}
               >
-                Empower Your Business with Seamless IT Solutions
+                Empower your business with seamless IT solutions
               </Typography>
+            </Box>
+          </Grid>
+          <Grid
+            item
+            xs={12}
+            md={6}
+            sx={{
+              paddingLeft: { md: "12px" },
+            }}
+          >
+            <Box
+              sx={{
+                height: { md: "100%" },
+                display: { xs: "flex" },
+                flexDirection: { xs: "column" },
+                justifyContent: { xs: "center" },
+                alignItems: { xs: "center", md: "start" },
+              }}
+            >
               <Typography
-                variant="h6"
+                variant="h5"
                 component="p"
                 fontFamily="inherit"
                 color="#333333"
@@ -85,7 +106,7 @@ function HeroSection({ includeLearnMoreButton = false }: Props) {
                 Unleash the Power of Technology with Our Expertise!
               </Typography>
               <Typography
-                variant="body1"
+                variant="h6"
                 fontFamily="inherit"
                 color="#333333"
                 textAlign={{ xs: "center", md: "left" }}
@@ -130,25 +151,6 @@ function HeroSection({ includeLearnMoreButton = false }: Props) {
                   </StyledLink>
                 </Box>
               )}
-            </Box>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            sx={{
-              paddingLeft: { md: "12px", lg: "0px" },
-            }}
-          >
-            <Box
-              sx={{
-                height: { md: "100%" },
-                display: { xs: "flex" },
-                justifyContent: { xs: "center" },
-                alignItems: { sm: "start", md: "center" },
-              }}
-            >
-              <h1>Other side</h1>
             </Box>
           </Grid>
         </Grid>
