@@ -1,12 +1,19 @@
 "use client"
-import React, { useEffect, useState } from "react"
+import React from "react"
 import Grid from "@mui/material/Grid"
 import Box from "@mui/material/Box"
 import Card from "@mui/material/Card"
 import CardContent from "@mui/material/CardContent"
 import Typography from "@mui/material/Typography"
 import Avatar from "@mui/material/Avatar"
-import tempAvatarImage from "../../../../../public/images/temp-avatar-image.png"
+
+function getInitials(name: string) {
+  const splitName = name.split(" ")
+
+  const initals = splitName.map((theName) => theName.charAt(0).toUpperCase())
+
+  return initals.join("")
+}
 
 const MovingCardsSection = ({
   items,
@@ -72,11 +79,8 @@ const MovingCardsSection = ({
                           color="rgba(51, 51, 51, 0.6)"
                         >{`${item.company}`}</Typography>
                       </Box>
-                      <Avatar
-                        alt="testimonial avatar"
-                        src={tempAvatarImage.src}
-                      >
-                        R
+                      <Avatar alt="testimonial avatar">
+                        {getInitials(`${item.name}`)}
                       </Avatar>
                     </Box>
                   </Box>
