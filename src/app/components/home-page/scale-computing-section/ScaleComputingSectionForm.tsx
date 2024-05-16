@@ -9,6 +9,7 @@ function ScaleComputingSectionForm() {
   const [nameInput, setNameInput] = React.useState("")
   const [emailInput, setEmailInput] = React.useState("")
   const [companyInput, setCompanyInput] = React.useState("")
+  const [detailsInput, setDetailsInput] = React.useState("")
   const [isSending, setIsSending] = React.useState(false)
   const [isSent, setIsSent] = React.useState(false)
 
@@ -25,6 +26,7 @@ function ScaleComputingSectionForm() {
           name: nameInput,
           email: emailInput,
           company: companyInput,
+          details: detailsInput
         }
       )
       .then(() => {
@@ -87,6 +89,17 @@ function ScaleComputingSectionForm() {
         fullWidth
         disabled={!isSent ? false : true}
         onChange={(e) => handleChange(e, setCompanyInput)}
+        sx={{ paddingBottom: "16px" }}
+      />
+      <TextField
+        id="detailsInput"
+        name="detailsInput"
+        label="Details"
+        type="text"
+        value={detailsInput}
+        fullWidth
+        disabled={!isSent ? false : true}
+        onChange={(e) => handleChange(e, setDetailsInput)}
         sx={{ paddingBottom: "16px" }}
       />
       <Button
