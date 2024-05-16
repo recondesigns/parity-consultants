@@ -7,9 +7,10 @@ import Grid from "@mui/material/Grid"
 import Typography from "@mui/material/Typography"
 import { Main, Section } from "../components/ui"
 import ContactUsSectionForm from "./ContactUsSectionForm"
-import FacebookIcon from "@mui/icons-material/Facebook"
-import InstagramIcon from "@mui/icons-material/Instagram"
-import LinkedInIcon from "@mui/icons-material/LinkedIn"
+// import FacebookIcon from "@mui/icons-material/Facebook"
+// import InstagramIcon from "@mui/icons-material/Instagram"
+// import LinkedInIcon from "@mui/icons-material/LinkedIn"
+import ContactUsMap from "./ContactUsMap"
 import { ScaleComputingSectionSmall } from "../components/home-page"
 
 const StyledLink = styled(Link)(
@@ -120,12 +121,44 @@ function ContactUsPage() {
           </Grid>
           <Grid item xs={12} lg={6}>
             <Box
-              px={{
-                xs: "20px",
-                sm: "80px",
-                md: "200px",
-                lg: "64px",
-                xl: "140px",
+              // pt="40px"
+              padding={{
+                xs: "0px 20px 40px 20px",
+              }}
+            >
+              <Typography
+                variant="h5"
+                component="h3"
+                textAlign="center"
+                fontWeight="bold"
+                sx={{ color: "#333333", fontFamily: "inherit" }}
+              >
+                Hours of operation
+              </Typography>
+              <Typography
+                variant="body1"
+                component="p"
+                textAlign="center"
+                pt="16px"
+                sx={{ color: "#333333", fontFamily: "inherit" }}
+              >
+                We provide onsite and remote services Monday to Friday from 8:00
+                to 5:00 (CST), excluding holidays.
+              </Typography>
+              <Typography
+                variant="body1"
+                component="p"
+                textAlign="center"
+                pt="16px"
+                sx={{ color: "#333333", fontFamily: "inherit" }}
+              >
+                Weekend support is available at $150.00 per hour
+              </Typography>
+            </Box>
+
+            <Box
+              padding={{
+                xs: "0px 20px 12px 20px",
               }}
             >
               <Typography
@@ -177,81 +210,13 @@ function ContactUsPage() {
               </Typography>
             </Box>
             <Box
-              pt="40px"
-              px={{
-                xs: "20px",
-                sm: "80px",
-                md: "200px",
-                lg: "64px",
-                xl: "140px",
+              sx={{
+                padding: { sm: "0px 20px", md: "0px 80px", lg: "0px 20px" },
+                width: "100%",
+                height: { xs: "200px", md: "250px" },
               }}
             >
-              <Typography
-                variant="h5"
-                component="h3"
-                textAlign="center"
-                fontWeight="bold"
-                sx={{ color: "#333333", fontFamily: "inherit" }}
-              >
-                Hours of operation
-              </Typography>
-              <Typography
-                variant="body1"
-                component="p"
-                textAlign="center"
-                pt="16px"
-                sx={{ color: "#333333", fontFamily: "inherit" }}
-              >
-                We provide onsite and remote services Monday to Friday from 8:00
-                to 5:00 (CST), excluding holidays.
-              </Typography>
-              <Typography
-                variant="body1"
-                component="p"
-                textAlign="center"
-                pt="16px"
-                sx={{ color: "#333333", fontFamily: "inherit" }}
-              >
-                Weekend support is available at $150.00 per hour
-              </Typography>
-            </Box>
-            <Box
-              pt="40px"
-              px={{
-                xs: "20px",
-                sm: "80px",
-                md: "200px",
-                lg: "64px",
-                xl: "140px",
-              }}
-            >
-              <Typography
-                variant="h5"
-                component="h3"
-                textAlign="center"
-                fontWeight="bold"
-                sx={{ color: "#333333", fontFamily: "inherit" }}
-              >
-                Find us on social media
-              </Typography>
-              <Box
-                pt="16px"
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  gap: "16px",
-                }}
-              >
-                <StyledLink href="https://www.facebook.com/" target="_blank">
-                  <FacebookIcon fontSize="large" sx={{ color: "#333333" }} />
-                </StyledLink>
-                <StyledLink href="https://www.instagram.com/" target="_blank">
-                  <InstagramIcon fontSize="large" sx={{ color: "#333333" }} />
-                </StyledLink>
-                <StyledLink href="https://www.LinkedIn.com/" target="_blank">
-                  <LinkedInIcon fontSize="large" sx={{ color: "#333333" }} />
-                </StyledLink>
-              </Box>
+              <ContactUsMap />
             </Box>
           </Grid>
         </Grid>
