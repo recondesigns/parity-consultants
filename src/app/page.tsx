@@ -1,5 +1,6 @@
 "use client"
 import { Main } from "./components/ui"
+
 import {
   // ScaleComputingSection,
   ServicesSection,
@@ -9,7 +10,7 @@ import {
   NewHeroSection,
   ScaleComputingSectionSmall,
   HeroSection,
-  GetSupportSection
+  GetSupportSection,
 } from "./components/home-page/"
 
 export default function Home() {

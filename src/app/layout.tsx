@@ -19,9 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <div style={{ position: "relative", paddingTop: "72px" }}>
-          <Header />
-          {children}
-          <Footer />
+            <Header />
+            {children}
+            <Footer />
         </div>
       </body>
     </html>

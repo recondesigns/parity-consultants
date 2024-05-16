@@ -24,6 +24,7 @@
     "@mui/icons-material": "^5.15.16",
     "@mui/material": "^5.15.16",
     "@szhsin/react-accordion": "^1.2.4",
+    "@vis.gl/react-google-maps": "^1.0.0",
     "axios": "^1.6.8",
     "clsx": "^2.1.1",
     "framer-motion": "^11.1.9",
