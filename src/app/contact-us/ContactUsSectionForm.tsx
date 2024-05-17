@@ -56,7 +56,7 @@ function ContactFormSection() {
             .post(
               process.env.NODE_ENV === "development"
                 ? "http://localhost:3000/api/sendContactFormMessage"
-                : "/api/sendEmail",
+                : "/api/sendContactFormMessage",
               {
                 name: values.name,
                 email: values.email,
