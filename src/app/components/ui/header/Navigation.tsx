@@ -18,7 +18,7 @@ const StyledUl = styled("ul")(
     gap: "12px",
     listStyleType: "none",
   },
-  ({ theme }) => ({})
+  ({}) => ({})
 )
 
 const MenuIconContainer = styled("button")(
@@ -27,10 +27,10 @@ const MenuIconContainer = styled("button")(
     border: "none",
     cursor: "pointer",
   },
-  ({ theme }) => ({})
+  ({}) => ({})
 )
 
-const StyledNav = styled(Box)({}, ({ theme }) => ({}))
+const StyledNav = styled(Box)({}, ({}) => ({}))
 
 type StyledLiProps = {
   isScaleComputingLink?: boolean
@@ -39,7 +39,7 @@ type StyledLiProps = {
 
 const StyledLi = styled("li")<StyledLiProps>(
   {
-    padding: "4px 8px",
+    padding: "4px 0px",
     height: "100%",
   },
   ({ isActiveLink, isScaleComputingLink }) => ({
@@ -75,7 +75,7 @@ const StyledLink = styled(Link)(
   {
     textDecoration: "none",
   },
-  ({ theme }) => ({
+  ({}) => ({
     color: "#000000",
     "&:hover": {
       color: "gray",
@@ -128,6 +128,7 @@ export default function Navigation() {
             <StyledLinkText
               isActiveLink={setIsActiveLink(pathname, "/scale-computing")}
               isScaleComputingLink={true}
+              sx={{ fontWeight: "bold" }}
             >
               Get Scale Computing
             </StyledLinkText>
@@ -142,7 +143,7 @@ export default function Navigation() {
             </StyledLinkText>
           </StyledLink>
         </StyledLi> */}
-        <StyledLi isActiveLink={setIsActiveLink(pathname, "/contact-us")}>
+        {/* <StyledLi isActiveLink={setIsActiveLink(pathname, "/contact-us")}>
           <StyledLink href="/contact-us">
             <StyledLinkText
               isActiveLink={setIsActiveLink(pathname, "/contact-us")}
@@ -150,7 +151,7 @@ export default function Navigation() {
               Contact
             </StyledLinkText>
           </StyledLink>
-        </StyledLi>
+        </StyledLi> */}
       </StyledUl>
       <MenuIconContainer
         sx={{ display: { xs: "flex", md: "none", color: "color: '#333333'," } }}

@@ -3,7 +3,23 @@ import axios from "axios"
 import { Formik } from "formik"
 import Box from "@mui/material/Box"
 import TextField from "@mui/material/TextField"
+import MenuItem from "@mui/material/MenuItem"
 import Button from "@mui/material/Button"
+
+const optionsList = [
+  {
+    label: "Feedback",
+    value: "feedback",
+  },
+  {
+    label: "General inquiry",
+    value: "general inquiry",
+  },
+  {
+    label: "Other",
+    value: "other",
+  },
+]
 
 const validateFunc = (values: any) => {
   const errors = {}
@@ -41,6 +57,7 @@ function ContactFormSection() {
         email: "",
         name: "",
         company: "",
+        subject: "",
         message: "",
       }}
       validateOnChange={false}
@@ -61,6 +78,7 @@ function ContactFormSection() {
                 name: values.name,
                 email: values.email,
                 company: values.company,
+                subject: values.subject,
                 message: values.message,
               }
             )
@@ -147,6 +165,28 @@ function ContactFormSection() {
               onChange={handleChange}
               sx={{ paddingBottom: "16px" }}
             />
+            <TextField
+              id="subjectInput"
+              name="subject"
+              label="Subject"
+              type="text"
+              value={values.subject}
+              error={touched.subject && errors.subject ? true : false}
+              helperText={
+                touched.subject && errors.subject && `${errors.subject}`
+              }
+              fullWidth
+              select
+              onBlur={handleBlur}
+              onChange={handleChange}
+              sx={{ paddingBottom: "16px" }}
+            >
+              {optionsList.map((option) => (
+                <MenuItem key={option.value} value={option.value}>
+                  {option.label}
+                </MenuItem>
+              ))}
+            </TextField>
             <TextField
               id="messageInput"
               name="message"

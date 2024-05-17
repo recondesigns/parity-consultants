@@ -2,7 +2,7 @@ import nodemailer from "nodemailer"
 
 export async function POST(request) {
   const req = await request.json()
-  const { name, email, company, message } = req
+  const { name, email, company, subject, message } = req
 
   try {
     const transporter = nodemailer.createTransport({
@@ -21,6 +21,7 @@ export async function POST(request) {
             Name: ${name}\n
             Email: ${email}\n
             Company: ${company}\n
+            Subject: ${!subject ? "User did not select a subject" : subject}\n
             Message: ${message}
           `,
     })

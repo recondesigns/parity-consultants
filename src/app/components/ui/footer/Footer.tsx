@@ -143,14 +143,18 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit", color: "#333333" }}
+                        sx={{
+                          fontFamily: "inherit",
+                          fontWeight: "bold",
+                          color: "#FC711F",
+                        }}
                       >
                         Scale Computing
                       </Typography>
                     </StyledLink>
                   </li>
-                  {/* <li style={{ width: "100%" }}>
-                    <StyledLink href="/get-support">
+                  <li style={{ width: "100%" }}>
+                    <StyledLink href="/#getSupportSection">
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -159,7 +163,7 @@ export default function Footer() {
                         Support
                       </Typography>
                     </StyledLink>
-                  </li> */}
+                  </li>
                 </StyledUl>
               </Grid>
 
@@ -175,7 +179,7 @@ export default function Footer() {
                       Connect
                     </Typography>
                   </li>
-                  <li style={{ width: "100%" }}>
+                  {/* <li style={{ width: "100%" }}>
                     <StyledLink
                       href="https://www.facebook.com/"
                       target="_blank"
@@ -216,7 +220,7 @@ export default function Footer() {
                         LinkedIn
                       </Typography>
                     </StyledLink>
-                  </li>
+                  </li> */}
                   <li style={{ width: "100%" }}>
                     <StyledLink href="/contact-us">
                       <Typography
@@ -252,7 +256,7 @@ export default function Footer() {
                       About us
                     </Typography>
                   </li>
-                  <li style={{ width: "100%" }}>
+                  {/* <li style={{ width: "100%" }}>
                     <Typography
                       variant="body2"
                       textAlign={{ xs: "center", sm: "left" }}
@@ -269,7 +273,7 @@ export default function Footer() {
                     >
                       Privacy Policy
                     </Typography>
-                  </li>
+                  </li> */}
                 </StyledUl>
               </Grid>
             </Grid>
