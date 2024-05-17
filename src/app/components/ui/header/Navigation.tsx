@@ -4,8 +4,10 @@ import { usePathname } from "next/navigation"
 import { styled } from "@mui/material/styles"
 import Link from "next/link"
 import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import MenuIcon from "@mui/icons-material/Menu"
+import OpenInNewIcon from "@mui/icons-material/OpenInNew"
 import { useAppStore } from "../../../stores/appStore"
 import NavigationFlyout from "./NavigationFlyout"
 
@@ -69,7 +71,6 @@ const StyledLinkText = styled(Typography)<StyledLinkTextProps>(
         : "#333333",
   })
 )
-// "#D95C5C"
 
 const StyledLink = styled(Link)(
   {
@@ -93,8 +94,16 @@ export default function Navigation() {
   const { isFlyoutOpen, setIsFlyoutOpen } = useAppStore()
 
   return (
-    <StyledNav as="nav">
-      <StyledUl sx={{ display: { xs: "none", md: "flex" } }}>
+    <StyledNav
+      as="nav"
+      sx={{
+        width: { xs: "auto", lg: "100%" },
+        display: { lg: "flex" },
+        justifyContent: { lg: "space-between" },
+        alignItems: { lg: "center" },
+      }}
+    >
+      <StyledUl sx={{ display: { xs: "none", lg: "flex" } }}>
         <StyledLi isActiveLink={setIsActiveLink(pathname, "/")}>
           <StyledLink href="/" sx={{ height: "100%" }}>
             <StyledLinkText isActiveLink={setIsActiveLink(pathname, "/")}>
@@ -120,29 +129,6 @@ export default function Navigation() {
             </StyledLinkText>
           </StyledLink>
         </StyledLi>
-        <StyledLi
-          isActiveLink={setIsActiveLink(pathname, "/scale-computing")}
-          isScaleComputingLink={true}
-        >
-          <StyledLink href="/scale-computing">
-            <StyledLinkText
-              isActiveLink={setIsActiveLink(pathname, "/scale-computing")}
-              isScaleComputingLink={true}
-              sx={{ fontWeight: "bold" }}
-            >
-              Get Scale Computing
-            </StyledLinkText>
-          </StyledLink>
-        </StyledLi>
-        {/* <StyledLi isActiveLink={setIsActiveLink(pathname, "/get-support")}>
-          <StyledLink href="/get-support">
-            <StyledLinkText
-              isActiveLink={setIsActiveLink(pathname, "/get-support")}
-            >
-              Support
-            </StyledLinkText>
-          </StyledLink>
-        </StyledLi> */}
         <StyledLi isActiveLink={setIsActiveLink(pathname, "/contact-us")}>
           <StyledLink href="/contact-us">
             <StyledLinkText
@@ -153,8 +139,94 @@ export default function Navigation() {
           </StyledLink>
         </StyledLi>
       </StyledUl>
+      <StyledUl
+        sx={{ display: { xs: "none", lg: "flex" }, alignItems: "center" }}
+      >
+        <StyledLi
+          isActiveLink={setIsActiveLink(pathname, "/")}
+          sx={{ borderBottom: "4px solid #FDFCFC" }}
+        >
+          <StyledLink
+            href="https://parity.myportallogin.com/"
+            sx={{
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              gap: "4px",
+            }}
+            target="_blank"
+          >
+            <StyledLinkText
+              variant="body2"
+              isActiveLink={setIsActiveLink(pathname, "/")}
+              sx={{ color: "#333333" }}
+            >
+              Client portal
+            </StyledLinkText>
+            <OpenInNewIcon fontSize="small" />
+          </StyledLink>
+        </StyledLi>
+        <StyledLi
+          isActiveLink={setIsActiveLink(pathname, "/")}
+          sx={{ borderBottom: "4px solid #FDFCFC" }}
+        >
+          <StyledLink
+            href="https://parity256.screenconnect.com/"
+            sx={{
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              gap: "4px",
+            }}
+            target="_blank"
+          >
+            <StyledLinkText
+              variant="body2"
+              isActiveLink={setIsActiveLink(pathname, "/")}
+              sx={{ color: "#333333" }}
+            >
+              Remote access
+            </StyledLinkText>
+            <OpenInNewIcon fontSize="small" />
+          </StyledLink>
+        </StyledLi>
+        <StyledLi
+          isActiveLink={setIsActiveLink(pathname, "/")}
+          sx={{ borderBottom: "4px solid #FDFCFC" }}
+        >
+          <StyledLink
+            href="https://parity256.screenconnect.com/"
+            sx={{
+              height: "100%",
+              display: "flex",
+              alignItems: "center",
+              gap: "4px",
+            }}
+            target="_blank"
+          >
+            <Button
+              component="div"
+              disableElevation
+              variant="contained"
+              sx={{
+                background: "#FC711F",
+                "&:hover": {
+                  background: "#e65100",
+                },
+              }}
+            >
+              <StyledLinkText
+                isActiveLink={setIsActiveLink(pathname, "/")}
+                sx={{ color: "#FDFCFC", textTransform: "none" }}
+              >
+                Get Scale Computing
+              </StyledLinkText>
+            </Button>
+          </StyledLink>
+        </StyledLi>
+      </StyledUl>
       <MenuIconContainer
-        sx={{ display: { xs: "flex", md: "none", color: "color: '#333333'," } }}
+        sx={{ display: { xs: "flex", lg: "none", color: "color: '#333333'," } }}
         onClick={() => setIsFlyoutOpen(!isFlyoutOpen)}
       >
         <MenuIcon />

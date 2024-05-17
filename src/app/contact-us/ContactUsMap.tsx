@@ -1,13 +1,13 @@
 "use client"
 import React from "react"
 import Box from "@mui/material/Box"
-// import Typography from "@mui/material/Typography"
-import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps"
+import Typography from "@mui/material/Typography"
+// import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps"
 
 function ContactUsMap() {
   return (
     <Box sx={{ width: "100", height: "100%" }}>
-      {/* <Box
+      <Box
         sx={{
           width: "100%",
           height: "100%",
@@ -24,8 +24,8 @@ function ContactUsMap() {
         >
           Map placeholder
         </Typography>
-      </Box> */}
-      <APIProvider apiKey={`${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}`}>
+      </Box>
+      {/* <APIProvider apiKey={`${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API}`}>
         <Map
           style={{ width: "100%", height: "100%" }}
           defaultCenter={{ lat: 33.011573791503906, lng: -96.96389770507812 }}
@@ -37,7 +37,7 @@ function ContactUsMap() {
             position={{ lat: 33.011573791503906, lng: -96.96389770507812 }}
           />
         </Map>
-      </APIProvider>
+      </APIProvider> */}
     </Box>
   )
 }
