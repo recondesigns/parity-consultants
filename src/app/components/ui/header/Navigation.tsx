@@ -143,7 +143,7 @@ export default function Navigation() {
             </StyledLinkText>
           </StyledLink>
         </StyledLi> */}
-        {/* <StyledLi isActiveLink={setIsActiveLink(pathname, "/contact-us")}>
+        <StyledLi isActiveLink={setIsActiveLink(pathname, "/contact-us")}>
           <StyledLink href="/contact-us">
             <StyledLinkText
               isActiveLink={setIsActiveLink(pathname, "/contact-us")}
@@ -151,7 +151,7 @@ export default function Navigation() {
               Contact
             </StyledLinkText>
           </StyledLink>
-        </StyledLi> */}
+        </StyledLi>
       </StyledUl>
       <MenuIconContainer
         sx={{ display: { xs: "flex", md: "none", color: "color: '#333333'," } }}
