@@ -36,7 +36,6 @@ function ScaleComputingSectionForm() {
     <Formik
       initialValues={{
         email: "",
-        password: "",
         name: "",
         company: "",
         details: "",
