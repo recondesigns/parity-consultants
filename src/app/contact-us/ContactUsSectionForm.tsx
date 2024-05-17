@@ -15,6 +15,10 @@ const optionsList = [
     label: "General inquiry",
     value: "general inquiry",
   },
+  {
+    label: "Other",
+    value: "other",
+  },
 ]
 
 const validateFunc = (values: any) => {
