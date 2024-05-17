@@ -4,9 +4,7 @@ import Box from "@mui/material/Box"
 // import Typography from "@mui/material/Typography"
 import { APIProvider, Map, Marker } from "@vis.gl/react-google-maps"
 
-type Props = {}
-
-export default function ContactUsMap({}: Props) {
+function ContactUsMap() {
   return (
     <Box sx={{ width: "100", height: "100%" }}>
       {/* <Box
@@ -43,3 +41,5 @@ export default function ContactUsMap({}: Props) {
     </Box>
   )
 }
+
+export default React.memo(ContactUsMap)
