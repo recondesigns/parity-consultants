@@ -2,7 +2,7 @@ import nodemailer from "nodemailer"
 
 export async function POST(request) {
   const req = await request.json()
-  const { name, email, message } = req
+  const { name, email, company, message } = req
 
   try {
     const transporter = nodemailer.createTransport({
@@ -20,6 +20,7 @@ export async function POST(request) {
       text: `
             Name: ${name}\n
             Email: ${email}\n
+            Company: ${company}\n
             Message: ${message}
           `,
     })
