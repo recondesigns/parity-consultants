@@ -143,14 +143,18 @@ export default function Footer() {
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit", color: "#333333" }}
+                        sx={{
+                          fontFamily: "inherit",
+                          fontWeight: "bold",
+                          color: "#FC711F",
+                        }}
                       >
                         Scale Computing
                       </Typography>
                     </StyledLink>
                   </li>
-                  {/* <li style={{ width: "100%" }}>
-                    <StyledLink href="/get-support">
+                  <li style={{ width: "100%" }}>
+                    <StyledLink href="/#getSupportSection">
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -159,7 +163,7 @@ export default function Footer() {
                         Support
                       </Typography>
                     </StyledLink>
-                  </li> */}
+                  </li>
                 </StyledUl>
               </Grid>
 
