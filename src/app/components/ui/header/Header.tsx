@@ -10,17 +10,16 @@ import parityLogo from "../../../../../public/images/parity-red-logo.png"
 const StyledHeader = styled(Box)(
   {
     position: "fixed",
-    top: "0px",
     left: "0px",
     right: "0px",
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
     background: "#FDFCFC",
-    // borderBottom: '1px solid rgba(51, 51, 51, .3)',
+    borderBottom: "1px solid rgba(51, 51, 51, .3)",
     zIndex: 300,
   },
-  ({ theme }) => ({})
+  ({}) => ({})
 )
 
 export default function Header() {
@@ -28,6 +27,7 @@ export default function Header() {
     <StyledHeader
       as="header"
       sx={{
+        top: { xs: "0px", md: "44px" },
         py: { xs: "12px", lg: "20px" },
         px: { xs: "20px", md: "40px", lg: "80px" },
       }}

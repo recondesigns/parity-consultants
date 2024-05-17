@@ -10,9 +10,10 @@ import List from "@mui/material/List"
 import ListItem from "@mui/material/ListItem"
 import Divider from "@mui/material/Divider"
 import Typography from "@mui/material/Typography"
+import OpenInNewIcon from "@mui/icons-material/OpenInNew"
 import parityLogo from "../../../../../public/images/parity-red-logo.png"
 
-const StyledLink = styled(Link)({}, ({ theme }) => ({}))
+const StyledLink = styled(Link)({}, ({}) => ({}))
 
 type StyledLinkTextProps = {
   isScaleComputingLink?: boolean
@@ -98,6 +99,7 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
               <StyledLinkText
                 isScaleComputingLink={true}
                 isActiveLink={setIsActiveLink(pathname, "/scale-computing")}
+                sx={{ fontWeight: "bold" }}
               >
                 Scale Computing
               </StyledLinkText>
@@ -118,6 +120,61 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
                 isActiveLink={setIsActiveLink(pathname, "/contact-us")}
               >
                 Contact
+              </StyledLinkText>
+            </StyledLink>
+          </ListItem>
+        </List>
+
+        <List sx={{ background: "#D95C5C" }}>
+          <ListItem>
+            <StyledLink
+              href="https://na.myconnectwise.net/support/index.htm?Company=parity"
+              onClick={onClose}
+              target="_blank"
+            >
+              <StyledLinkText
+                isActiveLink={setIsActiveLink(pathname, "/contact-us")}
+              >
+                <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      height: "20px",
+                      maxHeight: "20px",
+                      fontFamily: "inherit",
+                      color: "#FDFCFC",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Client portal
+                  </Typography>
+                  <OpenInNewIcon fontSize="small" sx={{ color: "#FDFCFC" }} />
+                </Box>
+              </StyledLinkText>
+            </StyledLink>
+          </ListItem>
+          <ListItem>
+            <StyledLink
+              href="https://support.parity.us.com/"
+              target="_blank"
+              onClick={onClose}
+            >
+              <StyledLinkText
+                isActiveLink={setIsActiveLink(pathname, "/contact-us")}
+              >
+                <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}>
+                  <Typography
+                    variant="body1"
+                    sx={{
+                      fontFamily: "inherit",
+                      color: "#FDFCFC",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    Remote access
+                  </Typography>
+                  <OpenInNewIcon fontSize="small" sx={{ color: "#FDFCFC" }} />
+                </Box>
               </StyledLinkText>
             </StyledLink>
           </ListItem>
