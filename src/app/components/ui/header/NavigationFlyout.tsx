@@ -56,15 +56,15 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
         <List>
           <ListItem
             sx={{
-              padding: "20px 0px",
               display: "flex",
-              justifyContent: "center",
+              justifyContent: "flex-start",
             }}
           >
             <StyledLink href="/" onClick={onClose}>
               <Image src={parityLogo} height={40} alt="Company logo." />
             </StyledLink>
           </ListItem>
+          <ListItem></ListItem>
           <Divider />
           <ListItem>
             <StyledLink href="/" onClick={onClose}>
@@ -105,15 +105,6 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
               </StyledLinkText>
             </StyledLink>
           </ListItem>
-          {/* <ListItem>
-            <StyledLink href="/get-support" onClick={onClose}>
-              <StyledLinkText
-                isActiveLink={setIsActiveLink(pathname, "/get-support")}
-              >
-                Support
-              </StyledLinkText>
-            </StyledLink>
-          </ListItem> */}
           <ListItem>
             <StyledLink href="/contact-us" onClick={onClose}>
               <StyledLinkText
@@ -123,18 +114,13 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
               </StyledLinkText>
             </StyledLink>
           </ListItem>
-        </List>
-
-        <List sx={{ background: "#D95C5C" }}>
           <ListItem>
             <StyledLink
               href="https://na.myconnectwise.net/support/index.htm?Company=parity"
               onClick={onClose}
               target="_blank"
             >
-              <StyledLinkText
-                isActiveLink={setIsActiveLink(pathname, "/contact-us")}
-              >
+              <StyledLinkText>
                 <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}>
                   <Typography
                     variant="body1"
@@ -142,13 +128,12 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
                       height: "20px",
                       maxHeight: "20px",
                       fontFamily: "inherit",
-                      color: "#FDFCFC",
-                      fontWeight: "bold",
+                      color: "#333333",
                     }}
                   >
                     Client portal
                   </Typography>
-                  <OpenInNewIcon fontSize="small" sx={{ color: "#FDFCFC" }} />
+                  <OpenInNewIcon fontSize="small" sx={{ color: "#333333" }} />
                 </Box>
               </StyledLinkText>
             </StyledLink>
@@ -159,21 +144,18 @@ export default function NavigationFlyout({ isOpen = false, onClose }: Props) {
               target="_blank"
               onClick={onClose}
             >
-              <StyledLinkText
-                isActiveLink={setIsActiveLink(pathname, "/contact-us")}
-              >
+              <StyledLinkText>
                 <Box sx={{ display: "flex", alignItems: "center", gap: "4px" }}>
                   <Typography
                     variant="body1"
                     sx={{
                       fontFamily: "inherit",
-                      color: "#FDFCFC",
-                      fontWeight: "bold",
+                      color: "#333333",
                     }}
                   >
                     Remote access
                   </Typography>
-                  <OpenInNewIcon fontSize="small" sx={{ color: "#FDFCFC" }} />
+                  <OpenInNewIcon fontSize="small" sx={{ color: "#333333" }} />
                 </Box>
               </StyledLinkText>
             </StyledLink>

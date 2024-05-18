@@ -195,33 +195,54 @@ export default function Navigation() {
           sx={{ borderBottom: "4px solid #FDFCFC" }}
         >
           <StyledLink
-            href="https://parity256.screenconnect.com/"
+            href="/scale-computing"
             sx={{
               height: "100%",
               display: "flex",
               alignItems: "center",
               gap: "4px",
             }}
-            target="_blank"
           >
-            <Button
-              component="div"
-              disableElevation
-              variant="contained"
-              sx={{
-                background: "#FC711F",
-                "&:hover": {
-                  background: "#e65100",
-                },
-              }}
-            >
-              <StyledLinkText
-                isActiveLink={setIsActiveLink(pathname, "/")}
-                sx={{ color: "#FDFCFC", textTransform: "none" }}
+            {pathname === "/scale-computing" ? (
+              <Button
+                component="div"
+                disableElevation
+                variant="outlined"
+                sx={{
+                  borderColor: "#FC711F",
+                  "&:hover": {
+                    borderColor: "#FC711F",
+                    background: "none",
+                  },
+                }}
               >
-                Get Scale Computing
-              </StyledLinkText>
-            </Button>
+                <StyledLinkText
+                  isActiveLink={setIsActiveLink(pathname, "/")}
+                  sx={{ color: "#FC711F", textTransform: "none" }}
+                >
+                  Get Scale Computing
+                </StyledLinkText>
+              </Button>
+            ) : (
+              <Button
+                component="div"
+                disableElevation
+                variant="contained"
+                sx={{
+                  background: "#FC711F",
+                  "&:hover": {
+                    background: "#e65100",
+                  },
+                }}
+              >
+                <StyledLinkText
+                  isActiveLink={setIsActiveLink(pathname, "/")}
+                  sx={{ color: "#FDFCFC", textTransform: "none" }}
+                >
+                  Get Scale Computing
+                </StyledLinkText>
+              </Button>
+            )}
           </StyledLink>
         </StyledLi>
       </StyledUl>

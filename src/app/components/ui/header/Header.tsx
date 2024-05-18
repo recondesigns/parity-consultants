@@ -32,7 +32,7 @@ export default function Header() {
           lg: "20px 80px 20px 80px",
         },
         justifyContent: { xs: "space-between", lg: "flex-start" },
-        gap: { lg: "20px" },
+        gap: { lg: "40px" },
       }}
     >
       <Box>
