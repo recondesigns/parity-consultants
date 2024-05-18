@@ -6,7 +6,7 @@ import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import Grid from "@mui/material/Grid"
 import { Section } from "../../ui"
-import sectionImage from "../../../../../public/images/section-image-1.jpg"
+import sectionImage from "../../../../../public/images/section-image-1.png"
 import circleAccent from "../../../../../public/images/accents/section-accent-broken-circles.png"
 import dotGridAccent from "../../../../../public/images/accents/section-accent-dot-grid.png"
 
