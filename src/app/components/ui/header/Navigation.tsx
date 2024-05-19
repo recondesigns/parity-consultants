@@ -185,7 +185,7 @@ export default function Navigation() {
               isActiveLink={setIsActiveLink(pathname, "/")}
               sx={{ color: "#333333" }}
             >
-              Remote access
+              Remote support
             </StyledLinkText>
             <OpenInNewIcon fontSize="small" />
           </StyledLink>
