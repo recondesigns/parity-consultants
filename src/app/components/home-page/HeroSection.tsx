@@ -2,6 +2,7 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
+import { montserrat } from "../../fonts"
 import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
@@ -89,7 +90,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
                 textAlign={{ xs: "center", md: "left" }}
                 sx={{ paddingBottom: { xs: "8px" } }}
               >
-                Upgrade your IT Infrastructure
+                Maximize Efficiency with Scale Computing Solutions
               </Typography>
               <Typography
                 variant="h6"
@@ -99,7 +100,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
                 textAlign={{ xs: "center", md: "left" }}
                 sx={{ paddingBottom: { xs: "40px", md: "20px" } }}
               >
-                Get the latest in Edge computing
+                Streamlined IT Infrastructure for Unmatched Performance
               </Typography>
               <Typography
                 variant="body1"
@@ -108,9 +109,13 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
                 textAlign={{ xs: "center", md: "left" }}
                 sx={{ paddingBottom: { xs: "40px" } }}
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-                mollitia, molestiae quas vel sint commodi repudiandae
-                consequuntur voluptatum laborum numquam blanditiis
+                Discover the power of Scale Computing with Parity Consultants.
+                Our expert team will help you deploy and optimize Scale
+                Computing solutions to ensure your IT infrastructure is
+                efficient, reliable, and scalable. Experience reduced
+                operational costs, simplified management, and enhanced
+                performance. Contact us today to learn how Scale Computing can
+                revolutionize your operations.
               </Typography>
               {includeLearnMoreButton && (
                 <Box

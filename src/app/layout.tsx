@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mulish.className}>
-        <div style={{ position: "relative", paddingTop: "82px" }}>
+        <div style={{ position: "relative", paddingTop: "94px" }}>
           <Header />
           {children}
           <Footer />
