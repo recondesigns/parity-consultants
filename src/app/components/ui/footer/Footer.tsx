@@ -95,7 +95,7 @@ export default function Footer() {
                   textAlign={{ xs: "center", sm: "left" }}
                   sx={{ fontFamily: "inherit", color: "#333333" }}
                 >
-                  469-240-5090
+                  469-240-5083
                 </Typography>
               </StyledLink>
             </li>
