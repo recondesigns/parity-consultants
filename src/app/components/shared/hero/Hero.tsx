@@ -6,6 +6,7 @@ import Grid from "@mui/material/Grid"
 
 type HeroSectionProps = {
   bgColor?: string
+  bgImage?: string
 }
 
 const HeroSection = styled("section")<HeroSectionProps>(
@@ -15,6 +16,9 @@ const HeroSection = styled("section")<HeroSectionProps>(
   },
   ({ bgColor }) => ({
     background: !bgColor ? "lightgreen" : bgColor,
+  }),
+  ({ bgImage }) => ({
+    backgroundImage: bgImage && bgImage,
   })
 )
 
@@ -22,16 +26,19 @@ type Props = {
   firstColumnSlot: React.ReactNode
   secondColumnSlot?: React.ReactNode
   bgColor?: string | React.ReactNode
+  bgImage?: string
 }
 
 export default function Hero({
   firstColumnSlot,
   secondColumnSlot,
   bgColor = "#333333",
+  bgImage,
 }: Props) {
   return (
     <HeroSection
       bgColor={`${bgColor}`}
+      bgImage={`${bgImage}`}
       sx={{
         padding: {
           xs: "80px 20px",

@@ -89,6 +89,7 @@ function ServicesPage() {
   return (
     <Main>
       <Hero
+        bgImage="linear-gradient(to right, #0f0c29, #302b63, #24243e)"
         firstColumnSlot={slotOneContent()}
         secondColumnSlot={slotTwoContent()}
       />
