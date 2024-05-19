@@ -64,7 +64,12 @@ export default function Footer() {
               justifyContent: { xs: "center", sm: "left" },
             }}
           >
-            <Link href={"/"} style={{ display: "inline-block" }}>
+            <Link
+              href={"/"}
+              aria-label="Parity Consultants"
+              title="Parity Consultants"
+              style={{ display: "inline-block" }}
+            >
               <Image src={parityLogo} height={40} alt="Company logo." />
             </Link>
           </Box>
@@ -77,7 +82,7 @@ export default function Footer() {
                 width: "100%",
                 display: "flex",
                 flexDirection: { xs: "column" },
-                alignItems: { xs: "center", sm: 'flex-start' },
+                alignItems: { xs: "center", sm: "flex-start" },
               }}
             >
               <Typography
@@ -98,8 +103,10 @@ export default function Footer() {
               </Typography>
               <StyledLink
                 href="tel:4692405090"
+                aria-label="Call us"
+                title="Call us"
                 sx={{
-                  px: { xs: "8px", sm: '0px' },
+                  px: { xs: "8px", sm: "0px" },
                 }}
               >
                 <Typography
@@ -138,10 +145,15 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center", sm: 'flex-start' },
+                      alignItems: { xs: "center", sm: "flex-start" },
                     }}
                   >
-                    <StyledLink href="/services" sx={{ px: { xs: "8px", sm: '0px' } }}>
+                    <StyledLink
+                      href="/services"
+                      aria-label="Services"
+                      title="Services"
+                      sx={{ px: { xs: "8px", sm: "0px" } }}
+                    >
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -160,10 +172,15 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center", sm: 'flex-start' },
+                      alignItems: { xs: "center", sm: "flex-start" },
                     }}
                   >
-                    <StyledLink href="/solutions" sx={{ px: { xs: "8px", sm: '0px' } }}>
+                    <StyledLink
+                      href="/solutions"
+                      aria-label="Solutions"
+                      title="Solutions"
+                      sx={{ px: { xs: "8px", sm: "0px" } }}
+                    >
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -179,10 +196,15 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center", sm: 'flex-start' },
+                      alignItems: { xs: "center", sm: "flex-start" },
                     }}
                   >
-                    <StyledLink href="/scale-computing" sx={{ px: { xs: "8px", sm: '0px' } }}>
+                    <StyledLink
+                      href="/scale-computing"
+                      aria-label="Get Scale Computing"
+                      title="Get Scale Computing"
+                      sx={{ px: { xs: "8px", sm: "0px" } }}
+                    >
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -202,10 +224,15 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center", sm: 'flex-start' },
+                      alignItems: { xs: "center", sm: "flex-start" },
                     }}
                   >
-                    <StyledLink href="/#getSupportSection" sx={{ px: { xs: "8px", sm: '0px' } }}>
+                    <StyledLink
+                      href="/#getSupportSection"
+                      aria-label="Support"
+                      title="Support"
+                      sx={{ px: { xs: "8px", sm: "0px" } }}
+                    >
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -278,10 +305,15 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center", sm: 'flex-start' },
+                      alignItems: { xs: "center", sm: "flex-start" },
                     }}
                   >
-                    <StyledLink href="/contact-us" sx={{ px: { xs: "8px", sm: '0px' } }}>
+                    <StyledLink
+                      href="/contact-us"
+                      aria-label="Contact us"
+                      title="Contact us"
+                      sx={{ px: { xs: "8px", sm: "0px" } }}
+                    >
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -312,7 +344,7 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center", sm: 'flex-start' },
+                      alignItems: { xs: "center", sm: "flex-start" },
                     }}
                   >
                     <Typography

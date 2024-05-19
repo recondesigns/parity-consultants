@@ -105,14 +105,24 @@ export default function Navigation() {
     >
       <StyledUl sx={{ display: { xs: "none", lg: "flex" } }}>
         <StyledLi isActiveLink={setIsActiveLink(pathname, "/")}>
-          <StyledLink href="/" sx={{ height: "100%" }}>
+          <StyledLink
+            href="/"
+            sx={{ height: "100%" }}
+            aria-label="Home"
+            title="Home"
+          >
             <StyledLinkText isActiveLink={setIsActiveLink(pathname, "/")}>
               Home
             </StyledLinkText>
           </StyledLink>
         </StyledLi>
         <StyledLi isActiveLink={setIsActiveLink(pathname, "/services")}>
-          <StyledLink href="/services" sx={{ height: "100%" }}>
+          <StyledLink
+            href="/services"
+            sx={{ height: "100%" }}
+            aria-label="Services"
+            title="Our services"
+          >
             <StyledLinkText
               isActiveLink={setIsActiveLink(pathname, "/services")}
             >
@@ -121,7 +131,11 @@ export default function Navigation() {
           </StyledLink>
         </StyledLi>
         <StyledLi isActiveLink={setIsActiveLink(pathname, "/solutions")}>
-          <StyledLink href="/solutions">
+          <StyledLink
+            href="/solutions"
+            aria-label="Solutions"
+            title="Our solutions"
+          >
             <StyledLinkText
               isActiveLink={setIsActiveLink(pathname, "/solutions")}
             >
@@ -130,7 +144,11 @@ export default function Navigation() {
           </StyledLink>
         </StyledLi>
         <StyledLi isActiveLink={setIsActiveLink(pathname, "/contact-us")}>
-          <StyledLink href="/contact-us">
+          <StyledLink
+            href="/contact-us"
+            aria-label="Contact us"
+            title="Contact us"
+          >
             <StyledLinkText
               isActiveLink={setIsActiveLink(pathname, "/contact-us")}
             >
@@ -148,6 +166,8 @@ export default function Navigation() {
         >
           <StyledLink
             href="https://parity.myportallogin.com/"
+            aria-label="Client portal"
+            title="Client portal"
             sx={{
               height: "100%",
               display: "flex",
@@ -159,7 +179,7 @@ export default function Navigation() {
             <StyledLinkText
               variant="body2"
               isActiveLink={setIsActiveLink(pathname, "/")}
-              sx={{ py: '8px', color: "#333333" }}
+              sx={{ py: "8px", color: "#333333" }}
             >
               Client portal
             </StyledLinkText>
@@ -172,6 +192,8 @@ export default function Navigation() {
         >
           <StyledLink
             href="https://parity256.screenconnect.com/"
+            aria-label="Remote support"
+            title="Remote support"
             sx={{
               height: "100%",
               display: "flex",
@@ -183,7 +205,7 @@ export default function Navigation() {
             <StyledLinkText
               variant="body2"
               isActiveLink={setIsActiveLink(pathname, "/")}
-              sx={{ py: '8px', color: "#333333" }}
+              sx={{ py: "8px", color: "#333333" }}
             >
               Remote support
             </StyledLinkText>
@@ -196,6 +218,8 @@ export default function Navigation() {
         >
           <StyledLink
             href="/scale-computing"
+            aria-label="Get Scale Computing"
+            title="Get Scale Computing"
             sx={{
               height: "100%",
               display: "flex",

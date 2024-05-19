@@ -163,6 +163,8 @@ function ContactUsPage() {
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <StyledLink
                   href="mailto:sales@parity.us.com"
+                  aria-label="Email us"
+                  title="Email us"
                   sx={{ px: { xs: "8px", sm: "0px" } }}
                 >
                   <Typography
@@ -192,6 +194,8 @@ function ContactUsPage() {
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <StyledLink
                   href="tel:4692405090"
+                  aria-label="Call us"
+                  title="Call us"
                   sx={{ display: "inline-block" }}
                 >
                   <Typography

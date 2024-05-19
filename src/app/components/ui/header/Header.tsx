@@ -42,6 +42,8 @@ export default function Header() {
               ? "http://localhost:3000"
               : "/"
           }
+          aria-label="Parity consultants"
+          title="Parity Consultants"
           style={{ padding: "6px", display: "inline-block" }}
         >
           <Image src={parityLogo} height={40} alt="Company logo." />
