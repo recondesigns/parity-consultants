@@ -1,8 +1,6 @@
 "use client"
-// import Link from "next/link"
 import Image from "next/image"
 import { montserrat } from "../fonts"
-// import HeroSection from "./HeroSection"
 import ContentSection from "./ContentSection"
 import {
   ScaleComputingSectionSmall,

@@ -15,7 +15,7 @@ const StyledLink = styled(Link)(
   {
     textDecoration: "none",
   },
-  ({ theme }) => ({
+  ({}) => ({
     color: "#000000",
     "&:hover": {
       color: "gray",
@@ -23,9 +23,9 @@ const StyledLink = styled(Link)(
   })
 )
 
-const StyledAccordion = styled(Accordion)({}, ({ theme }) => ({}))
+const StyledAccordion = styled(Accordion)({}, ({}) => ({}))
 
-const StyledAccordionItem = styled(Item)({}, ({ theme }) => ({}))
+const StyledAccordionItem = styled(Item)({}, ({}) => ({}))
 
 export default function SolutionsSection() {
   return (
@@ -60,7 +60,7 @@ export default function SolutionsSection() {
           color="#333333"
           textAlign="center"
         >
-          Our solutions
+          Cutting-edge IT solutions
         </Typography>
         <Typography
           variant="h5"
@@ -70,8 +70,7 @@ export default function SolutionsSection() {
           textAlign="center"
           pt="8px"
         >
-          Your business will get the experience and knowledge needed to make you
-          completely satisfied
+          Empowering Your Business with Tailored Technology Expertise
         </Typography>
       </Box>
 

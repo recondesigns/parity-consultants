@@ -13,7 +13,7 @@ const StyledLink = styled(Link)(
   {
     textDecoration: "none",
   },
-  ({ theme }) => ({
+  ({}) => ({
     color: "#000000",
     "&:hover": {
       color: "gray",
@@ -51,7 +51,7 @@ export default function ServicesSection() {
           color="#fdfcfc"
           textAlign="center"
         >
-          Key services
+          Our key IT services
         </Typography>
         <Typography
           variant="h5"
@@ -61,7 +61,7 @@ export default function ServicesSection() {
           textAlign="center"
           pt="8px"
         >
-          We are your one stop shop for all of your technology needs
+          Your one-stop shop for comprehensive technology solutions
         </Typography>
       </Box>
       <Grid container justifyContent="center" alignItems="center">

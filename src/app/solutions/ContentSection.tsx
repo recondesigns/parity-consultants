@@ -13,7 +13,7 @@ const StyledLink = styled(Link)(
   {
     textDecoration: "none",
   },
-  ({ theme }) => ({
+  ({}) => ({
     color: "#000000",
     "&:hover": {
       color: "gray",
@@ -54,7 +54,7 @@ export default function ContentSection() {
           color="#333333"
           textAlign="center"
         >
-          Our solutions
+          Tailored IT solutions for your business
         </Typography>
         <Typography
           variant="h5"
@@ -64,8 +64,7 @@ export default function ContentSection() {
           textAlign="center"
           pt="8px"
         >
-          Your business will get the experience and knowledge needed to make you
-          completely satisfied
+          Unlock your business potential with expert consultation
         </Typography>
       </Box>
       <Grid
