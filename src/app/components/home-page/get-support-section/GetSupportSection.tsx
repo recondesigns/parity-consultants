@@ -73,10 +73,10 @@ export default function GetSupportSection() {
           sm={6}
           sx={{
             padding: {
-              xs: "0px 0px 40px 0px",
+              xs: "0px 0px 32px 0px",
               sm: "0px 12px 0px 12px",
               md: "0px 8px 0px 8px",
-              lg: "0px 40px 0px 40px",
+              lg: "0px 64px 0px 64px",
               xl: "0px 80px 0px 80px",
             },
           }}
@@ -88,34 +88,38 @@ export default function GetSupportSection() {
               fontFamily="inherit"
               fontWeight="bold"
               color="#333333"
+              textAlign={{ xs: "center", md: "left" }}
               pb={{ xs: "8px" }}
             >
-              Remote assistance
+              Client portal
             </Typography>
             <Typography
               variant="body1"
               component="p"
               fontFamily="inherit"
               color="#333333"
-              pb={{ xs: "8px" }}
+              textAlign={{ xs: "center", md: "left" }}
+              pb={{ xs: "8px", sm: "12px" }}
             >
-              When directed by a technician to enable remote assistance use the
-              button below.
+              Authorized users can create new service tickets or monitor the
+              status of existing tickets.
             </Typography>
           </Box>
           <Box>
-            <StyledLink href={"https://support.parity.us.com/"} target="_blank">
+            <StyledLink
+              href={"https://parity.myportallogin.com/"}
+              target="_blank"
+            >
               <Button
                 component="div"
                 variant="outlined"
-                size="small"
                 sx={{
                   textTransform: "none",
                   width: { xs: "100%", md: "auto" },
                   borderRadius: "50px",
                 }}
               >
-                Allow access
+                Log in
               </Button>
             </StyledLink>
           </Box>
@@ -128,7 +132,7 @@ export default function GetSupportSection() {
             padding: {
               sm: "0px 12px 0px 12px",
               md: "0px 8px 0px 8px",
-              lg: "0px 40px 0px 40px",
+              lg: "0px 64px 0px 64px",
               xl: "0px 80px 0px 80px",
             },
           }}
@@ -140,39 +144,38 @@ export default function GetSupportSection() {
               fontFamily="inherit"
               fontWeight="bold"
               color="#333333"
+              textAlign={{ xs: "center", md: "left" }}
               pb={{ xs: "8px" }}
             >
-              Client portal
+              Remote support
             </Typography>
             <Typography
               variant="body1"
               component="p"
               fontFamily="inherit"
               color="#333333"
-              pb={{ xs: "8px" }}
+              textAlign={{ xs: "center", md: "left" }}
+              pb={{ xs: "8px", sm: "12px", md: "16px", lg: "20px" }}
             >
-              Authorized users can create new service tickets or monitor the
-              status of existing tickets.
+              When directed by a technician to enable remote assistance use the
+              button below.
             </Typography>
           </Box>
           <Box>
             <StyledLink
-              href={
-                "https://na.myconnectwise.net/support/index.htm?Company=parity"
-              }
+              href={"https://parity256.screenconnect.com/"}
               target="_blank"
             >
               <Button
                 component="div"
                 variant="outlined"
-                size="small"
                 sx={{
                   textTransform: "none",
                   width: { xs: "100%", md: "auto" },
                   borderRadius: "50px",
                 }}
               >
-                Access portal
+                Allow access
               </Button>
             </StyledLink>
           </Box>

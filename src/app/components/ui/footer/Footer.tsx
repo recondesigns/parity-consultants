@@ -71,7 +71,15 @@ export default function Footer() {
         </Grid>
         <Grid item xs={12} sm={3} md={4} lg={5} pb={"24px"}>
           <StyledUl>
-            <li style={{ width: "100%" }}>
+            <Box
+              component="li"
+              sx={{
+                width: "100%",
+                display: "flex",
+                flexDirection: { xs: "column" },
+                alignItems: { xs: "center", sm: 'flex-start' },
+              }}
+            >
               <Typography
                 variant="caption"
                 component="p"
@@ -88,17 +96,25 @@ export default function Footer() {
               >
                 Lewisville, TX 75057
               </Typography>
-              <StyledLink href="tel:4692405090">
+              <StyledLink
+                href="tel:4692405090"
+                sx={{
+                  px: { xs: "8px", sm: '0px' },
+                }}
+              >
                 <Typography
                   variant="caption"
                   component="p"
                   textAlign={{ xs: "center", sm: "left" }}
-                  sx={{ fontFamily: "inherit", color: "#333333" }}
+                  sx={{
+                    fontFamily: "inherit",
+                    color: "#333333",
+                  }}
                 >
                   469-240-5083
                 </Typography>
               </StyledLink>
-            </li>
+            </Box>
           </StyledUl>
         </Grid>
         <Grid item xs={12} sm={9} md={8} lg={7}>
@@ -116,19 +132,38 @@ export default function Footer() {
                       We offer
                     </Typography>
                   </li>
-                  <li style={{ width: "100%" }}>
-                    <StyledLink href="/services">
+                  <Box
+                    component="li"
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: { xs: "column" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
+                    }}
+                  >
+                    <StyledLink href="/services" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
-                        sx={{ fontFamily: "inherit", color: "#333333" }}
+                        sx={{
+                          fontFamily: "inherit",
+                          color: "#333333",
+                        }}
                       >
                         Services
                       </Typography>
                     </StyledLink>
-                  </li>
-                  <li style={{ width: "100%" }}>
-                    <StyledLink href="/solutions">
+                  </Box>
+                  <Box
+                    component="li"
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: { xs: "column" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
+                    }}
+                  >
+                    <StyledLink href="/solutions" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -137,9 +172,17 @@ export default function Footer() {
                         Solutions
                       </Typography>
                     </StyledLink>
-                  </li>
-                  <li style={{ width: "100%" }}>
-                    <StyledLink href="/scale-computing">
+                  </Box>
+                  <Box
+                    component="li"
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: { xs: "column" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
+                    }}
+                  >
+                    <StyledLink href="/scale-computing" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -152,9 +195,17 @@ export default function Footer() {
                         Scale Computing
                       </Typography>
                     </StyledLink>
-                  </li>
-                  <li style={{ width: "100%" }}>
-                    <StyledLink href="/#getSupportSection">
+                  </Box>
+                  <Box
+                    component="li"
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: { xs: "column" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
+                    }}
+                  >
+                    <StyledLink href="/#getSupportSection" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -163,7 +214,7 @@ export default function Footer() {
                         Support
                       </Typography>
                     </StyledLink>
-                  </li>
+                  </Box>
                 </StyledUl>
               </Grid>
 
@@ -221,8 +272,16 @@ export default function Footer() {
                       </Typography>
                     </StyledLink>
                   </li> */}
-                  <li style={{ width: "100%" }}>
-                    <StyledLink href="/contact-us">
+                  <Box
+                    component="li"
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: { xs: "column" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
+                    }}
+                  >
+                    <StyledLink href="/contact-us" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -231,7 +290,7 @@ export default function Footer() {
                         Contact us
                       </Typography>
                     </StyledLink>
-                  </li>
+                  </Box>
                 </StyledUl>
               </Grid>
 
@@ -247,7 +306,15 @@ export default function Footer() {
                       Company
                     </Typography>
                   </li>
-                  <li style={{ width: "100%" }}>
+                  <Box
+                    component="li"
+                    sx={{
+                      width: "100%",
+                      display: "flex",
+                      flexDirection: { xs: "column" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
+                    }}
+                  >
                     <Typography
                       variant="body2"
                       textAlign={{ xs: "center", sm: "left" }}
@@ -255,7 +322,7 @@ export default function Footer() {
                     >
                       About us
                     </Typography>
-                  </li>
+                  </Box>
                   {/* <li style={{ width: "100%" }}>
                     <Typography
                       variant="body2"

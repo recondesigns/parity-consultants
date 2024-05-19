@@ -176,7 +176,7 @@ const slotOneContent = () => (
             color: "#FDFCFC",
           }}
         >
-          Services
+          Support
         </Typography>
       </Button>
     </Box>
