@@ -36,7 +36,7 @@ const slotOneContent = () => (
       className={montserrat.className}
       sx={{
         width: "100%",
-        paddingBottom: { xs: "8px", lg: "12px" },
+        paddingBottom: { xs: "8px", lg: "20px" },
         fontWeight: 700,
         textAlign: { xs: "center", lg: "left" },
         color: "#FDFCFC",
