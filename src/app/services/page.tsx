@@ -39,7 +39,7 @@ const slotOneContent = () => (
         color: "#FDFCFC",
       }}
     >
-      Comprehensive IT services for business success
+      Complete IT services for business success
     </Typography>
     <Typography
       variant="h4"
