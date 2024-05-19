@@ -40,7 +40,7 @@ function SocialProofSection() {
           color="#333333"
           textAlign="center"
         >
-          Client testimonials
+          Success stories from our clients
         </Typography>
         <Typography
           variant="h5"
@@ -50,7 +50,7 @@ function SocialProofSection() {
           textAlign="center"
           pt="8px"
         >
-          See what our clients are saying
+          Discover real results and experiences
         </Typography>
       </Box>
       <MovingCardsSection items={testimonials} />

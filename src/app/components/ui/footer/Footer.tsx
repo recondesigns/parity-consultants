@@ -12,7 +12,7 @@ const StyledFooter = styled(Box)(
   {
     display: "flex",
   },
-  ({ theme }) => ({})
+  ({}) => ({})
 )
 
 const StyledUl = styled("ul")(
@@ -26,21 +26,21 @@ const StyledUl = styled("ul")(
     gap: "8px",
     listStyleType: "none",
   },
-  ({ theme }) => ({})
+  ({}) => ({})
 )
 
 const StyledNav = styled(Box)(
   {
     display: "flex",
   },
-  ({ theme }) => ({})
+  ({}) => ({})
 )
 
 const StyledLink = styled(Link)(
   {
     textDecoration: "none",
   },
-  ({ theme }) => ({
+  ({}) => ({
     color: "#000000",
     "&:hover": {
       color: "gray",
@@ -95,7 +95,7 @@ export default function Footer() {
                   textAlign={{ xs: "center", sm: "left" }}
                   sx={{ fontFamily: "inherit", color: "#333333" }}
                 >
-                  469-240-5090
+                  469-240-5083
                 </Typography>
               </StyledLink>
             </li>

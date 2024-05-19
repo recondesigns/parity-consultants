@@ -17,7 +17,7 @@ const StyledLink = styled(Link)(
   {
     textDecoration: "none",
   },
-  ({ theme }) => ({
+  ({}) => ({
     color: "#000000",
     "&:hover": {
       color: "gray",
@@ -67,7 +67,7 @@ function ContactUsPage() {
             textAlign="center"
             pt="8px"
           >
-            We reply typically within one business day
+            Connect with Parity Consultants for tailored solutions
           </Typography>
         </Box>
         <Grid container>
@@ -75,7 +75,7 @@ function ContactUsPage() {
             <Box>
               <Box
                 sx={{
-                  px: { sm: "64px", md: "172px", lg: "60px", xl: "156px" },
+                  px: { sm: "80px", md: "172px", lg: "60px", xl: "156px" },
                 }}
               >
                 <Typography
@@ -86,15 +86,6 @@ function ContactUsPage() {
                   sx={{ color: "#333333", fontFamily: "inherit" }}
                 >
                   Send us a message
-                </Typography>
-                <Typography
-                  variant="body1"
-                  component="p"
-                  textAlign="center"
-                  pt="16px"
-                  sx={{ color: "#333333", fontFamily: "inherit" }}
-                >
-                  One of our team members will reply to within one business day.
                 </Typography>
                 <Typography
                   variant="body2"
@@ -109,7 +100,7 @@ function ContactUsPage() {
               </Box>
               <Box
                 sx={{
-                  padding: "32px 0px 48px 0px",
+                  padding: "20px 0px 48px 0px",
                   display: "flex",
                   justifyContent: "center",
                   alignItems: "center",
@@ -121,7 +112,6 @@ function ContactUsPage() {
           </Grid>
           <Grid item xs={12} lg={6}>
             <Box
-              // pt="40px"
               padding={{
                 xs: "0px 20px 40px 20px",
               }}
@@ -179,17 +169,26 @@ function ContactUsPage() {
               >
                 sales@parity.us.com
               </Typography>
-              <StyledLink href="tel:4692405090">
-                <Typography
-                  variant="body1"
-                  component="p"
-                  textAlign={{ xs: "center" }}
-                  pt="4px"
-                  sx={{ fontFamily: "inherit", color: "#333333" }}
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <StyledLink
+                  href="tel:4692405090"
+                  sx={{ display: "inline-block" }}
                 >
-                  469-240-5090
-                </Typography>
-              </StyledLink>
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    textAlign={{ xs: "center" }}
+                    pt="4px"
+                    sx={{
+                      fontFamily: "inherit",
+                      color: "#333333",
+                    }}
+                  >
+                    469-240-5083
+                  </Typography>
+                </StyledLink>
+              </Box>
+
               <Typography
                 variant="body1"
                 component="p"

@@ -13,10 +13,8 @@ const StyledHeader = styled(Box)(
     left: "0px",
     right: "0px",
     display: "flex",
-    justifyContent: "space-between",
     alignItems: "center",
     background: "#FDFCFC",
-    borderBottom: "1px solid rgba(51, 51, 51, .3)",
     zIndex: 300,
   },
   ({}) => ({})
@@ -27,12 +25,17 @@ export default function Header() {
     <StyledHeader
       as="header"
       sx={{
-        top: { xs: "0px", md: "44px" },
-        py: { xs: "12px", lg: "20px" },
-        px: { xs: "20px", md: "40px", lg: "80px" },
+        top: { xs: "0px" },
+        padding: {
+          xs: "12px 20px 12px 20px",
+          md: "0px 40px 0px 40px",
+          lg: "20px 80px 20px 80px",
+        },
+        justifyContent: { xs: "space-between", lg: "flex-start" },
+        gap: { lg: "40px" },
       }}
     >
-      <div>
+      <Box>
         <Link
           href={
             process.env.NODE_ENV === "development"
@@ -43,7 +46,7 @@ export default function Header() {
         >
           <Image src={parityLogo} height={40} alt="Company logo." />
         </Link>
-      </div>
+      </Box>
       <Navigation />
     </StyledHeader>
   )

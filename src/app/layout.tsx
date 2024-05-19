@@ -1,12 +1,9 @@
 "use client"
 // import React from "react"
-// import type { Metadata } from "next"
-import { Mulish } from "next/font/google"
+import type { Metadata } from "next"
+import { mulish } from "./fonts"
 import { Header, Footer } from "./components/ui/"
-import { Banner } from "./components/shared"
 import "./globals.css"
-
-const inter = Mulish({ subsets: ["latin"] })
 
 // export const metadata: Metadata = {
 //   title: "Parity Consultants",
@@ -20,9 +17,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div style={{ position: "relative", paddingTop: "82px" }}>
-          <Banner />
+      <body className={mulish.className}>
+        <div style={{ position: "relative", paddingTop: "94px" }}>
           <Header />
           {children}
           <Footer />

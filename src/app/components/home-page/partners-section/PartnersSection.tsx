@@ -1,14 +1,23 @@
 "use client"
 import React from "react"
+import Link from "next/link"
 import Image from "next/image"
+import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
 import partners from "./partners"
 
-type Props = {}
+const StyledLink = styled(Link)(
+  {
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  ({}) => ({})
+)
 
-export default function PartnersSection({}: Props) {
+function PartnersSection() {
   return (
     <Section
       sx={{
@@ -66,17 +75,19 @@ export default function PartnersSection({}: Props) {
       >
         {partners.map((partner, idx) => {
           return (
-            <a href={partner.url} target="_blank" key={idx}>
+            <StyledLink href={partner.url} target="_blank" key={idx}>
               <Image
                 src={partner.image.src}
                 alt={partner.name}
                 width={100}
                 height={100}
               />
-            </a>
+            </StyledLink>
           )
         })}
       </Box>
     </Section>
   )
 }
+
+export default React.memo(PartnersSection)
