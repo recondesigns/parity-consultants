@@ -160,7 +160,27 @@ function ContactUsPage() {
               >
                 Contact details
               </Typography>
-              <Typography
+              <Box sx={{ display: "flex", justifyContent: "center" }}>
+                <StyledLink
+                  href="mailto:sales@parity.us.com"
+                  sx={{ px: { xs: "8px", sm: "0px" } }}
+                >
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    textAlign={{ xs: "center" }}
+                    pt="4px"
+                    sx={{
+                      fontFamily: "inherit",
+                      color: "#333333",
+                    }}
+                  >
+                    sales@parity.us.com
+                  </Typography>
+                </StyledLink>
+              </Box>
+
+              {/* <Typography
                 variant="body1"
                 component="p"
                 textAlign="center"
@@ -168,7 +188,7 @@ function ContactUsPage() {
                 sx={{ color: "#333333", fontFamily: "inherit" }}
               >
                 sales@parity.us.com
-              </Typography>
+              </Typography> */}
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <StyledLink
                   href="tel:4692405090"
