@@ -77,7 +77,7 @@ export default function Footer() {
                 width: "100%",
                 display: "flex",
                 flexDirection: { xs: "column" },
-                alignItems: { xs: "center" },
+                alignItems: { xs: "center", sm: 'flex-start' },
               }}
             >
               <Typography
@@ -99,7 +99,7 @@ export default function Footer() {
               <StyledLink
                 href="tel:4692405090"
                 sx={{
-                  px: "8px",
+                  px: { xs: "8px", sm: '0px' },
                 }}
               >
                 <Typography
@@ -138,10 +138,10 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
                     }}
                   >
-                    <StyledLink href="/services" sx={{ px: "8px" }}>
+                    <StyledLink href="/services" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -160,10 +160,10 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
                     }}
                   >
-                    <StyledLink href="/solutions" sx={{ px: "8px" }}>
+                    <StyledLink href="/solutions" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -179,10 +179,10 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
                     }}
                   >
-                    <StyledLink href="/scale-computing" sx={{ px: "8px" }}>
+                    <StyledLink href="/scale-computing" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -202,10 +202,10 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
                     }}
                   >
-                    <StyledLink href="/#getSupportSection" sx={{ px: "8px" }}>
+                    <StyledLink href="/#getSupportSection" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -278,10 +278,10 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
                     }}
                   >
-                    <StyledLink href="/contact-us" sx={{ px: "8px" }}>
+                    <StyledLink href="/contact-us" sx={{ px: { xs: "8px", sm: '0px' } }}>
                       <Typography
                         variant="body2"
                         textAlign={{ xs: "center", sm: "left" }}
@@ -312,7 +312,7 @@ export default function Footer() {
                       width: "100%",
                       display: "flex",
                       flexDirection: { xs: "column" },
-                      alignItems: { xs: "center" },
+                      alignItems: { xs: "center", sm: 'flex-start' },
                     }}
                   >
                     <Typography
