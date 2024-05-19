@@ -159,7 +159,7 @@ export default function Navigation() {
             <StyledLinkText
               variant="body2"
               isActiveLink={setIsActiveLink(pathname, "/")}
-              sx={{ color: "#333333" }}
+              sx={{ py: '8px', color: "#333333" }}
             >
               Client portal
             </StyledLinkText>
@@ -183,7 +183,7 @@ export default function Navigation() {
             <StyledLinkText
               variant="body2"
               isActiveLink={setIsActiveLink(pathname, "/")}
-              sx={{ color: "#333333" }}
+              sx={{ py: '8px', color: "#333333" }}
             >
               Remote support
             </StyledLinkText>
