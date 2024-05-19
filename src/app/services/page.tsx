@@ -66,7 +66,7 @@ const slotOneContent = () => (
       }}
     >
       At Parity Consultants, we provide a full range of IT services to boost
-      your business's innovation, efficiency, and growth. Enhance your
+      your business&apos;s innovation, efficiency, and growth. Enhance your
       technology, secure your digital assets, and achieve your business goals
       with our tailored solutions.
     </Typography>
