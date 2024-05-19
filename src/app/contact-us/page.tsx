@@ -169,17 +169,27 @@ function ContactUsPage() {
               >
                 sales@parity.us.com
               </Typography>
-              <StyledLink href="tel:4692405090">
-                <Typography
-                  variant="body1"
-                  component="p"
-                  textAlign={{ xs: "center" }}
-                  pt="4px"
-                  sx={{ fontFamily: "inherit", color: "#333333" }}
+              <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <StyledLink
+                  href="tel:4692405090"
+                  sx={{ display: 'inline-block' }}
                 >
-                  469-240-5083
-                </Typography>
-              </StyledLink>
+                  <Typography
+                    variant="body1"
+                    component="p"
+                    textAlign={{ xs: "center" }}
+                    pt="4px"
+                    sx={{
+                      fontFamily: "inherit",
+                      color: "#333333",
+                      // border: "2px solid blue",
+                    }}
+                  >
+                    469-240-5083
+                  </Typography>
+                </StyledLink>
+              </Box>
+
               <Typography
                 variant="body1"
                 component="p"
