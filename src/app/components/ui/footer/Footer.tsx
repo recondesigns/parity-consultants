@@ -12,7 +12,7 @@ const StyledFooter = styled(Box)(
   {
     display: "flex",
   },
-  ({ theme }) => ({})
+  ({}) => ({})
 )
 
 const StyledUl = styled("ul")(
@@ -26,21 +26,21 @@ const StyledUl = styled("ul")(
     gap: "8px",
     listStyleType: "none",
   },
-  ({ theme }) => ({})
+  ({}) => ({})
 )
 
 const StyledNav = styled(Box)(
   {
     display: "flex",
   },
-  ({ theme }) => ({})
+  ({}) => ({})
 )
 
 const StyledLink = styled(Link)(
   {
     textDecoration: "none",
   },
-  ({ theme }) => ({
+  ({}) => ({
     color: "#000000",
     "&:hover": {
       color: "gray",
