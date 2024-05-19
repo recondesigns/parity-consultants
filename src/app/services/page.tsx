@@ -8,6 +8,7 @@ import SecurityComplianceServicesSection from "./SecurityComplianceServicesSecti
 import DataProtectionServicesSection from "./DataProtectionServicesSection"
 import ConsultingServicesSection from "./ConsultingServicesSection"
 import SupportServicesSection from "./SupportServicesSection"
+import PageHeading from "./PageHeading"
 import { ScaleComputingSectionSmall } from "../components/home-page"
 import { PartnersSection } from "../components/home-page"
 import { Hero } from "../components/shared"
@@ -93,6 +94,7 @@ function ServicesPage() {
         firstColumnSlot={slotOneContent()}
         secondColumnSlot={slotTwoContent()}
       />
+      <PageHeading />
       <InfrastructureServicesSection />
       <SecurityComplianceServicesSection />
       <DataProtectionServicesSection />
