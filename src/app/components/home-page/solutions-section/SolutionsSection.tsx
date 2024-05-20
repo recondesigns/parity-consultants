@@ -158,7 +158,7 @@ export default function SolutionsSection() {
               borderRadius: "50px",
             }}
           >
-            Learn more
+            Explore our solutions
           </Button>
         </StyledLink>
       </Box>

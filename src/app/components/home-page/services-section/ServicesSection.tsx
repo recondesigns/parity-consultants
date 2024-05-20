@@ -98,7 +98,7 @@ export default function ServicesSection() {
               textTransform: "none",
             }}
           >
-            Learn more
+            Explore our services
           </Button>
         </StyledLink>
       </Box>
