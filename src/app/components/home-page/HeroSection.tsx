@@ -86,6 +86,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
                 component="h2"
                 fontFamily="inherit"
                 fontWeight="bold"
+                className={montserrat.className}
                 color="#FDFCFC"
                 textAlign={{ xs: "center", md: "left" }}
                 sx={{ paddingBottom: { xs: "8px" } }}
