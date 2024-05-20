@@ -32,8 +32,8 @@ function InfrastructureServicesSection() {
             }}
           >
             <Typography
-              variant="h4"
-              component="h4"
+              variant="h3"
+              component="h3"
               sx={{
                 width: "100%",
                 fontFamily: "inherit",
@@ -47,6 +47,7 @@ function InfrastructureServicesSection() {
             </Typography>
             <Typography
               variant="body1"
+              component="p"
               sx={{
                 fontFamily: "inherit",
                 color: "#333333",
