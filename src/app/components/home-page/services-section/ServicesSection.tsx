@@ -51,7 +51,7 @@ export default function ServicesSection() {
           color="#fdfcfc"
           textAlign="center"
         >
-          Our key IT services
+          Our IT services
         </Typography>
         <Typography
           variant="h5"
