@@ -53,7 +53,7 @@ export default function GetSupportSection() {
           color="#333333"
           textAlign="center"
         >
-          Expert technical support
+          Expert Technical Support
         </Typography>
         <Typography
           variant="h5"

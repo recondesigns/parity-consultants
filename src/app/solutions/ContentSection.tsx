@@ -54,7 +54,7 @@ export default function ContentSection() {
           color="#333333"
           textAlign="center"
         >
-          Tailored IT solutions for your business
+          Tailored IT Solutions for your Business
         </Typography>
         <Typography
           variant="h5"

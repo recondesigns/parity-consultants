@@ -60,7 +60,7 @@ export default function SolutionsSection() {
           color="#333333"
           textAlign="center"
         >
-          Cutting-edge IT solutions
+          Innovative IT Solutions
         </Typography>
         <Typography
           variant="h5"
@@ -158,7 +158,7 @@ export default function SolutionsSection() {
               borderRadius: "50px",
             }}
           >
-            Explore our solutions
+            Explore solutions
           </Button>
         </StyledLink>
       </Box>

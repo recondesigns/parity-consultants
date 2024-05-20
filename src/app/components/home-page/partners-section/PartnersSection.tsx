@@ -50,7 +50,7 @@ function PartnersSection() {
           color="#333333"
           textAlign="center"
         >
-          Our partners
+          Our Partners
         </Typography>
         <Typography
           variant="h5"

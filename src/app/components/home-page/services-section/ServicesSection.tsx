@@ -51,7 +51,8 @@ export default function ServicesSection() {
           color="#fdfcfc"
           textAlign="center"
         >
-          Our IT services
+          Services We Offer
+          {/* Our Services */}
         </Typography>
         <Typography
           variant="h5"
@@ -98,7 +99,7 @@ export default function ServicesSection() {
               textTransform: "none",
             }}
           >
-            Explore our services
+            Explore services
           </Button>
         </StyledLink>
       </Box>

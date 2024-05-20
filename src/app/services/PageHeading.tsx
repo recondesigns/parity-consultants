@@ -38,7 +38,7 @@ function PageHeading() {
           color="#333333"
           textAlign="center"
         >
-          Expert IT services to drive your business
+          Expert Services
         </Typography>
         <Typography
           variant="h5"

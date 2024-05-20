@@ -3,7 +3,6 @@ import barracudaLogo from "../../../../../public/images/partner-logo-barracuda.p
 import hplogo from "../../../../../public/images/partner-logo-hp.png"
 import masergylogo from "../../../../../public/images/partner-logo-masergy.png"
 import microsoftSmallBusniesslogo from "../../../../../public/images/partner-logo-microsoft-small-business.png"
-import microsoftCertifiedPartnerlogo from "../../../../../public/images/partner-logo-microsoft-certified-partner.png"
 import sonicwalllogo from "../../../../../public/images/partner-logo-sonicwall.png"
 import webrootlogo from "../../../../../public/images/partner-logo-webroot.png"
 import scaleGoldLogo from "../../../../../public/images/partner-logo-scale-gold.png"
@@ -59,11 +58,6 @@ const partners = [
   {
     name: "Microsoft Small Business",
     image: microsoftSmallBusniesslogo,
-    url: "https://www.microsoft.com/en-us/",
-  },
-  {
-    name: "Microsoft Certified Partner",
-    image: microsoftCertifiedPartnerlogo,
     url: "https://www.microsoft.com/en-us/",
   },
   {

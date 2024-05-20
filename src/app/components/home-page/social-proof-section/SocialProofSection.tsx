@@ -40,7 +40,7 @@ function SocialProofSection() {
           color="#333333"
           textAlign="center"
         >
-          Success stories from our clients
+          Clients Success Stories
         </Typography>
         <Typography
           variant="h5"

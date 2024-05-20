@@ -57,7 +57,7 @@ function ContactUsPage() {
             color="#333333"
             textAlign="center"
           >
-            Contact us
+            Contact Us
           </Typography>
           <Typography
             variant="h5"
@@ -67,7 +67,7 @@ function ContactUsPage() {
             textAlign="center"
             pt="8px"
           >
-            Connect with Parity Consultants for tailored solutions
+            Connect with Parity Consultants for tailored technology solutions
           </Typography>
         </Box>
         <Grid container>
