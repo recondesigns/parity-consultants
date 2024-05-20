@@ -105,6 +105,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
               </Typography>
               <Typography
                 variant="body1"
+                component="p"
                 fontFamily="inherit"
                 color="#FDFCFC"
                 textAlign={{ xs: "center", lg: "left" }}

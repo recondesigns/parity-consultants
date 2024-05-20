@@ -103,7 +103,7 @@ function ScaleComputingSectionForm() {
           >
             <Typography
               variant="h6"
-              component="p"
+              component="h4"
               fontWeight="bold"
               sx={{ fontFamily: "inherit" }}
             >

@@ -70,7 +70,7 @@ export default function SolutionsSection() {
           textAlign="center"
           pt="8px"
         >
-          Empowering Your Business with Tailored Technology Expertise
+          Empowering your business with tailored technology expertise
         </Typography>
       </Box>
 
@@ -110,7 +110,7 @@ export default function SolutionsSection() {
                       <Box sx={{ borderBottom: "2px solid #D95C5C" }}>
                         <Typography
                           variant="h6"
-                          component="p"
+                          component="h3"
                           fontFamily="inherit"
                           fontWeight="bold"
                           color="#333333"
