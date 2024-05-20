@@ -1,21 +1,10 @@
 "use client"
 import React from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
+import InfinitePartnerLogos from "./InfinitePartnerLogos"
 import partners from "./partners"
-
-const StyledLink = styled(Link)(
-  {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  ({}) => ({})
-)
 
 function PartnersSection() {
   return (
@@ -27,7 +16,6 @@ function PartnersSection() {
           md: "100px 80px",
           lg: "120px 100px",
         },
-        // px: { xs: "20px", md: "40px", lg: "80px" },
       }}
     >
       <Box
@@ -71,20 +59,10 @@ function PartnersSection() {
           justifyContent: "center",
           flexWrap: "wrap",
           gap: "20px",
+          width: "100%",
         }}
       >
-        {partners.map((partner, idx) => {
-          return (
-            <StyledLink href={partner.url} target="_blank" key={idx}>
-              <Image
-                src={partner.image.src}
-                alt={partner.name}
-                width={100}
-                height={100}
-              />
-            </StyledLink>
-          )
-        })}
+        <InfinitePartnerLogos items={partners} />
       </Box>
     </Section>
   )

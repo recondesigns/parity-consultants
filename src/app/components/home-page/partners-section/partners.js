@@ -16,29 +16,41 @@ import ingramMicroLogo from "../../../../../public/images/partner-logo-ingram-mi
 
 const partners = [
   {
-    name: "Scale Computing",
-    image: scalelogo,
-    url: "https://www.scalecomputing.com/",
-  },
-  {
-    name: "Scale Computing Gold Partner",
-    image: scaleGoldLogo,
-    url: "https://www.scalecomputing.com/",
-  },
-  {
     name: "Epic iO",
     image: epicLogo,
     url: "https://epicio.com/",
   },
   {
-    name: "Spectrum VoIP",
-    image: spectrumLogo,
-    url: "https://www.spectrumvoip.com/",
+    name: "Scale Computing",
+    image: scaleGoldLogo,
+    url: "https://www.scalecomputing.com/",
+  },
+  {
+    name: "Microsoft",
+    image: microsoftCertfiedLogo,
+    url: "https://www.microsoft.com/en-us/",
+  },
+  {
+    name: "HP",
+    image: hpEnterpriseLogo,
+    url: "https://www.hp.com/us-en/home.html",
   },
   {
     name: "Ingram Micro",
     image: ingramMicroLogo,
     url: "https://www.ingrammicro.com/en-us/home",
+  },
+
+  {
+    name: "Scale Computing",
+    image: scalelogo,
+    url: "https://www.scalecomputing.com/",
+  },
+
+  {
+    name: "Spectrum VoIP",
+    image: spectrumLogo,
+    url: "https://www.spectrumvoip.com/",
   },
   {
     name: "Lenovo",
@@ -46,24 +58,20 @@ const partners = [
     url: "https://www.lenovo.com/us/en/",
   },
   {
+    name: "HP",
+    image: hpEnterpriseLogo,
+    url: "https://www.hp.com/us-en/home.html",
+  },
+  {
     name: "Broadvoice",
     image: broadvoiceLogo,
     url: "https://www.broadvoice.com/",
   },
+
   {
-    name: "Microsoft Certified Business Solutions Partner",
-    image: microsoftCertfiedLogo,
-    url: "https://www.microsoft.com/en-us/",
-  },
-  {
-    name: "Microsoft Small Business",
+    name: "Microsoft",
     image: microsoftSmallBusniesslogo,
     url: "https://www.microsoft.com/en-us/",
-  },
-  {
-    name: "HP Enterprise Business Partner",
-    image: hpEnterpriseLogo,
-    url: "https://www.hp.com/us-en/home.html",
   },
   {
     name: "HP",
