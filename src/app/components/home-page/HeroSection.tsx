@@ -50,7 +50,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
           <Grid
             item
             xs={12}
-            md={6}
+            lg={6}
             sx={{
               paddingBottom: { xs: "32px", md: "0px" },
               px: { xs: "20px", md: "0px" },
@@ -71,7 +71,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
                     md: "24px",
                   },
                   display: "flex",
-                  justifyContent: { xs: "center", md: "start" },
+                  justifyContent: { xs: "center", lg: "start" },
                 }}
               >
                 <Image
@@ -88,7 +88,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
                 fontWeight="bold"
                 className={montserrat.className}
                 color="#FDFCFC"
-                textAlign={{ xs: "center", md: "left" }}
+                textAlign={{ xs: "center", lg: "left" }}
                 sx={{ paddingBottom: { xs: "8px" } }}
               >
                 Maximize Efficiency with Scale Computing Solutions
@@ -98,7 +98,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
                 component="p"
                 fontFamily="inherit"
                 color="#FDFCFC"
-                textAlign={{ xs: "center", md: "left" }}
+                textAlign={{ xs: "center", lg: "left" }}
                 sx={{ paddingBottom: { xs: "40px", md: "20px" } }}
               >
                 Streamlined IT Infrastructure for Unmatched Performance
@@ -107,7 +107,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
                 variant="body1"
                 fontFamily="inherit"
                 color="#FDFCFC"
-                textAlign={{ xs: "center", md: "left" }}
+                textAlign={{ xs: "center", lg: "left" }}
                 sx={{ paddingBottom: { xs: "40px" } }}
               >
                 Discover the power of Scale Computing with Parity Consultants.
@@ -158,7 +158,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
           <Grid
             item
             xs={12}
-            md={6}
+            lg={6}
             sx={{
               paddingLeft: { md: "12px", lg: "0px" },
             }}
