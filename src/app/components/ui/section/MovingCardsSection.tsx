@@ -56,7 +56,7 @@ const MovingCardsSection = ({
                 >
                   <Box>
                     <Box sx={{ padding: "8px 0px" }}>
-                      <Typography variant="body1" color="#333333">
+                      <Typography variant="body1" component='p' color="#333333">
                         {item.quote}
                       </Typography>
                     </Box>

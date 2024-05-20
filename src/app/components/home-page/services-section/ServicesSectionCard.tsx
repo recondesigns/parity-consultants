@@ -79,7 +79,7 @@ export default function ServicesSectionCard({ service }: Props) {
         <Box sx={{ paddingBottom: { xs: "20px" } }}>
           <Typography
             variant="h5"
-            component="div"
+            component="h3"
             textAlign="center"
             sx={{
               width: "100%",
@@ -118,6 +118,7 @@ export default function ServicesSectionCard({ service }: Props) {
               </Box>
               <Typography
                 variant="body1"
+                component="p"
                 sx={{
                   fontFamily: "inherit",
                   color: "#fdfcfc",

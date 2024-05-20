@@ -31,15 +31,16 @@ const slotOneContent = () => (
     }}
   >
     <Typography
-      variant="h3"
+      variant="h1"
       component="h1"
       className={montserrat.className}
       sx={{
         width: "100%",
-        paddingBottom: { xs: "8px", lg: "20px" },
+        paddingBottom: { xs: "12px", lg: "20px" },
         fontWeight: 700,
-        textAlign: { xs: "center", lg: "left" },
+        textAlign: { xs: "left" },
         color: "#FDFCFC",
+        fontSize: { xs: "3rem", md: "3.5rem" },
       }}
     >
       Empowering your digital growth
@@ -50,21 +51,24 @@ const slotOneContent = () => (
       fontFamily="inherit"
       sx={{
         width: "100%",
-        textAlign: { xs: "center", lg: "left" },
+        textAlign: { xs: "left" },
         color: "#FDFCFC",
         paddingBottom: { xs: "40px", lg: "24px" },
+        fontSize: { xs: "1.75rem", md: "2rem" },
       }}
     >
       Innovative IT solutions tailored for your success
     </Typography>
     <Typography
       variant="body1"
+      component="p"
       fontFamily="inherit"
       sx={{
         width: "100%",
-        textAlign: { xs: "center", lg: "left" },
+        textAlign: { xs: "left" },
         color: "#FDFCFC",
         paddingBottom: { xs: "40px" },
+        fontSize: { xs: "1rem", md: "1.125rem" },
       }}
     >
       At Parity Consultants, we partner with businesses to deliver cutting-edge
@@ -81,7 +85,7 @@ const slotOneContent = () => (
           lg: "0px",
         },
         display: "flex",
-        flexDirection: { xs: "column", lg: "row" },
+        flexDirection: { xs: "column", md: "row" },
         justifyContent: { xs: "center", lg: "flex-start" },
         alignItems: { xs: "center" },
         gap: { xs: "20px" },
@@ -94,7 +98,6 @@ const slotOneContent = () => (
         href={"/#servicesSection"}
         sx={{
           width: { xs: "100%", lg: "auto" },
-          // width: { xs: '100%' },
           color: "#FDFCFC",
           borderColor: "#FDFCFC",
           borderRadius: "50px",
@@ -114,6 +117,7 @@ const slotOneContent = () => (
             textAlign: "center",
             color: "#FDFCFC",
             width: { xs: "100%", lg: "auto" },
+            fontSize: { xs: "1rem", md: "1.125rem" },
           }}
         >
           Services
@@ -144,6 +148,7 @@ const slotOneContent = () => (
             textAlign: "center",
             width: { xs: "100%", lg: "auto" },
             color: "#FDFCFC",
+            fontSize: { xs: "1rem", md: "1.125rem" },
           }}
         >
           Solutions
@@ -174,6 +179,7 @@ const slotOneContent = () => (
             textAlign: "center",
             width: { xs: "100%", lg: "auto" },
             color: "#FDFCFC",
+            fontSize: { xs: "1rem", md: "1.125rem" },
           }}
         >
           Support

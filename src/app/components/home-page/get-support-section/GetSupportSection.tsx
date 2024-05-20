@@ -84,7 +84,7 @@ export default function GetSupportSection() {
           <Box>
             <Typography
               variant="h6"
-              component="h6"
+              component="h3"
               fontFamily="inherit"
               fontWeight="bold"
               color="#333333"
@@ -140,7 +140,7 @@ export default function GetSupportSection() {
           <Box>
             <Typography
               variant="h6"
-              component="h6"
+              component="h3"
               fontFamily="inherit"
               fontWeight="bold"
               color="#333333"

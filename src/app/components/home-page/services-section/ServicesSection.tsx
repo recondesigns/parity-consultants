@@ -51,7 +51,7 @@ export default function ServicesSection() {
           color="#fdfcfc"
           textAlign="center"
         >
-          Our key IT services
+          Our IT services
         </Typography>
         <Typography
           variant="h5"
@@ -98,7 +98,7 @@ export default function ServicesSection() {
               textTransform: "none",
             }}
           >
-            Learn more
+            Explore our services
           </Button>
         </StyledLink>
       </Box>
