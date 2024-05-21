@@ -1,17 +1,13 @@
 "use client"
+import { Main } from "../components/ui"
 import { HeroSection } from "../components/home-page"
+import FirstSection from "./FirstSection"
 
 export default function ScaledComputingPage() {
   return (
-    <main
-      style={{
-        flex: 1,
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
+    <Main>
       <HeroSection />
-    </main>
+      <FirstSection />
+    </Main>
   )
 }
