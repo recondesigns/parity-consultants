@@ -32,7 +32,7 @@ const slotOneContent = () => (
         width: "100%",
         paddingBottom: { xs: "8px", lg: "20px" },
         fontWeight: 700,
-        textAlign: { xs: "center", lg: "left" },
+        textAlign: { xs: "left", md: "center", lg: "left" },
         color: "#FDFCFC",
       }}
     >
@@ -44,19 +44,19 @@ const slotOneContent = () => (
       fontFamily="inherit"
       sx={{
         width: "100%",
-        textAlign: { xs: "center", lg: "left" },
+        textAlign: { xs: "left", md: "center", lg: "left" },
         color: "#FDFCFC",
         paddingBottom: { xs: "40px", lg: "24px" },
       }}
     >
-      Transforming technology challenges into competitive advantages
+      Transform technology challenges into competitive advantages
     </Typography>
     <Typography
       variant="body1"
       fontFamily="inherit"
       sx={{
         width: "100%",
-        textAlign: { xs: "center", lg: "left" },
+        textAlign: { xs: "left", md: "center", lg: "left" },
         color: "#FDFCFC",
         paddingBottom: { xs: "40px" },
       }}

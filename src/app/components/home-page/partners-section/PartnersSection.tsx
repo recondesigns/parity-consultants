@@ -1,21 +1,11 @@
 "use client"
 import React from "react"
-import Link from "next/link"
-import Image from "next/image"
-import { styled } from "@mui/material/styles"
+import { montserrat } from "../../../fonts"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
+import InfinitePartnerLogos from "./InfinitePartnerLogos"
 import partners from "./partners"
-
-const StyledLink = styled(Link)(
-  {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  ({}) => ({})
-)
 
 function PartnersSection() {
   return (
@@ -27,7 +17,6 @@ function PartnersSection() {
           md: "100px 80px",
           lg: "120px 100px",
         },
-        // px: { xs: "20px", md: "40px", lg: "80px" },
       }}
     >
       <Box
@@ -48,16 +37,18 @@ function PartnersSection() {
           fontFamily="inherit"
           fontWeight="bold"
           color="#333333"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
+          sx={{ color: "#333333" }}
+          className={montserrat.className}
         >
-          Our partners
+          Our Partners
         </Typography>
         <Typography
           variant="h5"
           component="p"
           fontFamily="inherit"
           color="#D95C5C"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
           pt="8px"
         >
           We partner with leading manufacturers to offer best in class service
@@ -71,20 +62,10 @@ function PartnersSection() {
           justifyContent: "center",
           flexWrap: "wrap",
           gap: "20px",
+          width: "100%",
         }}
       >
-        {partners.map((partner, idx) => {
-          return (
-            <StyledLink href={partner.url} target="_blank" key={idx}>
-              <Image
-                src={partner.image.src}
-                alt={partner.name}
-                width={100}
-                height={100}
-              />
-            </StyledLink>
-          )
-        })}
+        <InfinitePartnerLogos items={partners} />
       </Box>
     </Section>
   )

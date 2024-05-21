@@ -120,7 +120,7 @@ const slotOneContent = () => (
             fontSize: { xs: "1rem", md: "1.125rem" },
           }}
         >
-          Services
+          Our services
         </Typography>
       </Button>
       <Button
@@ -151,7 +151,7 @@ const slotOneContent = () => (
             fontSize: { xs: "1rem", md: "1.125rem" },
           }}
         >
-          Solutions
+          Our solutions
         </Typography>
       </Button>
       <Button
@@ -182,7 +182,7 @@ const slotOneContent = () => (
             fontSize: { xs: "1rem", md: "1.125rem" },
           }}
         >
-          Support
+          Get support
         </Typography>
       </Button>
     </Box>

@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import { montserrat } from "../../../fonts"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
@@ -35,19 +36,19 @@ function SocialProofSection() {
         <Typography
           variant="h3"
           component="h2"
-          fontFamily="inherit"
           fontWeight="bold"
           color="#333333"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
+          className={montserrat.className}
         >
-          Success stories from our clients
+          What Clients are Saying
         </Typography>
         <Typography
           variant="h5"
           component="p"
           fontFamily="inherit"
           color="#D95C5C"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
           pt="8px"
         >
           Discover real results and experiences

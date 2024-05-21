@@ -1,5 +1,6 @@
 import React from "react"
 import Link from "next/link"
+import { montserrat } from "../../../fonts"
 import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
@@ -26,9 +27,13 @@ export default function ServicesSection() {
     <Section
       id="servicesSection"
       sx={{
-        padding: "140px 80px",
         background: "linear-gradient(45deg, #434343 0%, black 100%)",
-        px: { xs: "20px", md: "40px", lg: "80px" },
+        padding: {
+          xs: "80px 20px",
+          sm: "100px 40px",
+          md: "100px 80px",
+          lg: "120px 100px",
+        },
       }}
     >
       <Box
@@ -46,25 +51,30 @@ export default function ServicesSection() {
         <Typography
           variant="h3"
           component="h2"
-          fontFamily="inherit"
           fontWeight="bold"
           color="#fdfcfc"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
+          className={montserrat.className}
         >
-          Our IT services
+          Services We Offer
         </Typography>
         <Typography
           variant="h5"
           component="p"
           fontFamily="inherit"
           color="#D95C5C"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
           pt="8px"
         >
           Your one-stop shop for comprehensive technology solutions
         </Typography>
       </Box>
-      <Grid container justifyContent="center" alignItems="center">
+      <Grid
+        container
+        spacing={{ xs: 3, md: 3, lg: 4 }}
+        justifyContent={{ xs: "center", md: "flex-start" }}
+        alignItems="center"
+      >
         {services.map((service, idx) => {
           return (
             <Grid key={idx} item xs={12} md={6} lg={4}>
@@ -98,7 +108,7 @@ export default function ServicesSection() {
               textTransform: "none",
             }}
           >
-            Explore our services
+            Explore services
           </Button>
         </StyledLink>
       </Box>

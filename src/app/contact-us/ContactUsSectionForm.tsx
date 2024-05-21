@@ -114,7 +114,8 @@ function ContactFormSection() {
             onSubmit={handleSubmit}
             noValidate
             sx={{
-              padding: "20px",
+              py: { xs: "20px" },
+              px: { xs: "0px" },
               background: "#FDFCFC",
               borderRadius: "20px",
               maxWidth: "380px",

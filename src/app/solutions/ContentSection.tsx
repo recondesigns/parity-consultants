@@ -52,16 +52,16 @@ export default function ContentSection() {
           fontFamily="inherit"
           fontWeight="bold"
           color="#333333"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
         >
-          Tailored IT solutions for your business
+          Tailored IT Solutions for your Business
         </Typography>
         <Typography
           variant="h5"
           component="p"
           fontFamily="inherit"
           color="#D95C5C"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
           pt="8px"
         >
           Unlock your business potential with expert consultation

@@ -33,13 +33,13 @@ function DataProtectionServicesSection() {
           >
             <Typography
               variant="h4"
-              component="h4"
+              component="h3"
               sx={{
                 width: "100%",
                 fontFamily: "inherit",
                 fontWeight: "bold",
                 color: "#333333",
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "left" },
                 paddingBottom: { xs: "12px" },
               }}
             >
@@ -47,11 +47,12 @@ function DataProtectionServicesSection() {
             </Typography>
             <Typography
               variant="body1"
+              component="p"
               sx={{
                 fontFamily: "inherit",
                 color: "#333333",
-                textAlign: { xs: "center", md: "left" },
-                paddingBottom: { xs: "20px" },
+                textAlign: { xs: "left" },
+                paddingBottom: { xs: "20px", md: "0px" },
               }}
             >
               Ensure peace of mind with our comprehensive IT services, including

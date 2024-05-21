@@ -1,6 +1,7 @@
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
+import { montserrat } from "../../../fonts"
 import { styled } from "@mui/material/styles"
 import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion"
 import Box from "@mui/material/Box"
@@ -55,19 +56,19 @@ export default function SolutionsSection() {
         <Typography
           variant="h3"
           component="h2"
-          fontFamily="inherit"
           fontWeight="bold"
           color="#333333"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
+          className={montserrat.className}
         >
-          Cutting-edge IT solutions
+          Innovative IT Solutions
         </Typography>
         <Typography
           variant="h5"
           component="p"
           fontFamily="inherit"
           color="#D95C5C"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
           pt="8px"
         >
           Empowering your business with tailored technology expertise
@@ -158,7 +159,7 @@ export default function SolutionsSection() {
               borderRadius: "50px",
             }}
           >
-            Explore our solutions
+            Explore solutions
           </Button>
         </StyledLink>
       </Box>

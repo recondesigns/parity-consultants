@@ -14,20 +14,11 @@ function PageHeading() {
           md: "64px 80px",
           lg: "80px 100px",
         },
-        // border: "2px solid red",
       }}
     >
       <Box
         sx={{
-        //   padding: {
-        //     xs: "0px 0px 0px 0px",
-        //     sm: "0px 0px 0px 0px",
-        //     md: "0px 0px 0px 0px",
-        //     lg: "0px 0px 0px 0px",
-        //     xl: "0px 0px 0px 0px",
-        //   },
           width: "100%",
-        //   border: '2px solid blue'
         }}
       >
         <Typography
@@ -36,16 +27,16 @@ function PageHeading() {
           fontFamily="inherit"
           fontWeight="bold"
           color="#333333"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
         >
-          Expert IT services to drive your business
+          Expert Services
         </Typography>
         <Typography
           variant="h5"
           component="p"
           fontFamily="inherit"
           color="#D95C5C"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
           pt="8px"
         >
           Tailored technology solutions for optimal performance and growth

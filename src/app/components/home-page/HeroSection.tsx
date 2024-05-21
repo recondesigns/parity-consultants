@@ -91,7 +91,7 @@ export default function HeroSection({ includeLearnMoreButton = false }: Props) {
                 textAlign={{ xs: "center", lg: "left" }}
                 sx={{ paddingBottom: { xs: "8px" } }}
               >
-                Maximize Efficiency with Scale Computing Solutions
+                Maximize efficiency with Scale Computing solutions
               </Typography>
               <Typography
                 variant="h6"
