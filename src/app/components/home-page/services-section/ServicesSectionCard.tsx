@@ -43,10 +43,11 @@ export default function ServicesSectionCard({ service }: Props) {
   return (
     <StyledCard
       sx={{
-        padding: "20px 0px",
+        padding: { xs: "20px 0px 16px 0px" },
         background: "none",
         height: "100%",
         boxShadow: "none",
+        borderRadius: "20px",
       }}
     >
       <CardContent
@@ -55,13 +56,16 @@ export default function ServicesSectionCard({ service }: Props) {
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
+          py: { xs: 0 },
+          px: { xs: 1, sm: 18, md: 6, lg: 2, xl: 10 },
         }}
       >
         <Box
           sx={{
-            paddingBottom: { xs: "16px" },
+            paddingBottom: { xs: "24px" },
+            width: { xs: "100%" },
             display: "flex",
-            justifyContent: "center",
+            justifyContent: "flex-start",
           }}
         >
           <Avatar
@@ -76,13 +80,17 @@ export default function ServicesSectionCard({ service }: Props) {
           </Avatar>
         </Box>
 
-        <Box sx={{ paddingBottom: { xs: "20px" } }}>
+        <Box
+          sx={{
+            paddingBottom: { xs: "8px" },
+            width: { xs: "100%" },
+          }}
+        >
           <Typography
-            variant="h5"
+            variant="h6"
             component="h3"
-            textAlign="center"
+            textAlign={{ xs: "left" }}
             sx={{
-              width: "100%",
               fontFamily: "inherit",
               fontWeight: "bold",
               color: "#fdfcfc",
@@ -95,10 +103,12 @@ export default function ServicesSectionCard({ service }: Props) {
         <Box
           component="ul"
           sx={{
+            width: { xs: "100%" },
             display: "flex",
             flexDirection: "column",
             alignItems: "start",
             listStyleType: "none",
+            gap: "8px",
           }}
         >
           {service.servicesGroup.map((service, idx) => (
@@ -106,7 +116,6 @@ export default function ServicesSectionCard({ service }: Props) {
               key={idx}
               component="li"
               sx={{
-                paddingBottom: "8px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
