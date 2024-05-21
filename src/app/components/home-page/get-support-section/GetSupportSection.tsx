@@ -51,16 +51,16 @@ export default function GetSupportSection() {
           fontFamily="inherit"
           fontWeight="bold"
           color="#333333"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
         >
-          Expert Technical Support
+          Expert Client Support
         </Typography>
         <Typography
           variant="h5"
           component="p"
           fontFamily="inherit"
           color="#D95C5C"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
           pt="8px"
         >
           Get reliable assistance for your IT needs
@@ -88,7 +88,7 @@ export default function GetSupportSection() {
               fontFamily="inherit"
               fontWeight="bold"
               color="#333333"
-              textAlign={{ xs: "center", md: "left" }}
+              textAlign={{ xs: "left", md: "left" }}
               pb={{ xs: "8px" }}
             >
               Client portal
@@ -98,7 +98,7 @@ export default function GetSupportSection() {
               component="p"
               fontFamily="inherit"
               color="#333333"
-              textAlign={{ xs: "center", md: "left" }}
+              textAlign={{ xs: "left", md: "left" }}
               pb={{ xs: "8px", sm: "12px" }}
             >
               Authorized users can create new service tickets or monitor the
@@ -144,7 +144,7 @@ export default function GetSupportSection() {
               fontFamily="inherit"
               fontWeight="bold"
               color="#333333"
-              textAlign={{ xs: "center", md: "left" }}
+              textAlign={{ xs: "left" }}
               pb={{ xs: "8px" }}
             >
               Remote support
@@ -154,7 +154,7 @@ export default function GetSupportSection() {
               component="p"
               fontFamily="inherit"
               color="#333333"
-              textAlign={{ xs: "center", md: "left" }}
+              textAlign={{ xs: "left" }}
               pb={{ xs: "8px", sm: "12px", md: "16px", lg: "20px" }}
             >
               When directed by a technician to enable remote assistance use the

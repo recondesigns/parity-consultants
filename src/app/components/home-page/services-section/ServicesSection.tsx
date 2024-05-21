@@ -53,7 +53,7 @@ export default function ServicesSection() {
           component="h2"
           fontWeight="bold"
           color="#fdfcfc"
-          textAlign={{ xs: "left", sm: "center" }}
+          textAlign={{ xs: "left", md: "center" }}
           className={montserrat.className}
         >
           Services We Offer
@@ -63,7 +63,7 @@ export default function ServicesSection() {
           component="p"
           fontFamily="inherit"
           color="#D95C5C"
-          textAlign={{ xs: "left", sm: "center" }}
+          textAlign={{ xs: "left", md: "center" }}
           pt="8px"
         >
           Your one-stop shop for comprehensive technology solutions

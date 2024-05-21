@@ -44,14 +44,14 @@ function ConsultingServicesSection() {
             }}
           >
             <Typography
-              variant="h3"
+              variant="h4"
               component="h3"
               sx={{
                 width: "100%",
                 fontFamily: "inherit",
                 fontWeight: "bold",
                 color: "#333333",
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "left" },
                 paddingBottom: { xs: "12px" },
               }}
             >
@@ -63,7 +63,7 @@ function ConsultingServicesSection() {
               sx={{
                 fontFamily: "inherit",
                 color: "#333333",
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "left" },
                 paddingBottom: { xs: "20px" },
               }}
             >
@@ -73,7 +73,7 @@ function ConsultingServicesSection() {
             </Typography>
             <Box
               sx={{
-                paddingBottom: { xs: "40px" },
+                paddingBottom: { xs: "20px", md: "0px" },
                 display: "flex",
                 justifyContent: { xs: "center", md: "start" },
               }}

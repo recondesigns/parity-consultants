@@ -32,15 +32,15 @@ function InfrastructureServicesSection() {
             }}
           >
             <Typography
-              variant="h3"
+              variant="h4"
               component="h3"
               sx={{
                 width: "100%",
                 fontFamily: "inherit",
                 fontWeight: "bold",
                 color: "#333333",
-                textAlign: { xs: "center", md: "left" },
-                paddingBottom: { xs: "32px" },
+                textAlign: { xs: "left" },
+                paddingBottom: { xs: "12px" },
               }}
             >
               Infrastructure
@@ -51,8 +51,8 @@ function InfrastructureServicesSection() {
               sx={{
                 fontFamily: "inherit",
                 color: "#333333",
-                textAlign: { xs: "center", md: "left" },
-                paddingBottom: { xs: "40px" },
+                textAlign: { xs: "left" },
+                paddingBottom: { xs: "20px", md: "0px" },
               }}
             >
               Revolutionize your IT infrastructure with our comprehensive

@@ -1,5 +1,6 @@
 "use client"
 import React from "react"
+import { montserrat } from "../../../fonts"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
@@ -36,7 +37,9 @@ function PartnersSection() {
           fontFamily="inherit"
           fontWeight="bold"
           color="#333333"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
+          sx={{ color: "#333333" }}
+          className={montserrat.className}
         >
           Our Partners
         </Typography>
@@ -45,7 +48,7 @@ function PartnersSection() {
           component="p"
           fontFamily="inherit"
           color="#D95C5C"
-          textAlign="center"
+          textAlign={{ xs: "left", md: "center" }}
           pt="8px"
         >
           We partner with leading manufacturers to offer best in class service

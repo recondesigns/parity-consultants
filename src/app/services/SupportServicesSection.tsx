@@ -34,14 +34,14 @@ function SupportServicesSection() {
             }}
           >
             <Typography
-              variant="h3"
+              variant="h4"
               component="h3"
               sx={{
                 width: "100%",
                 fontFamily: "inherit",
                 fontWeight: "bold",
                 color: "#333333",
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "left" },
                 paddingBottom: { xs: "12px" },
               }}
             >
@@ -53,19 +53,19 @@ function SupportServicesSection() {
               sx={{
                 fontFamily: "inherit",
                 color: "#333333",
-                textAlign: { xs: "center", md: "left" },
+                textAlign: { xs: "left" },
                 paddingBottom: { xs: "20px" },
                 paddingRight: { md: "12px", lg: "80px" },
               }}
             >
               Experience seamless IT support with our comprehensive services.
               From PC sales and support to virus/spyware removal, preventative
-              maintenance, and remote monitoring, we&apos;ve got you covered every
-              step of the way.
+              maintenance, and remote monitoring, we&apos;ve got you covered
+              every step of the way.
             </Typography>
             <Box
               sx={{
-                paddingBottom: { xs: "40px" },
+                paddingBottom: { xs: "20px", md: "0px" },
                 display: "flex",
                 justifyContent: { xs: "center", md: "start" },
               }}

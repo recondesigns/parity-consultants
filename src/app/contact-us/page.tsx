@@ -55,7 +55,7 @@ function ContactUsPage() {
             fontFamily="inherit"
             fontWeight="bold"
             color="#333333"
-            textAlign="center"
+            textAlign={{ xs: "left", md: "center" }}
           >
             Contact Us
           </Typography>
@@ -64,14 +64,14 @@ function ContactUsPage() {
             component="p"
             fontFamily="inherit"
             color="#D95C5C"
-            textAlign="center"
+            textAlign={{ xs: "left", md: "center" }}
             pt="8px"
           >
             Connect with Parity Consultants for tailored technology solutions
           </Typography>
         </Box>
         <Grid container>
-          <Grid item xs={12} lg={6} sx={{ padding: "0px 20px" }}>
+          <Grid item xs={12} lg={6} sx={{ padding: { xs: "0px 0px" } }}>
             <Box>
               <Box
                 sx={{
@@ -81,7 +81,7 @@ function ContactUsPage() {
                 <Typography
                   variant="h5"
                   component="h3"
-                  textAlign="center"
+                  textAlign={{ xs: "left", sm: "center" }}
                   fontWeight="bold"
                   sx={{ color: "#333333", fontFamily: "inherit" }}
                 >
@@ -90,7 +90,7 @@ function ContactUsPage() {
                 <Typography
                   variant="body2"
                   component="p"
-                  textAlign="center"
+                  textAlign={{ xs: "left", sm: "center" }}
                   pt="16px"
                   sx={{ color: "#333333", fontFamily: "inherit" }}
                 >
@@ -181,16 +181,6 @@ function ContactUsPage() {
                   </Typography>
                 </StyledLink>
               </Box>
-
-              {/* <Typography
-                variant="body1"
-                component="p"
-                textAlign="center"
-                pt="16px"
-                sx={{ color: "#333333", fontFamily: "inherit" }}
-              >
-                sales@parity.us.com
-              </Typography> */}
               <Box sx={{ display: "flex", justifyContent: "center" }}>
                 <StyledLink
                   href="tel:4692405090"
