@@ -1,11 +1,13 @@
 "use client"
 import React from "react"
-import Image from "next/image"
-import { montserrat } from "../fonts"
+import Link from "next/link"
+import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
-import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
+import { montserrat } from "../fonts"
+
+const StyledLink = styled(Link)({}, ({}) => ({}))
 
 export default function CenterAlignedSection() {
   return (
@@ -30,7 +32,7 @@ export default function CenterAlignedSection() {
         className={montserrat.className}
         paddingBottom={{ xs: "12px" }}
       >
-        Revolutionary Infrastructure Simplification
+        Superior Performance and Resilience
       </Typography>
       <Typography
         variant="h5"
@@ -56,17 +58,20 @@ export default function CenterAlignedSection() {
         support to keep your business running smoothly.
       </Typography>
       <Box sx={{ display: "flex", justifyContent: { md: "center" } }}>
-        <Button
-          variant="outlined"
-          sx={{
-            width: { xs: "100%", md: "auto" },
-            textTransform: "none",
-            borderRadius: "50px",
-          }}
-          size="large"
-        >
-          Contact us
-        </Button>
+        <StyledLink href="./scale-computing#scaleComputingHeroSection">
+          <Button
+            variant="outlined"
+            component="div"
+            sx={{
+              width: { xs: "100%", md: "auto" },
+              textTransform: "none",
+              borderRadius: "50px",
+            }}
+            size="large"
+          >
+            Contact us
+          </Button>
+        </StyledLink>
       </Box>
     </Box>
   )
