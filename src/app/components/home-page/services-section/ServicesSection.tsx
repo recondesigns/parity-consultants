@@ -55,6 +55,7 @@ export default function ServicesSection() {
           color="#fdfcfc"
           textAlign={{ xs: "left", md: "center" }}
           className={montserrat.className}
+          // sx={{ paddingBottom: '12px' }}
         >
           Services We Offer
         </Typography>
