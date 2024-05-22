@@ -33,6 +33,8 @@ const validateFunc = (values: any) => {
 }
 
 function ScaleComputingSectionForm() {
+  const nameInputRef = useFocus()
+
   return (
     <Formik
       initialValues={{
@@ -90,8 +92,6 @@ function ScaleComputingSectionForm() {
         isSubmitting,
         status,
       }) => {
-        const nameInputRef = useFocus()
-
         return (
           <Box
             component={"form"}
