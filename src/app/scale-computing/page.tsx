@@ -3,6 +3,7 @@ import { Main } from "../components/ui"
 import { HeroSection } from "../components/home-page"
 import CenterAlignedSection from "./CenterAlignedSection"
 import LeftAlignedSection from "./LeftAlignedSection"
+import RightAlignedSection from "./RightAlignedSection"
 
 export default function ScaledComputingPage() {
   return (
@@ -10,6 +11,7 @@ export default function ScaledComputingPage() {
       <HeroSection />
       <CenterAlignedSection />
       <LeftAlignedSection />
+      <RightAlignedSection />
     </Main>
   )
 }

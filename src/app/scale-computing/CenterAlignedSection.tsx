@@ -1,13 +1,17 @@
 "use client"
 import React from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import { montserrat } from "../fonts"
+import scaleLogo from "../../../public/images/partner-logo-scale.png"
 
 const StyledLink = styled(Link)({}, ({}) => ({}))
+
+const StyledImage = styled(Image)({}, ({}) => ({}))
 
 export default function CenterAlignedSection() {
   return (
@@ -15,10 +19,10 @@ export default function CenterAlignedSection() {
       component="section"
       sx={{
         padding: {
-          xs: "80px 20px",
-          sm: "100px 40px",
-          md: "100px 80px",
-          lg: "120px 100px",
+          xs: "80px 20px 40px 20px",
+          sm: "80px 40px 40px 40px",
+          md: "100px 80px 40px 80px",
+          lg: "120px 100px 80px 100px",
         },
         width: "100%",
       }}
@@ -40,10 +44,24 @@ export default function CenterAlignedSection() {
         fontFamily="inherit"
         color="#D95C5C"
         textAlign={{ xs: "left", md: "center" }}
-        paddingBottom={{ xs: "24px" }}
+        paddingBottom={{ xs: "24px", md: "40px" }}
       >
         Empower your business with unmatched reliability
       </Typography>
+      <Box
+        paddingBottom={{ xs: "24px", md: "40px" }}
+        sx={{
+          display: "flex",
+          justifyContent: { xs: "flex-start", md: "center" },
+          alignItems: "center",
+        }}
+      >
+        <StyledImage
+          src={scaleLogo}
+          alt="Scale Computing logo"
+          sx={{ height: { xs: "40px", md: "56px" }, width: "auto" }}
+        />
+      </Box>
       <Typography
         variant="body1"
         component="p"
@@ -58,18 +76,25 @@ export default function CenterAlignedSection() {
         support to keep your business running smoothly.
       </Typography>
       <Box sx={{ display: "flex", justifyContent: { md: "center" } }}>
-        <StyledLink href="./scale-computing#scaleComputingHeroSection">
+        <StyledLink
+          href="./scale-computing#scaleComputingHeroSection"
+          sx={{
+            width: { xs: "100%" },
+            display: "flex",
+            justifyContent: { md: "center" },
+          }}
+        >
           <Button
             variant="outlined"
             component="div"
             sx={{
-              width: { xs: "100%", md: "auto" },
+              width: { xs: "100%", sm: "auto" },
               textTransform: "none",
               borderRadius: "50px",
             }}
             size="large"
           >
-            Contact us
+            Get started
           </Button>
         </StyledLink>
       </Box>

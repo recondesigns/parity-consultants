@@ -8,11 +8,11 @@ import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
-import leftAlignedSectionImage1 from "../../../public/images/images/scale-page-left-section-1.jpg"
+import sectionImage from "../../../public/images/images/scale-page-left-section-2.jpg"
 
 const StyledLink = styled(Link)({}, ({}) => ({}))
 
-export default function LeftAlignedSection() {
+export default function RightAlignedSection() {
   return (
     <Box
       component="section"
@@ -26,14 +26,15 @@ export default function LeftAlignedSection() {
         width: "100%",
       }}
     >
-      <Grid container sx={{ padding: { lg: "0px 0px 0px 80px" } }}>
+      <Grid container sx={{ padding: { lg: "0px 80px 0px 0px" } }}>
         <Grid
           item
           xs={12}
           lg={7}
-          paddingRight={{ lg: "40px" }}
+          paddingLeft={{ lg: "40px" }}
           paddingBottom={{ xs: "24px", sm: "0px" }}
           sx={{
+            order: { xs: 1, lg: 2 },
             display: "flex",
             flexDirection: "column",
             alignItems: { lg: "flex-start" },
@@ -49,7 +50,7 @@ export default function LeftAlignedSection() {
             className={montserrat.className}
             paddingBottom={{ xs: "12px" }}
           >
-            Innovative IT Simplification
+            Future-Proof Scalability
           </Typography>
           <Typography
             variant="h5"
@@ -59,7 +60,7 @@ export default function LeftAlignedSection() {
             textAlign={{ xs: "left", md: "center", lg: "left" }}
             paddingBottom={{ xs: "24px" }}
           >
-            Unlock the Future of IT with Scale Computing
+            Grow Without Limits with Scale Computing
           </Typography>
           <Typography
             variant="body1"
@@ -69,11 +70,10 @@ export default function LeftAlignedSection() {
             textAlign={{ xs: "left", md: "center", lg: "left" }}
             paddingBottom={{ xs: "24px" }}
           >
-            Scale Computing&apos;s hyperconverged infrastructure (HCI)
-            simplifies IT by integrating storage, servers, and virtualization
-            into one seamless platform, offering streamlined operations and
-            reduced costs. Our expert consultants ensure a smooth transition,
-            keeping your business efficient and competitive.
+            Scale Computing offers seamless and efficient scalability, allowing
+            your IT infrastructure to grow with your business. Our expert
+            consultants ensure your system expands smoothly, maintaining optimal
+            performance and cost-effectiveness.
           </Typography>
           <Box>
             <StyledLink
@@ -107,22 +107,19 @@ export default function LeftAlignedSection() {
           justifyContent={{ lg: "center" }}
           alignItems={{ lg: "center" }}
           sx={{
+            order: { xs: 2, lg: 1 },
             padding: { sm: "40px", md: "80px", lg: "0px" },
           }}
         >
           <Box
             sx={{
               borderRadius: { xs: "20px" },
-              borderTopRightRadius: { lg: "0px" },
-              borderBottomRightRadius: { lg: "0px" },
+              borderTopLeftRadius: { lg: "0px" },
+              borderBottomLeftRadius: { lg: "0px" },
               overflow: "hidden",
             }}
           >
-            <Image
-              src={leftAlignedSectionImage1}
-              height={700}
-              alt="Computer hardware"
-            />
+            <Image src={sectionImage} height={700} alt="Computer hardware" />
           </Box>
         </Grid>
       </Grid>
