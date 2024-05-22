@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import axios from "axios"
+import { useFocus } from "../../../context/FocusContext"
 import { Formik } from "formik"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
@@ -89,6 +90,8 @@ function ScaleComputingSectionForm() {
         isSubmitting,
         status,
       }) => {
+        const nameInputRef = useFocus()
+
         return (
           <Box
             component={"form"}
@@ -123,6 +126,8 @@ function ScaleComputingSectionForm() {
               name="name"
               label="Name"
               type="text"
+              // @ts-expect-error
+              inputRef={nameInputRef}
               value={values.name}
               fullWidth
               required

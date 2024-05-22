@@ -1,18 +1,25 @@
 "use client"
 import React from "react"
 import Image from "next/image"
-import Link from "next/link"
+import { useFocus } from "../context/FocusContext"
 import { montserrat } from "../fonts"
-import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import leftAlignedSectionImage1 from "../../../public/images/images/scale-page-left-section-1.jpg"
 
-const StyledLink = styled(Link)({}, ({}) => ({}))
-
 export default function LeftAlignedSection() {
+  const nameInputRef = useFocus()
+
+  const handleClick = () => {
+    // @ts-expect-error
+    if (nameInputRef.current) {
+      // @ts-expect-error
+      nameInputRef.current.focus()
+    }
+  }
+
   return (
     <Box
       component="section"
@@ -75,28 +82,30 @@ export default function LeftAlignedSection() {
             reduced costs. Our expert consultants ensure a smooth transition,
             keeping your business efficient and competitive.
           </Typography>
-          <Box>
-            <StyledLink
-              href="./scale-computing#scaleComputingHeroSection"
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: {
+                xs: "center",
+                sm: "flex-start",
+                md: "center",
+                lg: "flex-start",
+              },
+            }}
+          >
+            <Button
+              variant="outlined"
+              // component="div"
+              onClick={handleClick}
               sx={{
-                width: { xs: "100%" },
-                display: "flex",
-                justifyContent: { md: "center", lg: "flex-start" },
+                width: { xs: "100%", sm: "auto" },
+                textTransform: "none",
+                borderRadius: "50px",
               }}
+              size="large"
             >
-              <Button
-                variant="outlined"
-                component="div"
-                sx={{
-                  width: { xs: "100%", sm: "auto" },
-                  textTransform: "none",
-                  borderRadius: "50px",
-                }}
-                size="large"
-              >
-                Get started
-              </Button>
-            </StyledLink>
+              Get started
+            </Button>
           </Box>
         </Grid>
         <Grid
