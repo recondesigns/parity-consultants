@@ -1,19 +1,27 @@
 "use client"
 import React from "react"
-import Link from "next/link"
 import Image from "next/image"
 import { styled } from "@mui/material/styles"
+import { useFocus } from "../context/FocusContext"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import { montserrat } from "../fonts"
 import scaleLogo from "../../../public/images/partner-logo-scale.png"
 
-const StyledLink = styled(Link)({}, ({}) => ({}))
-
 const StyledImage = styled(Image)({}, ({}) => ({}))
 
 export default function CenterAlignedSection() {
+  const nameInputRef = useFocus()
+
+  const handleClick = () => {
+    // @ts-expect-error
+    if (nameInputRef.current) {
+      // @ts-expect-error
+      nameInputRef.current.focus()
+    }
+  }
+
   return (
     <Box
       component="section"
@@ -76,27 +84,18 @@ export default function CenterAlignedSection() {
         support to keep your business running smoothly.
       </Typography>
       <Box sx={{ display: "flex", justifyContent: { md: "center" } }}>
-        <StyledLink
-          href="./scale-computing#scaleComputingHeroSection"
+        <Button
+          variant="outlined"
+          onClick={handleClick}
           sx={{
-            width: { xs: "100%" },
-            display: "flex",
-            justifyContent: { md: "center" },
+            width: { xs: "100%", sm: "auto" },
+            textTransform: "none",
+            borderRadius: "50px",
           }}
+          size="large"
         >
-          <Button
-            variant="outlined"
-            component="div"
-            sx={{
-              width: { xs: "100%", sm: "auto" },
-              textTransform: "none",
-              borderRadius: "50px",
-            }}
-            size="large"
-          >
-            Get started
-          </Button>
-        </StyledLink>
+          Get started
+        </Button>
       </Box>
     </Box>
   )

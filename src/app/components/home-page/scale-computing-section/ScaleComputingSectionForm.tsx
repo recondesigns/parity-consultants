@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import axios from "axios"
+import { useFocus } from "../../../context/FocusContext"
 import { Formik } from "formik"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
@@ -32,6 +33,8 @@ const validateFunc = (values: any) => {
 }
 
 function ScaleComputingSectionForm() {
+  const nameInputRef = useFocus()
+
   return (
     <Formik
       initialValues={{
@@ -123,6 +126,8 @@ function ScaleComputingSectionForm() {
               name="name"
               label="Name"
               type="text"
+              // @ts-expect-error
+              inputRef={nameInputRef}
               value={values.name}
               fullWidth
               required
