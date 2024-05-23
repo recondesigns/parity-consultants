@@ -110,7 +110,7 @@ function ScaleComputingSectionForm() {
               fontWeight="bold"
               sx={{ fontFamily: "inherit" }}
             >
-              Get Started Today!
+              Unlock your IT potential today!
             </Typography>
             <Typography
               variant="body1"
@@ -118,8 +118,7 @@ function ScaleComputingSectionForm() {
               sx={{ fontFamily: "inherit" }}
               pb={"20px"}
             >
-              Unlock exclusive offers and stay ahead of the curve with our
-              tailored solutions.
+              Submit your contact info below for a personalized consultation.
             </Typography>
             <TextField
               id="nameInput"
