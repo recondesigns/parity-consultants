@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import Link from "next/link"
+import { montserrat } from "../fonts"
 import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
@@ -52,7 +53,7 @@ function ContactUsPage() {
           <Typography
             variant="h3"
             component="h2"
-            fontFamily="inherit"
+            className={montserrat.className}
             fontWeight="bold"
             color="#333333"
             textAlign={{ xs: "left", md: "center" }}

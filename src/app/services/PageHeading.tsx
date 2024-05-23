@@ -1,4 +1,5 @@
 import React from "react"
+import { montserrat } from "../fonts"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 
@@ -24,7 +25,7 @@ function PageHeading() {
         <Typography
           variant="h3"
           component="h2"
-          fontFamily="inherit"
+          className={montserrat.className}
           fontWeight="bold"
           color="#333333"
           textAlign={{ xs: "left", md: "center" }}
