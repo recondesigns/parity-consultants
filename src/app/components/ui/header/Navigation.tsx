@@ -273,6 +273,9 @@ export default function Navigation() {
       <MenuIconContainer
         sx={{ display: { xs: "flex", lg: "none", color: "color: '#333333'," } }}
         onClick={() => setIsFlyoutOpen(!isFlyoutOpen)}
+        id="menuButton"
+        role="button"
+        aria-label="Menu button"
       >
         <MenuIcon />
       </MenuIconContainer>
