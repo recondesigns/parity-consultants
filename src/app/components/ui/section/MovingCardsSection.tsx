@@ -88,7 +88,7 @@ const MovingCardsSection = ({
                       </Box>
                       <Avatar
                         alt="testimonial avatar"
-                        sx={{ background: "#D95C5C" }}
+                        sx={{ background: "#B54C4C" }}
                       >
                         {getInitials(`${item.name}`)}
                       </Avatar>
