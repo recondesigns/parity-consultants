@@ -49,7 +49,7 @@ const StyledLi = styled("li")<StyledLiProps>(
       ? "none"
       : isScaleComputingLink
         ? "3px solid #FC711F"
-        : "3px solid #D95C5C",
+        : "3px solid #B54C4C",
   })
 )
 
@@ -67,7 +67,7 @@ const StyledLinkText = styled(Typography)<StyledLinkTextProps>(
     color: isScaleComputingLink
       ? "#FC711F"
       : isActiveLink
-        ? "#D95C5C"
+        ? "#B54C4C"
         : "#333333",
   })
 )
@@ -273,6 +273,9 @@ export default function Navigation() {
       <MenuIconContainer
         sx={{ display: { xs: "flex", lg: "none", color: "color: '#333333'," } }}
         onClick={() => setIsFlyoutOpen(!isFlyoutOpen)}
+        id="menuButton"
+        role="button"
+        aria-label="Menu button"
       >
         <MenuIcon />
       </MenuIconContainer>

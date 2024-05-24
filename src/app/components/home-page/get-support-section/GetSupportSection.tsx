@@ -1,6 +1,7 @@
 "use client"
 import React from "react"
 import Link from "next/link"
+import { montserrat } from "../../../fonts"
 import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
@@ -48,7 +49,7 @@ export default function GetSupportSection() {
         <Typography
           variant="h3"
           component="h2"
-          fontFamily="inherit"
+          className={montserrat.className}
           fontWeight="bold"
           color="#333333"
           textAlign={{ xs: "left", md: "center" }}

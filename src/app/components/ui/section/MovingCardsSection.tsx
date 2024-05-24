@@ -56,7 +56,12 @@ const MovingCardsSection = ({
                 >
                   <Box>
                     <Box sx={{ padding: "8px 0px" }}>
-                      <Typography variant="body1" component='p' color="#333333">
+                      <Typography
+                        variant="body1"
+                        component="p"
+                        fontFamily="inherit"
+                        color="#333333"
+                      >
                         {item.quote}
                       </Typography>
                     </Box>
@@ -72,14 +77,19 @@ const MovingCardsSection = ({
                       <Box sx={{ display: "flex", flexDirection: "column" }}>
                         <Typography
                           variant="body2"
-                          color="rgba(51, 51, 51, 1)"
+                          fontFamily="inherit"
+                          color="#333333"
                         >{`${item.name}`}</Typography>
                         <Typography
                           variant="body2"
-                          color="rgba(51, 51, 51, 0.6)"
+                          fontFamily="inherit"
+                          color="#333333"
                         >{`${item.company}`}</Typography>
                       </Box>
-                      <Avatar alt="testimonial avatar">
+                      <Avatar
+                        alt="testimonial avatar"
+                        sx={{ background: "#D95C5C" }}
+                      >
                         {getInitials(`${item.name}`)}
                       </Avatar>
                     </Box>
