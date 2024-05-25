@@ -1,13 +1,21 @@
-// "use client"
-// import React from "react"
 import type { Metadata } from "next"
 import { mulish } from "./fonts"
 import { Header, Footer } from "./components/ui/"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "Parity Consultants",
+  title: {
+    template: '%s | Parity Consultants',
+    default: 'Parity Consultants'
+  }, 
   description: "Your IT solutions.",
+  generator: 'Next.js',
+  applicationName: 'Parity Consultants',
+  keywords: [],
+  // referrer: 'origin-when-cross-origin',
+  authors: [{ name: 'Stedman', url: 'https://github.com/recondesigns' }],
+  creator: 'Stedman',
+  publisher: 'Stedman',
 }
 
 export default function RootLayout({

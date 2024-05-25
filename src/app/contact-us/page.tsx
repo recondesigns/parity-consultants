@@ -1,4 +1,5 @@
 import React from "react"
+import { Metadata } from "next"
 import { montserrat } from "../fonts"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
@@ -10,6 +11,20 @@ import { ScaleComputingSectionSmall } from "../components/home-page"
 // import FacebookIcon from "@mui/icons-material/Facebook"
 // import InstagramIcon from "@mui/icons-material/Instagram"
 // import LinkedInIcon from "@mui/icons-material/LinkedIn"
+
+export const metadata: Metadata = {
+  title: "Contact us",
+  description:
+    "Get in touch with our team for expert IT consulting services and solutions. Contact us today for inquiries, support, or to learn more about how our innovative technology solutions can benefit your business.",
+  keywords: [
+    "IT Consulting",
+    "IT Strategy",
+    "Cybersecurity",
+    "Cloud Solutions",
+    "Business IT Services",
+    "Digital Transformation",
+  ],
+}
 
 function ContactUsPage() {
   return (
