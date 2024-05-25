@@ -4,7 +4,7 @@ import { montserrat } from "../../../fonts"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import { Section } from "../../ui"
-import MovingCardsSection from "../../ui/section/MovingCardsSection"
+import TestimonialCards from "./TestimonialCards"
 import testimonials from "./testimonials"
 
 function SocialProofSection() {
@@ -54,7 +54,7 @@ function SocialProofSection() {
           Discover real results and experiences
         </Typography>
       </Box>
-      <MovingCardsSection items={testimonials} />
+      <TestimonialCards items={testimonials} />
     </Section>
   )
 }

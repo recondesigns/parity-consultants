@@ -15,7 +15,7 @@ function getInitials(name: string) {
   return initals.join("")
 }
 
-const MovingCardsSection = ({
+const TestimonialCards = ({
   items,
 }: {
   items: {
@@ -104,4 +104,4 @@ const MovingCardsSection = ({
   )
 }
 
-export default React.memo(MovingCardsSection)
+export default React.memo(TestimonialCards)
