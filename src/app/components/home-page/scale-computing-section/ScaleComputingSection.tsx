@@ -2,21 +2,21 @@
 import React from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { montserrat } from "../../fonts"
+import { montserrat } from "../../../fonts"
 import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Grid from "@mui/material/Grid"
 import Button from "@mui/material/Button"
-import ScaleComputingSectionForm from "./scale-computing-section/ScaleComputingSectionForm"
+import ScaleComputingSectionForm from "./ScaleComputingSectionForm"
 import Typography from "@mui/material/Typography"
-import { Section } from "../ui"
-import scaleLogoImage from "../../../../public/images/scale-computing-logo-new.png"
+import { Section } from "../../ui"
+import scaleLogoImage from "../../../../../public/images/scale-computing-logo-new.png"
 
 const StyledLink = styled(Link)(
   {
     textDecoration: "none",
   },
-  ({ theme }) => ({
+  ({}) => ({
     color: "#000000",
     "&:hover": {
       color: "gray",
@@ -28,9 +28,12 @@ type Props = {
   includeLearnMoreButton?: boolean
 }
 
-export default function HeroSection({ includeLearnMoreButton = false }: Props) {
+export default function ScaleComputingSection({ includeLearnMoreButton = false }: Props) {
   return (
-    <Section id='scaleComputingHeroSection' sx={{ background: "linear-gradient(45deg, #FF2146, #FC711F)" }}>
+    <Section
+      id="scaleComputingHeroSection"
+      sx={{ background: "linear-gradient(45deg, #FF2146, #FC711F)" }}
+    >
       <Box
         sx={{
           padding: {
