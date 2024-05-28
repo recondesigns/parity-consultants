@@ -1,11 +1,13 @@
 "use client"
 import React from "react"
-import Image from "next/image"
+import Link from "next/link"
+import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
+import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
 import { Hero } from "../components/shared"
 import { montserrat } from "../fonts"
-import heroImage from "../../../public/images/section-image-1.png"
+import heroBackgroundImage from "../../../public/images/images/services-hero-background.png"
 
 const SlotContentOne = () => (
   <Box
@@ -44,7 +46,7 @@ const SlotContentOne = () => (
         paddingBottom: { xs: "40px", lg: "24px" },
       }}
     >
-      Empowering your business with cutting-edge IT solutions
+      Empowerment with cutting-edge IT solutions
     </Typography>
     <Typography
       variant="body1"
@@ -61,30 +63,129 @@ const SlotContentOne = () => (
       technology, secure your digital assets, and achieve your business goals
       with our tailored solutions.
     </Typography>
+    <Box
+      sx={{
+        width: "100%",
+        paddingTop: {},
+        paddingBottom: {
+          xs: "40px",
+          lg: "0px",
+        },
+        display: "flex",
+        flexDirection: { xs: "column", md: "row" },
+        justifyContent: { xs: "center", lg: "flex-start" },
+        alignItems: { xs: "center" },
+        gap: { xs: "20px" },
+      }}
+    >
+      <Button
+        component={Link}
+        variant="outlined"
+        size="large"
+        href={"/contact-us"}
+        sx={{
+          width: { xs: "100%", lg: "auto" },
+          color: "#FDFCFC",
+          borderColor: "#FDFCFC",
+          borderRadius: "50px",
+          "&:hover": {
+            background: "none",
+            borderColor: "rgba(253,252,252, 0.4)",
+          },
+
+          textTransform: "none",
+        }}
+      >
+        <Typography
+          variant="body1"
+          component="p"
+          fontFamily="inherit"
+          sx={{
+            textAlign: "center",
+            color: "#FDFCFC",
+            width: { xs: "100%", lg: "auto" },
+            fontSize: { xs: "1rem", md: "1.125rem" },
+          }}
+        >
+          Contact us
+        </Typography>
+      </Button>
+      {/* <Button
+          component={Link}
+          variant="outlined"
+          size="large"
+          href={"/#solutionsSection"}
+          sx={{
+            width: { xs: "100%", lg: "auto" },
+            color: "#FDFCFC",
+            borderColor: "#FDFCFC",
+            borderRadius: "50px",
+            "&:hover": {
+              background: "none",
+              borderColor: "rgba(253,252,252, 0.4)",
+            },
+            textTransform: "none",
+          }}
+        >
+          <Typography
+            variant="body1"
+            component="p"
+            fontFamily="inherit"
+            sx={{
+              textAlign: "center",
+              width: { xs: "100%", lg: "auto" },
+              color: "#FDFCFC",
+              fontSize: { xs: "1rem", md: "1.125rem" },
+            }}
+          >
+            Our solutions
+          </Typography>
+        </Button> */}
+      {/* <Button
+          component={Link}
+          variant="outlined"
+          size="large"
+          href={"/#getSupportSection"}
+          sx={{
+            width: { xs: "100%", lg: "auto" },
+            color: "#FDFCFC",
+            borderColor: "#FDFCFC",
+            borderRadius: "50px",
+            "&:hover": {
+              background: "none",
+              borderColor: "rgba(253,252,252, 0.4)",
+            },
+            textTransform: "none",
+          }}
+        >
+          <Typography
+            variant="body1"
+            component="p"
+            fontFamily="inherit"
+            sx={{
+              textAlign: "center",
+              width: { xs: "100%", lg: "auto" },
+              color: "#FDFCFC",
+              fontSize: { xs: "1rem", md: "1.125rem" },
+            }}
+          >
+            Get support
+          </Typography>
+        </Button> */}
+    </Box>
   </Box>
 )
 
-const SlotContentTwo = () => (
-  <Box
-    sx={{
-      height: "100%",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }}
-  >
-    <Image src={heroImage} height={400} alt="Temporary image" />
-  </Box>
-)
+const StyledHero = styled(Hero)({}, ({ theme }) => ({}))
 
 type Props = {}
 
 export default function ServicesHero({}: Props) {
   return (
-    <Hero
+    <StyledHero
       firstColumnSlot={SlotContentOne()}
-      secondColumnSlot={SlotContentTwo()}
-      bgImage="linear-gradient(to right, #0f0c29, #302b63, #24243e)"
+      bgImage={heroBackgroundImage.src}
+      // bgImage="linear-gradient(to right, #0f0c29, #302b63, #24243e)"
     />
   )
 }

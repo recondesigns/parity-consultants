@@ -1,14 +1,13 @@
-'use client'
+"use client"
 import React from "react"
-import Image from "next/image"
 import Link from "next/link"
+import { styled } from "@mui/material/styles"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import Typography from "@mui/material/Typography"
-import { montserrat } from "../../../fonts"
-import heroImage from "../../../../../public/images/section-image-1.png"
-
 import { Hero } from "../../shared"
+import { montserrat } from "../../../fonts"
+import homeHeroBackground from "../../../../../public/images/images/home-hero-background.png"
 
 function SlotContentOne() {
   return (
@@ -183,29 +182,15 @@ function SlotContentOne() {
   )
 }
 
-function SlotContentTwo() {
-  return (
-    <Box
-      sx={{
-        height: "100%",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <Image src={heroImage} height={400} alt="Temporary image" />
-    </Box>
-  )
-}
+const StyledHero = styled(Hero)({}, ({ theme }) => ({}))
 
 type Props = {}
 
 export default function HomeHero({}: Props) {
   return (
-    <Hero
+    <StyledHero
       firstColumnSlot={SlotContentOne()}
-      secondColumnSlot={SlotContentTwo()}
-      bgColor="#333333"
+      bgImage={homeHeroBackground.src}
     />
   )
 }
