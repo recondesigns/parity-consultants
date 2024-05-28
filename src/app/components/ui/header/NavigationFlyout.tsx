@@ -11,7 +11,7 @@ import ListItem from "@mui/material/ListItem"
 import Divider from "@mui/material/Divider"
 import Typography from "@mui/material/Typography"
 import OpenInNewIcon from "@mui/icons-material/OpenInNew"
-import parityLogo from "../../../../../public/images/parity-red-logo.png"
+import parityLogo from "../../../../../public/images/parity-logo.png"
 
 const StyledLink = styled(Link)({}, ({}) => ({}))
 

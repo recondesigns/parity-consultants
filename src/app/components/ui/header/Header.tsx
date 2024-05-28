@@ -5,7 +5,7 @@ import Link from "next/link"
 import Box from "@mui/material/Box"
 import Navigation from "./Navigation"
 import { styled } from "@mui/material/styles"
-import parityLogo from "../../../../../public/images/parity-red-logo.png"
+import parityLogo from "../../../../../public/images/parity-logo.png"
 
 const StyledHeader = styled(Box)(
   {
