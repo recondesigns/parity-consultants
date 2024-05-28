@@ -13,12 +13,16 @@ const HeroSection = styled("section")<HeroSectionProps>(
   {
     width: "100%",
     overflow: "hidden",
+    // border: "2px solid lightgreen",
   },
   ({ bgColor }) => ({
     background: !bgColor ? "lightgreen" : bgColor,
   }),
   ({ bgImage }) => ({
-    backgroundImage: bgImage && bgImage,
+    backgroundImage: bgImage && `url(${bgImage})`,
+    backgroundPosition: bgImage && "center",
+    backgroundRepeat: bgImage && "no-repeat",
+    backgroundSize: bgImage && "cover",
   })
 )
 
@@ -27,6 +31,7 @@ type Props = {
   secondColumnSlot?: React.ReactNode
   bgColor?: string | React.ReactNode
   bgImage?: string
+  sx?: any
 }
 
 export default function Hero({
@@ -34,6 +39,7 @@ export default function Hero({
   secondColumnSlot,
   bgColor = "#333333",
   bgImage,
+  ...otherProps
 }: Props) {
   return (
     <HeroSection
@@ -47,9 +53,24 @@ export default function Hero({
           lg: "80px 80px",
         },
       }}
+      {...otherProps}
     >
       <Grid container>
-        <Grid item xs={12} lg={6}>
+        {firstColumnSlot && !secondColumnSlot && (
+
+            <Grid item xs={12} lg={8}>
+              <Box
+                id="heroSlotColumnOne"
+                sx={{
+                  height: { lg: "100%" },
+                }}
+              >
+                {firstColumnSlot}
+              </Box>
+            </Grid>
+        
+        )}
+        {/* <Grid item xs={12} lg={8}>
           <Box
             id="heroSlotColumnOne"
             sx={{
@@ -58,17 +79,31 @@ export default function Hero({
           >
             {firstColumnSlot}
           </Box>
-        </Grid>
-        <Grid item xs={12} lg={6}>
-          <Box
-            id="heroSlotColumnTwo"
-            sx={{
-              height: { lg: "100%" },
-            }}
-          >
-            {secondColumnSlot}
-          </Box>
-        </Grid>
+        </Grid> */}
+        {secondColumnSlot && (
+          <>
+            <Grid item xs={12} lg={6}>
+              <Box
+                id="heroSlotColumnOne"
+                sx={{
+                  height: { lg: "100%" },
+                }}
+              >
+                {firstColumnSlot}
+              </Box>
+            </Grid>
+            <Grid item xs={12} lg={6}>
+              <Box
+                id="heroSlotColumnTwo"
+                sx={{
+                  height: { lg: "100%" },
+                }}
+              >
+                {secondColumnSlot}
+              </Box>
+            </Grid>
+          </>
+        )}
       </Grid>
     </HeroSection>
   )
