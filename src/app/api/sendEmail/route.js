@@ -15,7 +15,7 @@ export async function POST(request) {
 
     const info = await transporter.sendMail({
       from: `"Parity Consultants website" <${process.env.NEXT_PUBLIC_GMAIL_FROM_EMAIL}>`,
-      to: "michaelstedman81@gmail.com",
+      to: `${process.env.NEXT_PUBLIC_GMAIL_SEND_TO_DEVELOPER}, ${process.env.NEXT_PUBLIC_GMAIL_SEND_TO_PARITY}`,
       subject: "New Scale Computing lead",
       text: `
             Name: ${name}\n
