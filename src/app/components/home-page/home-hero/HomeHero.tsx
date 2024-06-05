@@ -35,7 +35,7 @@ function SlotContentOne() {
           fontSize: { xs: "3rem", md: "3.5rem" },
         }}
       >
-        Empowering your digital growth
+        Premier Managed IT Services
       </Typography>
       <Typography
         variant="h4"
@@ -49,7 +49,7 @@ function SlotContentOne() {
           fontSize: { xs: "1.75rem", md: "2rem" },
         }}
       >
-        Innovative IT solutions tailored for your success
+        Empowering your business with reliable IT solutions and support
       </Typography>
       <Typography
         variant="body1"
@@ -63,10 +63,10 @@ function SlotContentOne() {
           fontSize: { xs: "1rem", md: "1.125rem" },
         }}
       >
-        At Parity Consultants, we partner with businesses to deliver
-        cutting-edge IT consulting services that drive growth, efficiency, and
-        innovation. Our team of experts is dedicated to providing customized
-        solutions that meet your unique needs and propel your business forward.
+        Our expert IT consultants provide top-notch managed IT services tailored
+        to businesses. Ensure your technology infrastructure is robust, secure,
+        and optimized for peak performance. Contact us today to discover how our
+        services can transform your business!
       </Typography>
       <Box
         sx={{

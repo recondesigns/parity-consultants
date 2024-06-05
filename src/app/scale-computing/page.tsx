@@ -8,7 +8,7 @@ import LeftAlignedSection from "./LeftAlignedSection"
 import RightAlignedSection from "./RightAlignedSection"
 
 export const metadata: Metadata = {
-  title: "Get Scale Computing",
+  title: "Get Scale Computing | Parity Consultants",
   description:
     "Explore our advanced Scale Computing solutions designed to optimize your IT infrastructure. Our scalable, high-performance computing services enhance efficiency, reduce costs, and support growth. Discover how our expert team can transform your business with innovative technology solutions.",
   keywords: [

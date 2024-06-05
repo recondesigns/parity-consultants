@@ -13,17 +13,9 @@ import { ScaleComputingSectionSmall } from "../components/home-page"
 // import LinkedInIcon from "@mui/icons-material/LinkedIn"
 
 export const metadata: Metadata = {
-  title: "Contact us",
+  title: "Contact us | Parity Consultants",
   description:
     "Get in touch with our team for expert IT consulting services and solutions. Contact us today for inquiries, support, or to learn more about how our innovative technology solutions can benefit your business.",
-  keywords: [
-    "IT Consulting",
-    "IT Strategy",
-    "Cybersecurity",
-    "Cloud Solutions",
-    "Business IT Services",
-    "Digital Transformation",
-  ],
 }
 
 function ContactUsPage() {
