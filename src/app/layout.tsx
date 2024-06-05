@@ -1,4 +1,5 @@
 import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/react"
 import { mulish } from "./fonts"
 import { Header, Footer } from "./components/ui/"
 import "./globals.css"
@@ -21,6 +22,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <Analytics />
       </body>
     </html>
   )
