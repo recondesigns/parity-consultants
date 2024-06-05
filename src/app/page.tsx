@@ -4,7 +4,6 @@ import {
   HomeHero,
   ScaleComputingSection,
   ServicesSection,
-  SocialProofSection,
   SolutionsSection,
   PartnersSection,
   ScaleComputingSectionSmall,
@@ -48,7 +47,6 @@ export default function Home() {
       <PartnersSection />
       <ServicesSection />
       <SolutionsSection />
-      <SocialProofSection />
       <GetSupportSection />
       <ScaleComputingSectionSmall />
     </Main>
