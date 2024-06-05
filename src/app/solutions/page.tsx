@@ -2,10 +2,7 @@ import { Metadata } from "next"
 import { Main } from "../components/ui"
 import SolutionsHero from "./SolutionsHero"
 import ContentSection from "./ContentSection"
-import {
-  ScaleComputingSectionSmall,
-  SocialProofSection,
-} from "../components/home-page"
+import { ScaleComputingSectionSmall } from "../components/home-page"
 
 export const metadata: Metadata = {
   title: "Our Solutions | Parity Consultants",
@@ -35,7 +32,6 @@ export default function SolutionsPage() {
     <Main>
       <SolutionsHero />
       <ContentSection />
-      <SocialProofSection />
       <ScaleComputingSectionSmall />
     </Main>
   )
