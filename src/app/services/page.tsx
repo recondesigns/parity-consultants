@@ -12,7 +12,7 @@ import { ScaleComputingSectionSmall } from "../components/home-page"
 import { PartnersSection } from "../components/home-page"
 
 export const metadata: Metadata = {
-  title: "Our Services",
+  title: "Our Services | Parity Consultants",
   description:
     "Discover the comprehensive IT consulting services we offer at Parity Consultants. Our expert team specializes in IT strategy, cybersecurity, cloud solutions, and more to help your business thrive in the digital age.",
   keywords: [

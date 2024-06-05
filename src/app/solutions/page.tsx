@@ -8,7 +8,7 @@ import {
 } from "../components/home-page"
 
 export const metadata: Metadata = {
-  title: "Our Solutions",
+  title: "Our Solutions | Parity Consultants",
   description:
     "Discover tailored IT solutions for businesses of all sizes. Our IT consultants provide expert services in cloud computing, cybersecurity, network infrastructure, and software development to enhance your company's performance and security.",
   keywords: [

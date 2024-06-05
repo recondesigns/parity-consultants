@@ -4,18 +4,8 @@ import { Header, Footer } from "./components/ui/"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: {
-    template: '%s | Parity Consultants',
-    default: 'Parity Consultants'
-  }, 
-  description: "Your IT solutions.",
-  generator: 'Next.js',
-  applicationName: 'Parity Consultants',
-  keywords: [],
-  // referrer: 'origin-when-cross-origin',
-  authors: [{ name: 'Stedman', url: 'https://github.com/recondesigns' }],
-  creator: 'Stedman',
-  publisher: 'Stedman',
+  generator: "Next.js",
+  referrer: "origin-when-cross-origin",
 }
 
 export default function RootLayout({
