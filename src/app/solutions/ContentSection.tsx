@@ -1,4 +1,4 @@
-'use client'
+"use client"
 import React from "react"
 import Image from "next/image"
 import Link from "next/link"
@@ -78,13 +78,7 @@ export default function ContentSection() {
           return (
             <Grid key={idx} item xs={12} md={6} lg={4}>
               <Box sx={{ paddingBottom: { xs: "16px" } }}>
-                <Image
-                  src={solution.image}
-                  width={100}
-                  height={366}
-                  style={{ width: "100%" }}
-                  alt="Infrascturure and management image"
-                />
+                <Image src={solution.image} alt={`${solution.title}`} />
               </Box>
 
               <Box>
