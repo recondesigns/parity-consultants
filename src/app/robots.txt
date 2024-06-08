@@ -1,4 +1,0 @@
-User-Agent: *
-Allow: /
-
-Sitemap: https://parity-consultants.vercel.app/sitemap.xml
