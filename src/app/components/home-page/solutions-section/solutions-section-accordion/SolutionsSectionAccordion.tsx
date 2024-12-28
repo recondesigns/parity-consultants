@@ -17,6 +17,7 @@ export default function SolutionsSectionAccordion({ list }: Props) {
     <Accordion>
       {list.map((item, idx) => (
         <SolutionsSectionAccordionItem
+          key={idx}
           idx={idx}
           title={item.title}
           description={item.description}
