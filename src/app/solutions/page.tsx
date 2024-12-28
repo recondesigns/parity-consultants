@@ -1,6 +1,6 @@
 import { Metadata } from "next"
 import { Main } from "../components/ui"
-import SolutionsHero from "./SolutionsHero"
+import SolutionsHero from "./solutions-hero/SolutionsHero"
 import ContentSection from "./ContentSection"
 import { ScaleComputingSectionSmall } from "../components/home-page"
 

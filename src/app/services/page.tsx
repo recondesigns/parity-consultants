@@ -1,7 +1,7 @@
 import React from "react"
 import { Metadata } from "next"
 import { Main } from "../components/ui"
-import ServicesHero from "./ServicesHero"
+import ServicesHero from "./services-hero/ServicesHero"
 import PageHeading from "./PageHeading"
 import InfrastructureServicesSection from "./InfrastructureServicesSection"
 import SecurityComplianceServicesSection from "./SecurityComplianceServicesSection"

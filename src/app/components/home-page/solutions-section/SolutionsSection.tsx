@@ -4,7 +4,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { montserrat } from "../../../fonts"
 import { styled } from "@mui/material/styles"
-import { Accordion, AccordionItem as Item } from "@szhsin/react-accordion"
+import SolutionsSectionAccordion from "./solutions-section-accordion/SolutionsSectionAccordion"
 import Box from "@mui/material/Box"
 import Button from "@mui/material/Button"
 import Grid from "@mui/material/Grid"
@@ -24,10 +24,6 @@ const StyledLink = styled(Link)(
     },
   })
 )
-
-const StyledAccordion = styled(Accordion)({}, ({}) => ({}))
-
-const StyledAccordionItem = styled(Item)({}, ({}) => ({}))
 
 export default function SolutionsSection() {
   return (
@@ -102,42 +98,7 @@ export default function SolutionsSection() {
           }}
         >
           <Box>
-            <StyledAccordion>
-              {solutions.map((solution, idx) => {
-                return (
-                  <StyledAccordionItem
-                    key={idx}
-                    itemKey={idx}
-                    header={
-                      <Box sx={{ borderBottom: "2px solid #D95C5C" }}>
-                        <Typography
-                          variant="h6"
-                          component="h3"
-                          fontFamily="inherit"
-                          fontWeight="bold"
-                          color="#333333"
-                        >
-                          {solution.title}
-                        </Typography>
-                      </Box>
-                    }
-                    initialEntered={idx === 0 ? true : false}
-                    sx={{ padding: { xs: "8px 12px" } }}
-                  >
-                    <Box sx={{ paddingTop: "12px" }}>
-                      <Typography
-                        variant="body1"
-                        component="p"
-                        fontFamily="inherit"
-                        color="#333333"
-                      >
-                        {solution.description}
-                      </Typography>
-                    </Box>
-                  </StyledAccordionItem>
-                )
-              })}
-            </StyledAccordion>
+            <SolutionsSectionAccordion list={solutions} />
           </Box>
         </Grid>
       </Grid>
