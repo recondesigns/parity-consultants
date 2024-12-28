@@ -1,11 +1,13 @@
 'use client'
 import React from "react"
 import axios from "axios"
-import { Formik } from "formik"
+import {Formik} from "formik"
 import Box from "@mui/material/Box"
 import TextField from "@mui/material/TextField"
 import MenuItem from "@mui/material/MenuItem"
 import Button from "@mui/material/Button"
+// @ts-expect-error Could not find a declaration file for module react-google-recaptcha
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const optionsList = [
   {
@@ -52,6 +54,12 @@ const validateFunc = (values: any) => {
 }
 
 function ContactFormSection() {
+  const [captchaValue, setCaptchaValue] = React.useState<string | null>(null)
+
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaValue(value);
+  };
+
   return (
     <Formik
       initialValues={{
@@ -63,9 +71,14 @@ function ContactFormSection() {
       }}
       validateOnChange={false}
       validate={validateFunc}
-      onSubmit={(values, { setSubmitting, setStatus, resetForm }) => {
+      onSubmit={(values, {setSubmitting, setStatus, resetForm}) => {
+        if (!captchaValue) {
+          alert('Please complete captcha.')
+
+          return
+        }
         const errors = validateFunc(values)
-        setStatus({ isSending: true, success: false })
+        setStatus({isSending: true, success: false})
 
         if (Object.keys(errors).length === 0) {
           setSubmitting(true)
@@ -81,17 +94,18 @@ function ContactFormSection() {
                 company: values.company,
                 subject: values.subject,
                 message: values.message,
+                captcha: captchaValue
               }
             )
             .then(() => {
               // console.log(result.data)
-              setStatus({ isSending: false, success: true })
+              setStatus({isSending: false, success: true})
               setSubmitting(false)
               resetForm()
             })
             .catch((error) => {
               console.log("Error sending email:", error)
-              setStatus({ isSending: false, success: false })
+              setStatus({isSending: false, success: false})
               setSubmitting(false)
             })
         } else {
@@ -101,23 +115,23 @@ function ContactFormSection() {
       }}
     >
       {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-        status,
-      }) => {
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isSubmitting,
+          status,
+        }) => {
         return (
           <Box
             component={"form"}
             onSubmit={handleSubmit}
             noValidate
             sx={{
-              py: { xs: "20px" },
-              px: { xs: "0px" },
+              py: {xs: "20px"},
+              px: {xs: "0px"},
               background: "#FDFCFC",
               borderRadius: "20px",
               maxWidth: "380px",
@@ -135,7 +149,7 @@ function ContactFormSection() {
               helperText={touched.name && errors.name && `${errors.name}`}
               onBlur={handleBlur}
               onChange={handleChange}
-              sx={{ paddingBottom: "16px", fontFamily: "inherit" }}
+              sx={{paddingBottom: "16px", fontFamily: "inherit"}}
             />
             <TextField
               id="emailInput"
@@ -149,7 +163,7 @@ function ContactFormSection() {
               fullWidth
               onBlur={handleBlur}
               onChange={handleChange}
-              sx={{ paddingBottom: "16px" }}
+              sx={{paddingBottom: "16px"}}
             />
 
             <TextField
@@ -166,7 +180,7 @@ function ContactFormSection() {
               required
               onBlur={handleBlur}
               onChange={handleChange}
-              sx={{ paddingBottom: "16px" }}
+              sx={{paddingBottom: "16px"}}
             />
             <TextField
               id="subjectInput"
@@ -182,7 +196,7 @@ function ContactFormSection() {
               select
               onBlur={handleBlur}
               onChange={handleChange}
-              sx={{ paddingBottom: "16px" }}
+              sx={{paddingBottom: "16px"}}
             >
               {optionsList.map((option) => (
                 <MenuItem key={option.value} value={option.value}>
@@ -206,8 +220,15 @@ function ContactFormSection() {
               rows={8}
               onBlur={handleBlur}
               onChange={handleChange}
-              sx={{ paddingBottom: "16px" }}
+              sx={{paddingBottom: "16px"}}
             />
+            <Box sx={{paddingBottom: '16px', display: 'flex', justifyContent: 'center'}}>
+              <ReCAPTCHA
+                sitekey="6Le_QqgqAAAAAM4ZmtzdcU7YAN4rJZpf-2tud0uz"
+                onChange={handleCaptchaChange}
+              />
+            </Box>
+
             <Button
               variant="contained"
               size="large"
