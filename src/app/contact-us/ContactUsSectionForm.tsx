@@ -73,7 +73,7 @@ function ContactFormSection() {
       validate={validateFunc}
       onSubmit={(values, {setSubmitting, setStatus, resetForm}) => {
         if (!captchaValue) {
-          alert('Please complete captcha.')
+          alert('Please complete reCaptcha.')
 
           return
         }
@@ -224,7 +224,7 @@ function ContactFormSection() {
             />
             <Box sx={{paddingBottom: '16px', display: 'flex', justifyContent: 'center'}}>
               <ReCAPTCHA
-                sitekey="6Le_QqgqAAAAAM4ZmtzdcU7YAN4rJZpf-2tud0uz"
+                sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}
                 onChange={handleCaptchaChange}
               />
             </Box>
