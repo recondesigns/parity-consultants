@@ -45,7 +45,7 @@ function ScaleComputingSectionForm() {
       }}
       validateOnChange={false}
       validate={validateFunc}
-      onSubmit={(values, { setSubmitting, setStatus }) => {
+      onSubmit={(values, { setSubmitting, setStatus, resetForm }) => {
         const errors = validateFunc(values)
         setStatus({ isSending: true, success: false })
 
@@ -70,6 +70,7 @@ function ScaleComputingSectionForm() {
               // console.log(result.data)
               setStatus({ isSending: false, success: true })
               setSubmitting(false)
+              resetForm()
             })
             .catch((error) => {
               console.log("Error sending email:", error)
