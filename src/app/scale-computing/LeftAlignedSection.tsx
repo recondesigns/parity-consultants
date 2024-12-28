@@ -56,7 +56,7 @@ export default function LeftAlignedSection() {
             className={montserrat.className}
             paddingBottom={{ xs: "12px" }}
           >
-            Innovative IT Simplification
+            Simplify and Scale: Innovative IT Solutions for Modern Businesses
           </Typography>
           <Typography
             variant="h5"

@@ -12,7 +12,16 @@ export const metadata: Metadata = {
   description:
     "Explore our advanced Scale Computing solutions designed to optimize your IT infrastructure. Our scalable, high-performance computing services enhance efficiency, reduce costs, and support growth. Discover how our expert team can transform your business with innovative technology solutions.",
   keywords: [
+    "alternative vmware",
+    "vmware alternatives",
+    "vmware replacement",
+    "enterprise vmware alternatives",
+    "edge computing",
+    "edge-computing",
     "scale computing",
+    "scale computing Fort Worth",
+    "scale computing Dallas",
+    "scale computing DFW",
     "high-performance computing",
     "scalable IT solutions",
     "IT infrastructure optimization",
