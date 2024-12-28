@@ -1,12 +1,14 @@
 "use client"
 import React from "react"
 import axios from "axios"
-import { useFocus } from "../../../context/FocusContext"
-import { Formik } from "formik"
+import {useFocus} from "../../../context/FocusContext"
+import {Formik} from "formik"
 import Box from "@mui/material/Box"
 import Typography from "@mui/material/Typography"
 import TextField from "@mui/material/TextField"
 import Button from "@mui/material/Button"
+// @ts-expect-error Could not find a declaration file for module react-google-recaptcha
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const validateFunc = (values: any) => {
   const errors = {}
@@ -33,6 +35,12 @@ const validateFunc = (values: any) => {
 }
 
 function ScaleComputingSectionForm() {
+  const [captchaValue, setCaptchaValue] = React.useState<string | null>(null)
+
+  const handleCaptchaChange = (value: string | null) => {
+    setCaptchaValue(value);
+  };
+
   const nameInputRef = useFocus()
 
   return (
@@ -42,12 +50,13 @@ function ScaleComputingSectionForm() {
         name: "",
         company: "",
         details: "",
+        captcha: captchaValue
       }}
       validateOnChange={false}
       validate={validateFunc}
-      onSubmit={(values, { setSubmitting, setStatus, resetForm }) => {
+      onSubmit={(values, {setSubmitting, setStatus, resetForm}) => {
         const errors = validateFunc(values)
-        setStatus({ isSending: true, success: false })
+        setStatus({isSending: true, success: false})
 
         if (Object.keys(errors).length === 0) {
           setSubmitting(true)
@@ -68,13 +77,13 @@ function ScaleComputingSectionForm() {
             )
             .then(() => {
               // console.log(result.data)
-              setStatus({ isSending: false, success: true })
+              setStatus({isSending: false, success: true})
               setSubmitting(false)
               resetForm()
             })
             .catch((error) => {
               console.log("Error sending email:", error)
-              setStatus({ isSending: false, success: false })
+              setStatus({isSending: false, success: false})
               setSubmitting(false)
             })
         } else {
@@ -84,19 +93,29 @@ function ScaleComputingSectionForm() {
       }}
     >
       {({
-        values,
-        errors,
-        touched,
-        handleChange,
-        handleBlur,
-        handleSubmit,
-        isSubmitting,
-        status,
-      }) => {
+          values,
+          errors,
+          touched,
+          handleChange,
+          handleBlur,
+          handleSubmit,
+          isSubmitting,
+          status,
+        }) => {
         return (
           <Box
             component={"form"}
-            onSubmit={handleSubmit}
+            onSubmit={(e) => {
+              e.preventDefault()
+
+              if (!captchaValue) {
+                alert('Please complete reCaptcha.')
+
+                return
+              }
+
+              handleSubmit()
+            }}
             noValidate
             sx={{
               padding: "20px",
@@ -109,14 +128,14 @@ function ScaleComputingSectionForm() {
               variant="h6"
               component="p"
               fontWeight="bold"
-              sx={{ fontFamily: "inherit" }}
+              sx={{fontFamily: "inherit"}}
             >
               Unlock your IT potential today!
             </Typography>
             <Typography
               variant="body1"
               component="p"
-              sx={{ fontFamily: "inherit" }}
+              sx={{fontFamily: "inherit"}}
               pb={"20px"}
             >
               Submit your contact info below for a personalized consultation.
@@ -135,7 +154,7 @@ function ScaleComputingSectionForm() {
               helperText={touched.name && errors.name && `${errors.name}`}
               onBlur={handleBlur}
               onChange={handleChange}
-              sx={{ paddingBottom: "16px", fontFamily: "inherit" }}
+              sx={{paddingBottom: "16px", fontFamily: "inherit"}}
             />
             <TextField
               id="emailInput"
@@ -149,7 +168,7 @@ function ScaleComputingSectionForm() {
               fullWidth
               onBlur={handleBlur}
               onChange={handleChange}
-              sx={{ paddingBottom: "16px" }}
+              sx={{paddingBottom: "16px"}}
             />
 
             <TextField
@@ -166,7 +185,7 @@ function ScaleComputingSectionForm() {
               required
               onBlur={handleBlur}
               onChange={handleChange}
-              sx={{ paddingBottom: "16px" }}
+              sx={{paddingBottom: "16px"}}
             />
             <TextField
               id="detailsInput"
@@ -181,8 +200,14 @@ function ScaleComputingSectionForm() {
               fullWidth
               onBlur={handleBlur}
               onChange={handleChange}
-              sx={{ paddingBottom: "16px" }}
+              sx={{paddingBottom: "16px"}}
             />
+            <Box sx={{paddingBottom: '16px', display: 'flex', justifyContent: 'center'}}>
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}
+                onChange={handleCaptchaChange}
+              />
+            </Box>
             <Button
               variant="contained"
               size="large"

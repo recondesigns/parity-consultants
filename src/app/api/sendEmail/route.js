@@ -1,3 +1,4 @@
+import { NextResponse } from 'next/server'
 import nodemailer from "nodemailer"
 
 export async function POST(request) {
@@ -27,16 +28,10 @@ export async function POST(request) {
 
     console.log("Message sent: %s", info.messageId)
 
-    return new Response(`Email was sent successfully`, {
-      status: 200,
-      success: true,
-    })
+    return NextResponse.json({ message: 'Email was sent successfully.' }, { status: 200 })
   } catch (error) {
     console.error("Error occurred:", error)
-    return new Response(`Sending an email had an error`, {
-      status: 500,
-      success: false,
-      error: error.message,
-    })
+
+    return NextResponse.json({ error: error.message }, { status: 500 })
   }
 }

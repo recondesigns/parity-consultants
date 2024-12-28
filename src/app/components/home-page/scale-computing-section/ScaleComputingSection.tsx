@@ -86,7 +86,7 @@ export default function ScaleComputingSection({ includeLearnMoreButton = false }
               </Box>
               <Typography
                 variant="h4"
-                component="h2"
+                component="h1"
                 fontFamily="inherit"
                 fontWeight="bold"
                 className={montserrat.className}
@@ -94,7 +94,7 @@ export default function ScaleComputingSection({ includeLearnMoreButton = false }
                 textAlign={{ xs: "center", lg: "left" }}
                 sx={{ paddingBottom: { xs: "8px" } }}
               >
-                Maximize efficiency with Scale Computing solutions
+                Maximize Efficiency with Scale Computing: The Leading VMware Alternative
               </Typography>
               <Typography
                 variant="h6"
