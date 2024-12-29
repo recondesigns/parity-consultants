@@ -8,6 +8,9 @@ import MenuItem from "@mui/material/MenuItem"
 import Button from "@mui/material/Button"
 // @ts-expect-error Could not find a declaration file for module react-google-recaptcha
 import ReCAPTCHA from 'react-google-recaptcha'
+import Snackbar, {SnackbarCloseReason} from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 const optionsList = [
   {
@@ -55,10 +58,35 @@ const validateFunc = (values: any) => {
 
 function ContactFormSection() {
   const [captchaValue, setCaptchaValue] = React.useState<string | null>(null)
+  const [isSnackbarOpen, setIsSnackbarOpen] = React.useState(false);
 
   const handleCaptchaChange = (value: string | null) => {
     setCaptchaValue(value);
   };
+
+  const handleClose = (
+    event: React.SyntheticEvent | Event,
+    reason?: SnackbarCloseReason,
+  ) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setIsSnackbarOpen(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small"/>
+      </IconButton>
+    </React.Fragment>
+  );
 
   return (
     <Formik
@@ -102,6 +130,9 @@ function ContactFormSection() {
               setStatus({isSending: false, success: true})
               setSubmitting(false)
               resetForm()
+              setIsSnackbarOpen(true)
+
+              setTimeout(() => setIsSnackbarOpen(false), 5000)
             })
             .catch((error) => {
               console.log("Error sending email:", error)
@@ -125,131 +156,140 @@ function ContactFormSection() {
           status,
         }) => {
         return (
-          <Box
-            component={"form"}
-            onSubmit={handleSubmit}
-            noValidate
-            sx={{
-              py: {xs: "20px"},
-              px: {xs: "0px"},
-              background: "#FDFCFC",
-              borderRadius: "20px",
-              maxWidth: "380px",
-            }}
-          >
-            <TextField
-              id="nameInput"
-              name="name"
-              label="Name"
-              type="text"
-              value={values.name}
-              fullWidth
-              required
-              error={touched.name && errors.name ? true : false}
-              helperText={touched.name && errors.name && `${errors.name}`}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{paddingBottom: "16px", fontFamily: "inherit"}}
+          <>
+            <Snackbar
+              open={isSnackbarOpen}
+              onClose={handleClose}
+              // anchorOrigin={{ vertical, horizontal }}
+              message="Thank you. Your message has been sent."
+              action={action}
             />
-            <TextField
-              id="emailInput"
-              name="email"
-              label="Email"
-              type="email"
-              required
-              value={values.email}
-              error={touched.email && errors.email ? true : false}
-              helperText={touched.email && errors.email && `${errors.email}`}
-              fullWidth
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{paddingBottom: "16px"}}
-            />
-
-            <TextField
-              id="companyInput"
-              name="company"
-              label="Company"
-              type="text"
-              value={values.company}
-              error={touched.company && errors.company ? true : false}
-              helperText={
-                touched.company && errors.company && `${errors.company}`
-              }
-              fullWidth
-              required
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{paddingBottom: "16px"}}
-            />
-            <TextField
-              id="subjectInput"
-              name="subject"
-              label="Subject"
-              type="text"
-              value={values.subject}
-              error={touched.subject && errors.subject ? true : false}
-              helperText={
-                touched.subject && errors.subject && `${errors.subject}`
-              }
-              fullWidth
-              select
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{paddingBottom: "16px"}}
-            >
-              {optionsList.map((option) => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
-            <TextField
-              id="messageInput"
-              name="message"
-              label="Message"
-              type="text"
-              value={values.message}
-              error={touched.message && errors.message ? true : false}
-              helperText={
-                touched.message && errors.message && `${errors.message}`
-              }
-              required
-              fullWidth
-              multiline
-              rows={8}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{paddingBottom: "16px"}}
-            />
-            <Box sx={{paddingBottom: '16px', display: 'flex', justifyContent: 'center'}}>
-              <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}
-                onChange={handleCaptchaChange}
-              />
-            </Box>
-
-            <Button
-              variant="contained"
-              size="large"
-              fullWidth
-              type="submit"
-              disabled={
-                status && (status.success || !isSubmitting) ? true : false
-              }
+            <Box
+              component={"form"}
+              onSubmit={handleSubmit}
+              noValidate
               sx={{
-                borderRadius: "50px",
-                fontWeight: "bold",
-                textTransform: "none",
+                py: {xs: "20px"},
+                px: {xs: "0px"},
+                background: "#FDFCFC",
+                borderRadius: "20px",
+                maxWidth: "380px",
               }}
             >
-              {status && isSubmitting
-                ? "Sending..."
-                : status && status.success
-                  ? "Sent"
-                  : "Send"}
-            </Button>
-          </Box>
+              <TextField
+                id="nameInput"
+                name="name"
+                label="Name"
+                type="text"
+                value={values.name}
+                fullWidth
+                required
+                error={touched.name && errors.name ? true : false}
+                helperText={touched.name && errors.name && `${errors.name}`}
+                onBlur={handleBlur}
+                onChange={handleChange}
+                sx={{paddingBottom: "16px", fontFamily: "inherit"}}
+              />
+              <TextField
+                id="emailInput"
+                name="email"
+                label="Email"
+                type="email"
+                required
+                value={values.email}
+                error={touched.email && errors.email ? true : false}
+                helperText={touched.email && errors.email && `${errors.email}`}
+                fullWidth
+                onBlur={handleBlur}
+                onChange={handleChange}
+                sx={{paddingBottom: "16px"}}
+              />
+
+              <TextField
+                id="companyInput"
+                name="company"
+                label="Company"
+                type="text"
+                value={values.company}
+                error={touched.company && errors.company ? true : false}
+                helperText={
+                  touched.company && errors.company && `${errors.company}`
+                }
+                fullWidth
+                required
+                onBlur={handleBlur}
+                onChange={handleChange}
+                sx={{paddingBottom: "16px"}}
+              />
+              <TextField
+                id="subjectInput"
+                name="subject"
+                label="Subject"
+                type="text"
+                value={values.subject}
+                error={touched.subject && errors.subject ? true : false}
+                helperText={
+                  touched.subject && errors.subject && `${errors.subject}`
+                }
+                fullWidth
+                select
+                onBlur={handleBlur}
+                onChange={handleChange}
+                sx={{paddingBottom: "16px"}}
+              >
+                {optionsList.map((option) => (
+                  <MenuItem key={option.value} value={option.value}>
+                    {option.label}
+                  </MenuItem>
+                ))}
+              </TextField>
+              <TextField
+                id="messageInput"
+                name="message"
+                label="Message"
+                type="text"
+                value={values.message}
+                error={touched.message && errors.message ? true : false}
+                helperText={
+                  touched.message && errors.message && `${errors.message}`
+                }
+                required
+                fullWidth
+                multiline
+                rows={8}
+                onBlur={handleBlur}
+                onChange={handleChange}
+                sx={{paddingBottom: "16px"}}
+              />
+              <Box sx={{paddingBottom: '16px', display: 'flex', justifyContent: 'center'}}>
+                <ReCAPTCHA
+                  sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}
+                  onChange={handleCaptchaChange}
+                />
+              </Box>
+
+              <Button
+                variant="contained"
+                size="large"
+                fullWidth
+                type="submit"
+                disabled={
+                  status && (status.success || !isSubmitting) ? true : false
+                }
+                sx={{
+                  borderRadius: "50px",
+                  fontWeight: "bold",
+                  textTransform: "none",
+                }}
+              >
+                {status && isSubmitting
+                  ? "Sending..."
+                  : status && status.success
+                    ? "Sent"
+                    : "Send"}
+              </Button>
+            </Box>
+          </>
         )
       }}
     </Formik>
