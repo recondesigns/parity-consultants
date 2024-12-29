@@ -1,6 +1,5 @@
 "use client"
 import React from "react"
-import axios from "axios"
 import {useFocus} from "../../../context/FocusContext"
 import {Formik} from "formik"
 import Box from "@mui/material/Box"
@@ -82,41 +81,52 @@ function ScaleComputingSectionForm() {
       }}
       validateOnChange={false}
       validate={validateFunc}
-      onSubmit={(values, {setSubmitting, setStatus, resetForm}) => {
+      onSubmit={async (values, {setSubmitting, setStatus, resetForm}) => {
         const errors = validateFunc(values)
         setStatus({isSending: true, success: false})
 
         if (Object.keys(errors).length === 0) {
           setSubmitting(true)
 
-          axios
-            .post(
+          try {
+            const response = await fetch(
               process.env.NODE_ENV === "development"
                 ? "http://localhost:3000/api/sendEmail"
-                : "/api/sendEmail",
+                : "/api/sendContactFormMessage",
               {
-                name: values.name,
-                email: values.email,
-                company: values.company,
-                details: values.details
-                  ? values.details
-                  : "User did not submit details.",
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  name: values.name,
+                  email: values.email,
+                  company: values.company,
+                  details: values.details
+                    ? values.details
+                    : "User did not submit details.",
+                  captcha: captchaValue,
+                }),
               }
-            )
-            .then(() => {
-              // console.log(result.data)
-              setStatus({isSending: false, success: true})
-              setSubmitting(false)
-              resetForm()
-              setIsSnackbarOpen(true)
+            );
 
-              setTimeout(() => setIsSnackbarOpen(false), 5000)
-            })
-            .catch((error) => {
-              console.log("Error sending email:", error)
-              setStatus({isSending: false, success: false})
-              setSubmitting(false)
-            })
+            if (response.ok) {
+              setStatus({isSending: false, success: true});
+              resetForm();
+              setIsSnackbarOpen(true);
+
+              setTimeout(() => setIsSnackbarOpen(false), 5000);
+            } else {
+              const errorData = await response.json();
+              console.error("Error sending email:", errorData);
+              setStatus({isSending: false, success: false});
+            }
+          } catch (error) {
+            console.error("Error sending email:", error);
+            setStatus({isSending: false, success: false});
+          } finally {
+            setSubmitting(false);
+          }
         } else {
           console.log(errors)
           console.error("Form has validation errors")
