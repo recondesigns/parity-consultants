@@ -92,7 +92,7 @@ function ScaleComputingSectionForm() {
             const response = await fetch(
               process.env.NODE_ENV === "development"
                 ? "http://localhost:3000/api/sendEmail"
-                : "/api/sendContactFormMessage",
+                : "/api/sendEmail",
               {
                 method: "POST",
                 headers: {
