@@ -1,6 +1,5 @@
 "use client"
 import React from "react"
-import axios from "axios"
 import {useFocus} from "../../../context/FocusContext"
 import {Formik} from "formik"
 import Box from "@mui/material/Box"
@@ -9,6 +8,9 @@ import TextField from "@mui/material/TextField"
 import Button from "@mui/material/Button"
 // @ts-expect-error Could not find a declaration file for module react-google-recaptcha
 import ReCAPTCHA from 'react-google-recaptcha'
+import Snackbar, {SnackbarCloseReason} from '@mui/material/Snackbar';
+import IconButton from '@mui/material/IconButton';
+import CloseIcon from '@mui/icons-material/Close';
 
 const validateFunc = (values: any) => {
   const errors = {}
@@ -36,10 +38,35 @@ const validateFunc = (values: any) => {
 
 function ScaleComputingSectionForm() {
   const [captchaValue, setCaptchaValue] = React.useState<string | null>(null)
+  const [isSnackbarOpen, setIsSnackbarOpen] = React.useState(false);
 
   const handleCaptchaChange = (value: string | null) => {
     setCaptchaValue(value);
   };
+
+  const handleClose = (
+    event: React.SyntheticEvent | Event,
+    reason?: SnackbarCloseReason,
+  ) => {
+    if (reason === 'clickaway') {
+      return;
+    }
+
+    setIsSnackbarOpen(false);
+  };
+
+  const action = (
+    <React.Fragment>
+      <IconButton
+        size="small"
+        aria-label="close"
+        color="inherit"
+        onClick={handleClose}
+      >
+        <CloseIcon fontSize="small"/>
+      </IconButton>
+    </React.Fragment>
+  );
 
   const nameInputRef = useFocus()
 
@@ -54,38 +81,52 @@ function ScaleComputingSectionForm() {
       }}
       validateOnChange={false}
       validate={validateFunc}
-      onSubmit={(values, {setSubmitting, setStatus, resetForm}) => {
+      onSubmit={async (values, {setSubmitting, setStatus, resetForm}) => {
         const errors = validateFunc(values)
         setStatus({isSending: true, success: false})
 
         if (Object.keys(errors).length === 0) {
           setSubmitting(true)
 
-          axios
-            .post(
+          try {
+            const response = await fetch(
               process.env.NODE_ENV === "development"
                 ? "http://localhost:3000/api/sendEmail"
-                : "/api/sendEmail",
+                : "/api/sendContactFormMessage",
               {
-                name: values.name,
-                email: values.email,
-                company: values.company,
-                details: values.details
-                  ? values.details
-                  : "User did not submit details.",
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  name: values.name,
+                  email: values.email,
+                  company: values.company,
+                  details: values.details
+                    ? values.details
+                    : "User did not submit details.",
+                  captcha: captchaValue,
+                }),
               }
-            )
-            .then(() => {
-              // console.log(result.data)
-              setStatus({isSending: false, success: true})
-              setSubmitting(false)
-              resetForm()
-            })
-            .catch((error) => {
-              console.log("Error sending email:", error)
-              setStatus({isSending: false, success: false})
-              setSubmitting(false)
-            })
+            );
+
+            if (response.ok) {
+              setStatus({isSending: false, success: true});
+              resetForm();
+              setIsSnackbarOpen(true);
+
+              setTimeout(() => setIsSnackbarOpen(false), 5000);
+            } else {
+              const errorData = await response.json();
+              console.error("Error sending email:", errorData);
+              setStatus({isSending: false, success: false});
+            }
+          } catch (error) {
+            console.error("Error sending email:", error);
+            setStatus({isSending: false, success: false});
+          } finally {
+            setSubmitting(false);
+          }
         } else {
           console.log(errors)
           console.error("Form has validation errors")
@@ -103,132 +144,142 @@ function ScaleComputingSectionForm() {
           status,
         }) => {
         return (
-          <Box
-            component={"form"}
-            onSubmit={(e) => {
-              e.preventDefault()
-
-              if (!captchaValue) {
-                alert('Please complete reCaptcha.')
-
-                return
-              }
-
-              handleSubmit()
-            }}
-            noValidate
-            sx={{
-              padding: "20px",
-              background: "#FDFCFC",
-              borderRadius: "20px",
-              maxWidth: "380px",
-            }}
-          >
-            <Typography
-              variant="h6"
-              component="p"
-              fontWeight="bold"
-              sx={{fontFamily: "inherit"}}
-            >
-              Unlock your IT potential today!
-            </Typography>
-            <Typography
-              variant="body1"
-              component="p"
-              sx={{fontFamily: "inherit"}}
-              pb={"20px"}
-            >
-              Submit your contact info below for a personalized consultation.
-            </Typography>
-            <TextField
-              id="nameInput"
-              name="name"
-              label="Name"
-              type="text"
-              // @ts-expect-error
-              inputRef={nameInputRef}
-              value={values.name}
-              fullWidth
-              required
-              error={touched.name && errors.name ? true : false}
-              helperText={touched.name && errors.name && `${errors.name}`}
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{paddingBottom: "16px", fontFamily: "inherit"}}
-            />
-            <TextField
-              id="emailInput"
-              name="email"
-              label="Email"
-              type="email"
-              required
-              value={values.email}
-              error={touched.email && errors.email ? true : false}
-              helperText={touched.email && errors.email && `${errors.email}`}
-              fullWidth
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{paddingBottom: "16px"}}
+          <>
+            <Snackbar
+              open={isSnackbarOpen}
+              onClose={handleClose}
+              // anchorOrigin={{ vertical, horizontal }}
+              message="Thank you. Your message has been sent."
+              action={action}
             />
 
-            <TextField
-              id="companyInput"
-              name="company"
-              label="Company"
-              type="text"
-              value={values.company}
-              error={touched.company && errors.company ? true : false}
-              helperText={
-                touched.company && errors.company && `${errors.company}`
-              }
-              fullWidth
-              required
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{paddingBottom: "16px"}}
-            />
-            <TextField
-              id="detailsInput"
-              name="details"
-              label="Details"
-              type="text"
-              value={values.details}
-              error={touched.details && errors.details ? true : false}
-              helperText={
-                touched.details && errors.details && `${errors.details}`
-              }
-              fullWidth
-              onBlur={handleBlur}
-              onChange={handleChange}
-              sx={{paddingBottom: "16px"}}
-            />
-            <Box sx={{paddingBottom: '16px', display: 'flex', justifyContent: 'center'}}>
-              <ReCAPTCHA
-                sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}
-                onChange={handleCaptchaChange}
-              />
-            </Box>
-            <Button
-              variant="contained"
-              size="large"
-              fullWidth
-              type="submit"
-              disabled={
-                status && (status.success || !isSubmitting) ? true : false
-              }
+            <Box
+              component={"form"}
+              onSubmit={(e) => {
+                e.preventDefault()
+
+                if (!captchaValue) {
+                  alert('Please complete reCaptcha.')
+
+                  return
+                }
+
+                handleSubmit()
+              }}
+              noValidate
               sx={{
-                borderRadius: "50px",
-                fontWeight: "bold",
-                textTransform: "none",
+                padding: "20px",
+                background: "#FDFCFC",
+                borderRadius: "20px",
+                maxWidth: "380px",
               }}
             >
-              {status && isSubmitting
-                ? "Sending..."
-                : status && status.success
-                  ? "Sent"
-                  : "Send"}
-            </Button>
-          </Box>
+              <Typography
+                variant="h6"
+                component="p"
+                fontWeight="bold"
+                sx={{fontFamily: "inherit"}}
+              >
+                Unlock your IT potential today!
+              </Typography>
+              <Typography
+                variant="body1"
+                component="p"
+                sx={{fontFamily: "inherit"}}
+                pb={"20px"}
+              >
+                Submit your contact info below for a personalized consultation.
+              </Typography>
+              <TextField
+                id="nameInput"
+                name="name"
+                label="Name"
+                type="text"
+                // @ts-expect-error
+                inputRef={nameInputRef}
+                value={values.name}
+                fullWidth
+                required
+                error={touched.name && errors.name ? true : false}
+                helperText={touched.name && errors.name && `${errors.name}`}
+                onBlur={handleBlur}
+                onChange={handleChange}
+                sx={{paddingBottom: "16px", fontFamily: "inherit"}}
+              />
+              <TextField
+                id="emailInput"
+                name="email"
+                label="Email"
+                type="email"
+                required
+                value={values.email}
+                error={touched.email && errors.email ? true : false}
+                helperText={touched.email && errors.email && `${errors.email}`}
+                fullWidth
+                onBlur={handleBlur}
+                onChange={handleChange}
+                sx={{paddingBottom: "16px"}}
+              />
+
+              <TextField
+                id="companyInput"
+                name="company"
+                label="Company"
+                type="text"
+                value={values.company}
+                error={touched.company && errors.company ? true : false}
+                helperText={
+                  touched.company && errors.company && `${errors.company}`
+                }
+                fullWidth
+                required
+                onBlur={handleBlur}
+                onChange={handleChange}
+                sx={{paddingBottom: "16px"}}
+              />
+              <TextField
+                id="detailsInput"
+                name="details"
+                label="Details"
+                type="text"
+                value={values.details}
+                error={touched.details && errors.details ? true : false}
+                helperText={
+                  touched.details && errors.details && `${errors.details}`
+                }
+                fullWidth
+                onBlur={handleBlur}
+                onChange={handleChange}
+                sx={{paddingBottom: "16px"}}
+              />
+              <Box sx={{paddingBottom: '16px', display: 'flex', justifyContent: 'center'}}>
+                <ReCAPTCHA
+                  sitekey={process.env.NEXT_PUBLIC_GOOGLE_RECAPTCHA_SITE_KEY}
+                  onChange={handleCaptchaChange}
+                />
+              </Box>
+              <Button
+                variant="contained"
+                size="large"
+                fullWidth
+                type="submit"
+                disabled={
+                  status && (status.success || !isSubmitting) ? true : false
+                }
+                sx={{
+                  borderRadius: "50px",
+                  fontWeight: "bold",
+                  textTransform: "none",
+                }}
+              >
+                {status && isSubmitting
+                  ? "Sending..."
+                  : status && status.success
+                    ? "Sent"
+                    : "Send"}
+              </Button>
+            </Box>
+          </>
         )
       }}
     </Formik>
