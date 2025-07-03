@@ -2,6 +2,7 @@ import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/react"
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { mulish } from "./fonts"
+import { Hotjar } from "./components/Hotjar"
 import { Header, Footer } from "./components/ui/"
 import faviconImage16x16 from "../../public/images/favicons/favicon-16x16.png"
 import faviconImage32x32 from "../../public/images/favicons/favicon-32x32.png"
@@ -127,6 +128,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={mulish.className}>
+        <Hotjar />
         <div style={{ position: "relative", paddingTop: "94px" }}>
           <Header />
           {children}
